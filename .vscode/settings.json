@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "xc_sr_common.h": "c",
+        "xc_dom.h": "c",
+        "hypercall.h": "c",
+        "ioctls.h": "c",
+        "ioctl.h": "c"
+    }
+}
