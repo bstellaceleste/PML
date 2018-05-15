@@ -1494,7 +1494,7 @@ void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
     else
         pml_idx++;
 
-    printk("%lu -------- avant \n",pml_idx);
+    //printk("%lu -------- avant \n",pml_idx);
     for ( ; pml_idx < NR_PML_ENTRIES; pml_idx++ )
     {
         unsigned long gfn = pml_buf[pml_idx] >> PAGE_SHIFT;
@@ -1511,7 +1511,7 @@ void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
         p2m_change_type_one(v->domain, gfn, p2m_ram_logdirty, p2m_ram_rw);
         paging_mark_gfn_dirty(v->domain, gfn);
     }
-    printk("%lu -------- apres \n",pml_idx);
+    //printk("%lu -------- apres \n",pml_idx);
 
     unmap_domain_page(pml_buf);
 

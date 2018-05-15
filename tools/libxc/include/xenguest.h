@@ -107,7 +107,7 @@ int xc_domain_save(xc_interface *xch, int io_fd, uint32_t dom, uint32_t max_iter
 
 int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom);
 
-int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom);
+int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap);
 
 int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom);
 

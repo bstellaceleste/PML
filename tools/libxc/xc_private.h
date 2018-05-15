@@ -268,7 +268,7 @@ static inline int do_domctl(xc_interface *xch, struct xen_domctl *domctl)
     if ( xc_hypercall_bounce_pre(xch, domctl) )
     {
         PERROR("Could not bounce buffer for domctl hypercall");
-        goto out1; 
+        //goto out1; 
     }
 
     ret = xencall1(xch->xcall, __HYPERVISOR_domctl,
@@ -281,13 +281,13 @@ static inline int do_domctl(xc_interface *xch, struct xen_domctl *domctl)
     }
 
     xc_hypercall_bounce_post(xch, domctl);
- out1:
+ //out1:
     return ret;
 }
 
 static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl)
 {
-    int ret = -1;
+    int ret = -2;
     DECLARE_HYPERCALL_BOUNCE(domctl, sizeof(*domctl), XC_HYPERCALL_BUFFER_BOUNCE_BOTH);
     printf("\n %s:%d:%s\n",__FILE__,__LINE__,__func__);
 
@@ -296,7 +296,7 @@ static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl
     if ( xc_hypercall_bounce_pre(xch, domctl) )
     {
         PERROR("Could not bounce buffer for domctl hypercall");
-        goto out1;
+       // goto out1;
     }
 
     ret = xencall1(xch->xcall, __HYPERVISOR_test_hypercall,
@@ -309,7 +309,7 @@ static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl
     }
 
     xc_hypercall_bounce_post(xch, domctl);
- out1:
+ //out1:
     return ret;
 }
 

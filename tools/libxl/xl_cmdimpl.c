@@ -4641,7 +4641,7 @@ static void migrate_domain(uint32_t domid, const char *rune, int debug,
             goto failed_suspend;
         else
             goto failed_resume;
-    }
+    } 
 
     //fprintf(stderr, "migration sender: Transfer complete.\n");
     // Should only be printed when debugging as it's a bit messy with
@@ -5055,7 +5055,6 @@ int main_migrate(int argc, char **argv)
         {"live", 0, 0, 0x200},
         COMMON_LONG_OPTS
     };
-
     SWITCH_FOREACH_OPT(opt, "FC:s:e", opts, "migrate", 2) {
     case 'C':
         config_filename = optarg;

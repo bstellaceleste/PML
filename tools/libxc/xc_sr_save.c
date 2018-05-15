@@ -477,6 +477,7 @@ static int send_memory_live(struct xc_sr_context *ctx)
     unsigned x;
     int rc;
 
+    printf("ctx->save.p2m_size : %lu",ctx->save.p2m_size);
     rc = update_progress_string(ctx, &progress_str, 0);
     if ( rc )
         goto out;
@@ -630,6 +631,25 @@ static int suspend_and_send_dirty(struct xc_sr_context *ctx)
  out:
     xc_set_progress_prefix(xch, NULL);
     free(progress_str);
+    return rc;
+}
+
+int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap)
+{
+    int rc;
+    DECLARE_DOMCTL;
+    //DECLARE_HYPERCALL_BUFFER_ARGUMENT(dirty_bitmap);
+    memset(&domctl, 0, sizeof(domctl));
+
+    domctl.cmd = XEN_DOMCTL_shadow_op;
+    domctl.domain = (domid_t)dom;
+    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_PEEK;
+
+    rc = do_domctl(xch, &domctl); 
+    /*memcpy(dirty_bitmap, &domctl.u.shadow_op.dirty_bitmap,
+           sizeof(xc_hypercall_buffer_t));*/
+    printf("%s:%d:%s\n",__FILE__,__LINE__,__func__,&domctl.u.shadow_op.dirty_bitmap);
+
     return rc;
 }
 
@@ -924,19 +944,6 @@ int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom)
     domctl.domain = (domid_t)dom;
     domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY;
     rc = do_domctl(xch, &domctl);
-    printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
-    return rc;
-}
-
-int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom)
-{
-    int rc;
-    DECLARE_DOMCTL;
-    memset(&domctl, 0, sizeof(domctl));
-    domctl.cmd = XEN_DOMCTL_shadow_op;
-    domctl.domain = (domid_t)dom;
-    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_COLLECT_DIRTY_LOGS;
-    rc = do_test_hypercall(xch, &domctl);
     printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
     return rc;
 }

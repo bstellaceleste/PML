@@ -361,7 +361,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
     mfn=l1[decalage];
     l0=map_domain_page(mfn);
     l0[i1]++;
-    printk("%d:",(int)l0[i1]);
+    //printk("%d:",(int)l0[i1]);
     unmap_domain_page(l0);
 
     /*
@@ -371,7 +371,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
     mfn=l1[decalage];
     l0=map_domain_page(mfn);
     l0[i1] = pfn;
-    printk("%d\n",(int)l0[i1]);
+    //printk("%d\n",(int)l0[i1]);
     unmap_domain_page(l0);
 
     d->arch.paging.log_dirty.dirty_count++;
@@ -392,13 +392,6 @@ out:
     /* We've already recorded any failed allocations */
     paging_unlock(d);
     return;
-}
-
-long paging_collect(struct domain *d)
-{
-    unsigned long *l=paging_map_log_dirty_bitmap(d);
-    unmap_domain_page(l);
-    return (long)l;
 }
 
 /* Mark a page as dirty */
@@ -564,7 +557,7 @@ static int paging_log_dirty_op(struct domain *d,
                                                   pages >> 3, bytes)) != 0 )
                     {
                         rv = -EFAULT;
-                        goto out;
+                        goto out; 
                     }
                 }
                 pages += bytes << 3;
@@ -803,10 +796,6 @@ int  paging_domctl(struct domain *d, xen_domctl_shadow_op_t *sc,
     case XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY:
     printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
         return paging_log_dirty_enable(d, 1);
-
-    case XEN_DOMCTL_SHADOW_OP_COLLECT_DIRTY_LOGS:
-        return paging_collect(d);
-        //break;
 
     case XEN_DOMCTL_SHADOW_OP_OFF:
         if ( (rc = paging_log_dirty_disable(d, resuming)) != 0 )

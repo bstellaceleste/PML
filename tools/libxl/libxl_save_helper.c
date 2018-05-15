@@ -37,6 +37,7 @@
 #include "libxl_osdeps.h"
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <assert.h>
 #include <inttypes.h>
@@ -244,7 +245,7 @@ int main(int argc, char **argv)
 #define NEXTARG (++argv, assert(*argv), *argv)
 
     const char *mode = *++argv;
-    assert(mode);
+    assert(mode); 
 
     if (!strcmp(mode,"--save-domain")) {
 
@@ -318,10 +319,18 @@ int main(int argc, char **argv)
 
     } else if (!strcmp(mode,"--collect_dirty_logs")) {
         uint32_t dom =                      strtoul(NEXTARG,0,10);
-        startup("collect");
-        r = xc_domain_collect_dirty_logs(xch, dom);  
-        complete(r);      
 
+        startup("collect");
+
+        xc_hypercall_buffer_t *dirty_bitmap=NULL;
+        r = xc_domain_collect_dirty_logs(xch, dom, dirty_bitmap); 
+
+        char *home=getenv("HOME"), name[]="/logs.txt", *path=strcat(home,name);
+        FILE *file=fopen(path,"a");
+        fclose(file);
+
+        complete(r);      
+        
     } else {
         assert(!"unexpected mode argument");
     }
