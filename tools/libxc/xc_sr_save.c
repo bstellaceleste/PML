@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 #include "xc_sr_common.h"
 
@@ -637,19 +638,64 @@ static int suspend_and_send_dirty(struct xc_sr_context *ctx)
 int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap)
 {
     int rc;
+    unsigned long p2m_size=1045504;//=0xff400;
+    xen_pfn_t nr_pfns;
+    unsigned long *db=malloc(sizeof(unsigned long) * p2m_size);
+
     DECLARE_DOMCTL;
-    //DECLARE_HYPERCALL_BUFFER_ARGUMENT(dirty_bitmap);
+    DECLARE_HYPERCALL_BOUNCE(db, p2m_size * sizeof(*db), XC_HYPERCALL_BUFFER_BOUNCE_OUT);
     memset(&domctl, 0, sizeof(domctl));
+
+    if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
+    {
+        PERROR("Unable to obtain p2m_size");
+        //goto out;
+    }
+
+    //p2m_size =(unsigned long)nr_pfns;
+    //for(i=0; i<10; i++) printf("%lu - ",db[i]);
+    //printf("%lu\n",db[32]);
 
     domctl.cmd = XEN_DOMCTL_shadow_op;
     domctl.domain = (domid_t)dom;
     domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_PEEK;
+    domctl.u.shadow_op.pages  = p2m_size;
+    set_xen_guest_handle(domctl.u.shadow_op.dirty_bitmap, db);
 
-    rc = do_domctl(xch, &domctl); 
-    /*memcpy(dirty_bitmap, &domctl.u.shadow_op.dirty_bitmap,
-           sizeof(xc_hypercall_buffer_t));*/
-    printf("%s:%d:%s\n",__FILE__,__LINE__,__func__,&domctl.u.shadow_op.dirty_bitmap);
+    rc = do_domctl(xch, &domctl);
+    printf("%lu\n",db[32]);
 
+    xc_hypercall_bounce_post(xch, db);
+
+    //out:
+      //  return rc;
+    return rc;
+}
+
+int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom)
+{
+    int rc;
+    unsigned long p2m_size=1045504;//=0xff400;
+    //xen_pfn_t nr_pfns;
+
+    DECLARE_DOMCTL;
+    memset(&domctl, 0, sizeof(domctl));
+
+    /*if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
+    {
+        PERROR("Unable to obtain p2m_size");
+        goto out;
+    }*/
+
+    domctl.cmd = XEN_DOMCTL_shadow_op;
+    domctl.domain = (domid_t)dom;
+    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_CLEAN;
+    domctl.u.shadow_op.pages  = p2m_size;
+
+    rc = do_domctl(xch, &domctl);
+
+    /*out:
+        return rc;*/
     return rc;
 }
 

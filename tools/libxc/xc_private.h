@@ -261,18 +261,18 @@ static inline int do_domctl(xc_interface *xch, struct xen_domctl *domctl)
 {
     int ret = -1;
     DECLARE_HYPERCALL_BOUNCE(domctl, sizeof(*domctl), XC_HYPERCALL_BUFFER_BOUNCE_BOTH);
-    //printf("\n %s:%d:%s\n",__FILE__,__LINE__,__func__);
 
     domctl->interface_version = XEN_DOMCTL_INTERFACE_VERSION;
 
     if ( xc_hypercall_bounce_pre(xch, domctl) )
     {
         PERROR("Could not bounce buffer for domctl hypercall");
-        //goto out1; 
+        goto out1; 
     }
 
     ret = xencall1(xch->xcall, __HYPERVISOR_domctl,
                    HYPERCALL_BUFFER_AS_ARG(domctl));
+    //printf("ret:%d\n",ret);
     if ( ret < 0 )
     {
         if ( errno == EACCES )
@@ -281,7 +281,7 @@ static inline int do_domctl(xc_interface *xch, struct xen_domctl *domctl)
     }
 
     xc_hypercall_bounce_post(xch, domctl);
- //out1:
+ out1:
     return ret;
 }
 

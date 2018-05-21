@@ -136,7 +136,7 @@ int hap_track_dirty_vram(struct domain *d,
             paging_unlock(d);
 
             domain_pause(d);
-            printk("fffffffffffffffffffffff\n");
+            //printk("fffffffffffffffffffffff\n");
             /* Flush dirty GFNs potentially cached by hardware. */
             p2m_flush_hardware_cached_dirty(d);
 

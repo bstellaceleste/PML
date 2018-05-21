@@ -5464,6 +5464,14 @@ int main_collect_dirty_logs(int argc, char **argv)
     return ret;
 }
 
+int main_clean_dirty_bitmap(int argc, char **argv)
+{
+    int ret=0;
+    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
+    ret=execl(path,path,"--clean_dirty_bitmap",argv[1],NULL);
+    return ret;
+}
+
 int main_disable_log_dirty(int argc, char **argv)
 {
     int ret;

@@ -30,7 +30,6 @@
 #include <xen/numa.h>
 #include <xsm/xsm.h>
 #include <public/sched.h> /* SHUTDOWN_suspend */
-#include <asm-x86/hvm/vmx/vmcs.h>
 
 #include "mm-locks.h"
 
@@ -77,7 +76,7 @@ static mfn_t paging_new_log_dirty_page(struct domain *d)
 }
 
 /* Alloc and init a new leaf node */
-/*static mfn_t paging_new_log_dirty_leaf(struct domain *d)
+static mfn_t paging_new_log_dirty_leaf(struct domain *d)
 {
     mfn_t mfn = paging_new_log_dirty_page(d);
 
@@ -85,13 +84,32 @@ static mfn_t paging_new_log_dirty_page(struct domain *d)
         clear_domain_page(mfn);
 
     return mfn;
-}*/
+}
+
+/* Alloc and init a new leaf with xxentries */
+static mfn_t paging_new_log_dirty_leaf_long(struct domain *d)
+{    
+    mfn_t mfn = paging_new_log_dirty_page(d);//mfn2, 
+    if ( mfn_valid(mfn) )
+    {
+        int i;
+        mfn_t *node = map_domain_page(mfn);
+        for ( i = 0; i < LOGDIRTY_LEAF_LONG_ENTRIES << 1; i++ )
+        {
+            /*mfn2=paging_new_log_dirty_page(d);
+            if ( mfn_valid(mfn2) )
+                clear_domain_page(mfn2);*/
+            node[i] = _mfn(INVALID_MFN);//mfn2;            
+        }       
+        unmap_domain_page(node);
+    }  
+    return mfn;
+}
 
 /* Alloc and init a new non-leaf node */
 static mfn_t paging_new_log_dirty_node(struct domain *d)
 {
     mfn_t mfn = paging_new_log_dirty_page(d);
-
     if ( mfn_valid(mfn) )
     {
         int i;
@@ -100,26 +118,6 @@ static mfn_t paging_new_log_dirty_node(struct domain *d)
             node[i] = _mfn(INVALID_MFN);
         unmap_domain_page(node);
     }
-    return mfn;
-}
-
-/* Alloc and init a new leaf with 32entries */
-static mfn_t paging_new_log_dirty_leaf_long(struct domain *d)
-{    
-    mfn_t mfn2, mfn = paging_new_log_dirty_page(d);
-    if ( mfn_valid(mfn) )
-    {
-        int i;
-        mfn_t *node = map_domain_page(mfn);
-        for ( i = 0; i < LOGDIRTY_LEAF_LONG_ENTRIES << 1; i++ )
-        {
-            mfn2=paging_new_log_dirty_page(d);
-            if ( mfn_valid(mfn2) )
-                clear_domain_page(mfn2);
-            node[i] = mfn2;            
-        }       
-        unmap_domain_page(node);
-    }  
     return mfn;
 }
 
@@ -242,7 +240,6 @@ static int paging_free_log_dirty_bitmap(struct domain *d, int rc)
 int paging_log_dirty_enable(struct domain *d, bool_t log_global)
 {
     int ret;
-    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
 
     if ( need_iommu(d) && log_global )
     {
@@ -290,7 +287,6 @@ static int paging_log_dirty_disable(struct domain *d, bool_t resuming)
 /* Mark a page as dirty, with taking guest pfn as parameter */
 void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
 {
-    //int changed;
     mfn_t mfn, *l4, *l3, *l2;
     unsigned long *l1,*l0;
     int i1, i2, i3, i4, decalage;
@@ -319,9 +315,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
 
     if ( unlikely(!mfn_valid(d->arch.paging.log_dirty.top)) ) 
     {
-         //printk("%s:%d:%s initialisation de la bitmap!\n",__FILE__,__LINE__,__func__);
          d->arch.paging.log_dirty.top = paging_new_log_dirty_node(d);
-         //flag=1;
          if ( unlikely(!mfn_valid(d->arch.paging.log_dirty.top)) )
              goto out;
     }
@@ -353,22 +347,36 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
 
     l1 = map_domain_page(mfn);
     /*
-    *on obtient le bloc de l1 à partir d'où incrémenter
+    *On obtient le bloc de l1 à partir d'où incrémenter
     */
-    decalage = (i1 >> 9); //on fait i1:(PAGE_SIZE/sizeof(long)) et PAGE_SIZE(==1 << 12)/sizeof(long)(== 1 << 3) = (1 << 9)
+    decalage = (i1 >> 9); //On fait i1:(PAGE_SIZE/sizeof(long)) et PAGE_SIZE(==1 << 12)/sizeof(long)(== 1 << 3) = (1 << 9)
     i1 %= (PAGE_SIZE >> 3);//(PAGE_SIZE/sizeof(long))
 
     mfn=l1[decalage];
+    if ( !mfn_valid(mfn) ){
+        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
+    }
+    unmap_domain_page(l1);
+    if ( !mfn_valid(mfn) )
+        goto out;
+
     l0=map_domain_page(mfn);
     l0[i1]++;
     //printk("%d:",(int)l0[i1]);
     unmap_domain_page(l0);
 
     /*
-    *on obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
+    *On obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
     */
     decalage += LOGDIRTY_LEAF_LONG_ENTRIES;
     mfn=l1[decalage];
+    if ( !mfn_valid(mfn) ){
+        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
+    }
+    unmap_domain_page(l1);
+    if ( !mfn_valid(mfn) )
+        goto out;
+
     l0=map_domain_page(mfn);
     l0[i1] = pfn;
     //printk("%d\n",(int)l0[i1]);
@@ -465,11 +473,11 @@ static int paging_log_dirty_op(struct domain *d,
                                struct xen_domctl_shadow_op *sc,
                                bool_t resuming)
 {
-    int rv = 0, clean = 0, peek = 1;
+    int rv = 0, clean = 0, peek = 1;//, buf_log_offset = (1 << 15)
     unsigned long pages = 0;
     mfn_t *l4 = NULL, *l3 = NULL, *l2 = NULL;
-    unsigned long *l1 = NULL;
-    int i4, i3, i2;
+    unsigned long *l1 = NULL, *l0=NULL;//, *buf_log=NULL
+    int i4, i3, i2, i1, i0=0, decalage;
 
     if ( !resuming )
     {
@@ -548,6 +556,47 @@ static int paging_log_dirty_op(struct domain *d,
                       map_domain_page(l2[i2]) : NULL);
                 if ( unlikely(((sc->pages - pages + 7) >> 3) < bytes) )
                     bytes = (unsigned int)((sc->pages - pages + 7) >> 3);
+                for ( i1 = 0; i1 < LOGDIRTY_LEAF_LONG_ENTRIES; i1++ )
+                {
+                    if(clean)
+                    {
+                        l0 = ((l1 && mfn_valid(l1[i1])) ? map_domain_page(l1[i1]) : NULL);
+                        if (l0)
+                        {
+                            clear_page(l0); 
+                            unmap_domain_page(l0);
+                        }
+                    }else
+                    {
+                        for( i0 = 0; i0 < LOGDIRTY_NODE_ENTRIES; i0++)
+                        {
+                            l0 = ((l1 && mfn_valid(l1[i1])) ?
+                                 map_domain_page(l1[i1]) : NULL);
+                            if(l0)
+                            {
+                                printk("(WSS) %lu : ", l0[i0]);
+                                unmap_domain_page(l0);
+                            }
+
+                            /**
+                             * Ensuite on fait un décalage pour se placer au début de la 
+                             * liste des adresses
+                             * */
+                            decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
+                            /**
+                             * Maintenant on récupère les adresses elles-mêmes
+                             * */
+                            l0 = ((l1 && mfn_valid(l1[decalage])) ?
+                                 map_domain_page(l1[decalage]) : NULL);
+                            if(l0)
+                            {
+                                printk("%lx\n", l0[i0]);
+                                unmap_domain_page(l0);
+                            }
+                        }
+
+                    }
+                }
                 if ( likely(peek) )
                 {
                     if ( (l1 ? copy_to_guest_offset(sc->dirty_bitmap,
@@ -557,14 +606,14 @@ static int paging_log_dirty_op(struct domain *d,
                                                   pages >> 3, bytes)) != 0 )
                     {
                         rv = -EFAULT;
-                        goto out; 
+                        goto out;
                     }
                 }
                 pages += bytes << 3;
                 if ( l1 )
                 {
-                    if ( clean )
-                        clear_page(l1);
+                    /*if ( clean )
+                        clear_page(l1);*/
                     unmap_domain_page(l1);
                 }
             }
@@ -592,6 +641,8 @@ static int paging_log_dirty_op(struct domain *d,
         if ( rv )
             break;
     }
+    printk("[END_WSS]\n");
+
     if ( l4 )
         unmap_domain_page(l4);
 
@@ -628,6 +679,7 @@ static int paging_log_dirty_op(struct domain *d,
          * paging modes (shadow or hap).  Safe because the domain is paused. */
         d->arch.paging.log_dirty.clean_dirty_bitmap(d);
     }
+
     domain_unpause(d);
     return rv;
 
@@ -636,6 +688,8 @@ static int paging_log_dirty_op(struct domain *d,
     paging_unlock(d);
     domain_unpause(d);
 
+    if ( l0 )
+        unmap_domain_page(l0);
     if ( l1 )
         unmap_domain_page(l1);
     if ( l2 )
@@ -735,11 +789,11 @@ void paging_vcpu_init(struct vcpu *v)
         shadow_vcpu_init(v);
 }
 
-int  paging_domctl(struct domain *d, xen_domctl_shadow_op_t *sc,
+
+int paging_domctl(struct domain *d, xen_domctl_shadow_op_t *sc,
                   XEN_GUEST_HANDLE_PARAM(void) u_domctl, bool_t resuming)
 {
     int rc;
-    //struct vcpu *v;
 
     if ( unlikely(d == current->domain) )
     {
@@ -794,7 +848,6 @@ int  paging_domctl(struct domain *d, xen_domctl_shadow_op_t *sc,
             break;
         /* Else fall through... */
     case XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY:
-    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
         return paging_log_dirty_enable(d, 1);
 
     case XEN_DOMCTL_SHADOW_OP_OFF:

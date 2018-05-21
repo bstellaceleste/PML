@@ -67,6 +67,7 @@ int main_vm_list(int argc, char **argv);
 int main_create(int argc, char **argv);
 int main_enable_log_dirty(int argc, char **argv);
 int main_collect_dirty_logs(int argc, char **argv);
+int main_clean_dirty_bitmap(int argc, char **argv);
 int main_disable_log_dirty(int argc, char **argv);
 int main_config_update(int argc, char **argv);
 int main_button_press(int argc, char **argv);

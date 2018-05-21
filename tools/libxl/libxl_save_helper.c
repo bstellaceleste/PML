@@ -325,9 +325,14 @@ int main(int argc, char **argv)
         xc_hypercall_buffer_t *dirty_bitmap=NULL;
         r = xc_domain_collect_dirty_logs(xch, dom, dirty_bitmap); 
 
-        char *home=getenv("HOME"), name[]="/logs.txt", *path=strcat(home,name);
-        FILE *file=fopen(path,"a");
-        fclose(file);
+        complete(r);      
+        
+    }else if (!strcmp(mode,"--clean_dirty_bitmap")) {
+        uint32_t dom =                      strtoul(NEXTARG,0,10);
+
+        startup("clean");
+
+        r = xc_domain_clean_dirty_bitmap(xch, dom); 
 
         complete(r);      
         

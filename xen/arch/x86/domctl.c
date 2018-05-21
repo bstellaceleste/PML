@@ -240,6 +240,7 @@ long arch_do_domctl(
     long ret = 0;
     bool_t copyback = 0;
     unsigned long i;
+    //printk("arch_do_domctl!!!\n");
 
     switch ( domctl->cmd )
     {

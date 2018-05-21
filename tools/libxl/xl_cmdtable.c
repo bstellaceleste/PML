@@ -48,6 +48,12 @@ struct cmd_spec cmd_table[] = {
       "[options] [domainid]",
       "-h                      Print this help.\n"
     },
+    { "clean-dirty-bitmap",
+      &main_clean_dirty_bitmap, 1, 1,
+      "Clean the dirty bitmap of domain <domid>",
+      "[options] [domainid]",
+      "-h                      Print this help.\n"
+    },
     { "disable-log-dirty",
       &main_disable_log_dirty, 1, 1,
       "Disable log dirty mode for domain <domid>",
