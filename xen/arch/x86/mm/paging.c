@@ -361,9 +361,11 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
         goto out;
 
     l0=map_domain_page(mfn);
-    l0[i1]++;
-    //printk("%d:",(int)l0[i1]);
-    unmap_domain_page(l0);
+    if(l0)
+    {
+        l0[i1]++;
+        unmap_domain_page(l0);
+    }
 
     /*
     *On obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
@@ -378,9 +380,11 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
         goto out;
 
     l0=map_domain_page(mfn);
-    l0[i1] = pfn;
-    //printk("%d\n",(int)l0[i1]);
-    unmap_domain_page(l0);
+    if(l0)
+    {
+        l0[i1] = pfn;
+        unmap_domain_page(l0);
+    }
 
     d->arch.paging.log_dirty.dirty_count++;
 
@@ -561,6 +565,13 @@ static int paging_log_dirty_op(struct domain *d,
                     if(clean)
                     {
                         l0 = ((l1 && mfn_valid(l1[i1])) ? map_domain_page(l1[i1]) : NULL);
+                        if (l0)
+                        {
+                            clear_page(l0); 
+                            unmap_domain_page(l0);
+                        }
+                        decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
+                        l0 = ((l1 && mfn_valid(l1[decalage])) ? map_domain_page(l1[decalage]) : NULL);
                         if (l0)
                         {
                             clear_page(l0); 
