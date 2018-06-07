@@ -3702,6 +3702,7 @@ void vmx_vmexit_handler(struct cpu_user_regs *regs)
 
         __vmread(GUEST_PHYSICAL_ADDRESS, &gpa);
         __vmread(EXIT_QUALIFICATION, &exit_qualification);
+        //printk("gpa:%lx",gpa);
         ept_handle_violation(exit_qualification, gpa);
         break;
     }

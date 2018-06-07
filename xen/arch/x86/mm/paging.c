@@ -383,6 +383,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
     if(l0)
     {
         l0[i1] = pfn;
+        //printk("%lx\n",pfn);
         unmap_domain_page(l0);
     }
 
@@ -585,7 +586,7 @@ static int paging_log_dirty_op(struct domain *d,
                                  map_domain_page(l1[i1]) : NULL);
                             if(l0)
                             {
-                                printk("(WSS) %lu : ", l0[i0]);
+                                //printk("(WSS) %lu : ", l0[i0]);
                                 unmap_domain_page(l0);
                             }
 
@@ -601,7 +602,7 @@ static int paging_log_dirty_op(struct domain *d,
                                  map_domain_page(l1[decalage]) : NULL);
                             if(l0)
                             {
-                                printk("%lx\n", l0[i0]);
+                                //printk("%lx\n", l0[i0]);
                                 unmap_domain_page(l0);
                             }
                         }
