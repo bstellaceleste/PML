@@ -191,7 +191,7 @@ out:
 static int hap_enable_log_dirty(struct domain *d, bool_t log_global)
 {
     /* turn on PG_log_dirty bit in paging mode */
-    printk("%s:%d:%s",__FILE__,__LINE__,__func__);
+    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
     paging_lock(d);
     d->arch.paging.mode |= PG_log_dirty;
     paging_unlock(d);

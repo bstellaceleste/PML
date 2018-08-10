@@ -482,7 +482,7 @@ static int paging_log_dirty_op(struct domain *d,
     unsigned long pages = 0;
     mfn_t *l4 = NULL, *l3 = NULL, *l2 = NULL;
     unsigned long *l1 = NULL, *l0=NULL;//, *buf_log=NULL
-    int i4, i3, i2, i1, i0=0, decalage;
+    int i4, i3, i2, i1, i0=0, decalage, count=0;//, count=0;
 
     if ( !resuming )
     {
@@ -586,7 +586,11 @@ static int paging_log_dirty_op(struct domain *d,
                                  map_domain_page(l1[i1]) : NULL);
                             if(l0)
                             {
-                                //printk("(WSS) %lu : ", l0[i0]);
+                                if(l0[i0]!=0)
+                                {
+                                    printk("(WSS) %lu : ", l0[i0]);
+                                }
+                                
                                 unmap_domain_page(l0);
                             }
 
@@ -602,7 +606,11 @@ static int paging_log_dirty_op(struct domain *d,
                                  map_domain_page(l1[decalage]) : NULL);
                             if(l0)
                             {
-                                //printk("%lx\n", l0[i0]);
+                                if(l0[i0]!=0)
+                                {
+                                    count++;
+                                    printk("%lx\n", l0[i0]);
+                                } 
                                 unmap_domain_page(l0);
                             }
                         }
@@ -654,6 +662,7 @@ static int paging_log_dirty_op(struct domain *d,
             break;
     }
     printk("[END_WSS]\n");
+    printk("%d\n", count);
 
     if ( l4 )
         unmap_domain_page(l4);

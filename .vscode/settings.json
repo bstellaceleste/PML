@@ -4,7 +4,8 @@
         "xc_dom.h": "c",
         "hypercall.h": "c",
         "ioctls.h": "c",
-        "ioctl.h": "c"
+        "ioctl.h": "c",
+        "typeinfo": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

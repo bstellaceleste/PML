@@ -292,7 +292,7 @@ void p2m_memory_type_changed(struct domain *d)
 void p2m_enable_hardware_log_dirty(struct domain *d)
 {
     struct p2m_domain *p2m = p2m_get_hostp2m(d);
-    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
+    //printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
 
     if ( p2m->enable_hardware_log_dirty )
     {

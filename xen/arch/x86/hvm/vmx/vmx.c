@@ -3745,7 +3745,7 @@ void vmx_vmexit_handler(struct cpu_user_regs *regs)
         break;
 
     case EXIT_REASON_PML_FULL:
-    printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
+    //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
         vmx_vcpu_flush_pml_buffer(v);
         break;
  

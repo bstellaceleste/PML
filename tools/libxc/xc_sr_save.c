@@ -990,7 +990,7 @@ int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom)
     domctl.domain = (domid_t)dom;
     domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY;
     rc = do_domctl(xch, &domctl);
-    printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
+    //printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
     return rc;
 }
 
@@ -1002,7 +1002,7 @@ int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom)
     domctl.cmd = XEN_DOMCTL_shadow_op;
     domctl.domain = (domid_t)dom;
     domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_OFF;
-    printf("\n%s:%d:%s\n",__FILE__,__LINE__,__func__);
+    //printf("\n%s:%d:%s\n",__FILE__,__LINE__,__func__);
     rc = do_domctl(xch, &domctl);
     return rc;
 }

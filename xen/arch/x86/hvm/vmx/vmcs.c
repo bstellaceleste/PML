@@ -1419,10 +1419,10 @@ bool_t vmx_vcpu_pml_enabled(const struct vcpu *v)
  
 int vmx_vcpu_enable_pml(struct vcpu *v)
 {
-    int activate=vmx_vcpu_pml_enabled(v);
+    //int activate=vmx_vcpu_pml_enabled(v);
     if ( vmx_vcpu_pml_enabled(v) )
         return 0;
-    printk("%s:%d:%s vmx_vcpu_pml_enabled:%d",__FILE__,__LINE__,__func__,activate);
+    //printk("%s:%d:%s vmx_vcpu_pml_enabled:%d",__FILE__,__LINE__,__func__,activate);
 
     v->arch.hvm_vmx.pml_pg = v->domain->arch.paging.alloc_page(v->domain);
     if ( !v->arch.hvm_vmx.pml_pg )
@@ -1541,7 +1541,7 @@ int vmx_domain_enable_pml(struct domain *d)
     int rc;
 
     ASSERT(atomic_read(&d->pause_count));
-    printk("%s:%d:%s",__FILE__,__LINE__,__func__);
+    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
 
     if ( vmx_domain_pml_enabled(d) )
         return 0;
