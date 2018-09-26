@@ -588,7 +588,7 @@ static int paging_log_dirty_op(struct domain *d,
                             {
                                 if(l0[i0]!=0)
                                 {
-                                    printk("(WSS) %lu : ", l0[i0]);
+                                    //printk("(WSS) %lu : ", l0[i0]);
                                 }
                                 
                                 unmap_domain_page(l0);
@@ -609,7 +609,7 @@ static int paging_log_dirty_op(struct domain *d,
                                 if(l0[i0]!=0)
                                 {
                                     count++;
-                                    printk("%lx\n", l0[i0]);
+                                    //printk("%lx\n", l0[i0]);
                                 } 
                                 unmap_domain_page(l0);
                             }
@@ -661,7 +661,7 @@ static int paging_log_dirty_op(struct domain *d,
         if ( rv )
             break;
     }
-    printk("[END_WSS]\n");
+    //printk("[END_WSS]\n");
     printk("%d\n", count);
 
     if ( l4 )
