@@ -22,10 +22,13 @@ patch git : git diff log_x..log_x+1 > out
 
 //pour le routage (faire accéder la vm à internet)
 **dans l'hôte
-- brctl addif eth0 xenbr0
+- brctl addif xenbr0 eth0
+- iptables -A FORWARD -o wlp2s0 -i xenbr0 -s 10.0.0.0/24 -m conntrack --ctstate NEW -j ACCEPT
+- iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+- iptables -t nat -A POSTROUTING -o wlp2s0 -j MASQUERADE
 - iptables -t nat -A POSTROUTING -j MASQUERADE (routage)
-**dans la vm
 - echo 1 > /proc/sys/net/ipv4/ip_forward
+**dans la vm
 - /etc/init.d/procps restart
 - echo "nameserver 8.8.8.8" > /etc/resolv.conf
 - route add default gw addr_xenbr0_dans_lhote

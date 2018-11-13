@@ -356,7 +356,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
     if ( !mfn_valid(mfn) ){
         l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
     }
-    unmap_domain_page(l1);
+    //unmap_domain_page(l1);
     if ( !mfn_valid(mfn) )
         goto out;
 
@@ -375,7 +375,7 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
     if ( !mfn_valid(mfn) ){
         l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
     }
-    unmap_domain_page(l1);
+    //unmap_domain_page(l1);
     if ( !mfn_valid(mfn) )
         goto out;
 
@@ -387,9 +387,9 @@ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
         unmap_domain_page(l0);
     }
 
-    d->arch.paging.log_dirty.dirty_count++;
-
     unmap_domain_page(l1);
+
+    d->arch.paging.log_dirty.dirty_count++;
 
     //changed = !__test_and_set_bit(i1, l1);
     /*if ( changed )
