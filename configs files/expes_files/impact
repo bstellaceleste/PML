@@ -1,0 +1,19 @@
+impact sur le temps:
+Tv: vérification D-bit
+Td: décrémenter index
+Tc: comparer index
+Tl: logger address
+
+soient 
+- To le temps natif (sans PML) pour le parcours de table de page
+- No le nb de parcours
+
+alors l'impact va faire passer le tps de To*No à 
+(To + Tv)*N1 + (To + Tv + Td + Tc + Tl)*N2 + (To + Tv + Td + Tc + Tl + Texit + Tenter + Thandler)*N3
+où:
+
+No = nb de tlb miss
+N2 = nb d'adresses dans le logs
+N3 = nb de flushs effectués (car pdt la translation d'adresse, si le matériel se rend compte que l'index est inférieur à 0, il stoppe la translation, vide le log avant de revenir continuer et logger ensuite l'adresse qui était en cours de translation dans le log)
+N1 = No - (N2 + N3)
+
