@@ -28,6 +28,7 @@ Seulement dans xen-4.7.0: index.html
 Seulement dans xen-4.7.0: migration
 Seulement dans xen-4.7.0: mk_wrld
 Seulement dans xen-4.7.0: patches
+Seulement dans xen-4.7.0: pml.patch
 Seulement dans xen-4.7.0/stubdom: config.log
 Seulement dans xen-4.7.0/stubdom: config.status
 Seulement dans xen-4.7.0/stubdom: cross-root-i686
@@ -606,21 +607,21 @@ Seulement dans xen-4.7.0/tools/libvchan: node-select.o
 Seulement dans xen-4.7.0/tools/libvchan: .node-select.o.d
 Seulement dans xen-4.7.0/tools/libvchan: vchan-node1
 Seulement dans xen-4.7.0/tools/libvchan: vchan-node2
-diff -ur xen-4.7.0/tools/libxc/include/xenguest.h xen-4.7.0_copie/tools/libxc/include/xenguest.h
---- xen-4.7.0/tools/libxc/include/xenguest.h	2018-09-28 14:54:01.448362000 +0100
-+++ xen-4.7.0_copie/tools/libxc/include/xenguest.h	2016-06-20 11:38:15.000000000 +0100
-@@ -105,14 +105,6 @@
+diff -ur xen-4.7.0_copie/tools/libxc/include/xenguest.h xen-4.7.0/tools/libxc/include/xenguest.h
+--- xen-4.7.0_copie/tools/libxc/include/xenguest.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxc/include/xenguest.h	2018-09-28 14:54:01.448362000 +0100
+@@ -105,6 +105,14 @@
                     struct save_callbacks* callbacks, int hvm,
                     xc_migration_stream_t stream_type, int recv_fd);
  
--int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom);
--
--int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom);
--
--int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap);
--
--int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom);
--
++int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom);
++
++int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom);
++
++int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap);
++
++int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom);
++
  /* callbacks provided by xc_domain_restore */
  struct restore_callbacks {
      /* Called after a new checkpoint to suspend the guest.
@@ -686,15 +687,15 @@ Seulement dans xen-4.7.0/tools/libxc: xc_csched.o
 Seulement dans xen-4.7.0/tools/libxc: .xc_csched.o.d
 Seulement dans xen-4.7.0/tools/libxc: xc_csched.opic
 Seulement dans xen-4.7.0/tools/libxc: .xc_csched.opic.d
-diff -ur xen-4.7.0/tools/libxc/xc_domain.c xen-4.7.0_copie/tools/libxc/xc_domain.c
---- xen-4.7.0/tools/libxc/xc_domain.c	2018-09-28 14:54:01.452370000 +0100
-+++ xen-4.7.0_copie/tools/libxc/xc_domain.c	2016-06-20 11:38:15.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/libxc/xc_domain.c xen-4.7.0/tools/libxc/xc_domain.c
+--- xen-4.7.0_copie/tools/libxc/xc_domain.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxc/xc_domain.c	2018-09-28 14:54:01.452370000 +0100
 @@ -582,7 +582,7 @@
  }
  
  
--int  xc_shadow_control(xc_interface *xch,
-+int xc_shadow_control(xc_interface *xch,
+-int xc_shadow_control(xc_interface *xch,
++int  xc_shadow_control(xc_interface *xch,
                        uint32_t domid,
                        unsigned int sop,
                        xc_hypercall_buffer_t *dirty_bitmap,
@@ -810,55 +811,55 @@ Seulement dans xen-4.7.0/tools/libxc: xc_pm.o
 Seulement dans xen-4.7.0/tools/libxc: .xc_pm.o.d
 Seulement dans xen-4.7.0/tools/libxc: xc_pm.opic
 Seulement dans xen-4.7.0/tools/libxc: .xc_pm.opic.d
-diff -ur xen-4.7.0/tools/libxc/xc_private.h xen-4.7.0_copie/tools/libxc/xc_private.h
---- xen-4.7.0/tools/libxc/xc_private.h	2018-09-28 14:54:01.452370000 +0100
-+++ xen-4.7.0_copie/tools/libxc/xc_private.h	2016-06-20 11:38:15.000000000 +0100
-@@ -267,12 +267,11 @@
+diff -ur xen-4.7.0_copie/tools/libxc/xc_private.h xen-4.7.0/tools/libxc/xc_private.h
+--- xen-4.7.0_copie/tools/libxc/xc_private.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxc/xc_private.h	2018-09-28 14:54:01.452370000 +0100
+@@ -267,11 +267,12 @@
      if ( xc_hypercall_bounce_pre(xch, domctl) )
      {
          PERROR("Could not bounce buffer for domctl hypercall");
--        goto out1; 
-+        goto out1;
+-        goto out1;
++        goto out1; 
      }
  
      ret = xencall1(xch->xcall, __HYPERVISOR_domctl,
                     HYPERCALL_BUFFER_AS_ARG(domctl));
--    //printf("ret:%d\n",ret);
++    //printf("ret:%d\n",ret);
      if ( ret < 0 )
      {
          if ( errno == EACCES )
-@@ -285,34 +284,6 @@
+@@ -284,6 +285,34 @@
      return ret;
  }
  
--static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl)
--{
--    int ret = -2;
--    DECLARE_HYPERCALL_BOUNCE(domctl, sizeof(*domctl), XC_HYPERCALL_BUFFER_BOUNCE_BOTH);
--    printf("\n %s:%d:%s\n",__FILE__,__LINE__,__func__);
--
--    domctl->interface_version = XEN_DOMCTL_INTERFACE_VERSION;
--
--    if ( xc_hypercall_bounce_pre(xch, domctl) )
--    {
--        PERROR("Could not bounce buffer for domctl hypercall");
--       // goto out1;
--    }
--
--    ret = xencall1(xch->xcall, __HYPERVISOR_test_hypercall,
--                   HYPERCALL_BUFFER_AS_ARG(domctl));
--    if ( ret < 0 )
--    {
--        if ( errno == EACCES )
--            DPRINTF("domctl operation failed -- need to"
--                    " rebuild the user-space tool set?\n");
--    }
--
--    xc_hypercall_bounce_post(xch, domctl);
-- //out1:
--    return ret;
--}
--
++static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl)
++{
++    int ret = -2;
++    DECLARE_HYPERCALL_BOUNCE(domctl, sizeof(*domctl), XC_HYPERCALL_BUFFER_BOUNCE_BOTH);
++    printf("\n %s:%d:%s\n",__FILE__,__LINE__,__func__);
++
++    domctl->interface_version = XEN_DOMCTL_INTERFACE_VERSION;
++
++    if ( xc_hypercall_bounce_pre(xch, domctl) )
++    {
++        PERROR("Could not bounce buffer for domctl hypercall");
++       // goto out1;
++    }
++
++    ret = xencall1(xch->xcall, __HYPERVISOR_test_hypercall,
++                   HYPERCALL_BUFFER_AS_ARG(domctl));
++    if ( ret < 0 )
++    {
++        if ( errno == EACCES )
++            DPRINTF("domctl operation failed -- need to"
++                    " rebuild the user-space tool set?\n");
++    }
++
++    xc_hypercall_bounce_post(xch, domctl);
++ //out1:
++    return ret;
++}
++
  static inline int do_sysctl(xc_interface *xch, struct xen_sysctl *sysctl)
  {
      int ret = -1;
@@ -906,125 +907,125 @@ Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_pv.o
 Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_pv.o.d
 Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_pv.opic
 Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_pv.opic.d
-diff -ur xen-4.7.0/tools/libxc/xc_sr_save.c xen-4.7.0_copie/tools/libxc/xc_sr_save.c
---- xen-4.7.0/tools/libxc/xc_sr_save.c	2018-09-28 14:54:01.452370000 +0100
-+++ xen-4.7.0_copie/tools/libxc/xc_sr_save.c	2016-06-20 11:38:15.000000000 +0100
-@@ -1,6 +1,5 @@
+diff -ur xen-4.7.0_copie/tools/libxc/xc_sr_save.c xen-4.7.0/tools/libxc/xc_sr_save.c
+--- xen-4.7.0_copie/tools/libxc/xc_sr_save.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxc/xc_sr_save.c	2018-09-28 14:54:01.452370000 +0100
+@@ -1,5 +1,6 @@
  #include <assert.h>
  #include <arpa/inet.h>
--#include <unistd.h>
++#include <unistd.h>
  
  #include "xc_sr_common.h"
  
-@@ -478,7 +477,6 @@
+@@ -477,6 +478,7 @@
      unsigned x;
      int rc;
  
--    printf("ctx->save.p2m_size : %lu",ctx->save.p2m_size);
++    printf("ctx->save.p2m_size : %lu",ctx->save.p2m_size);
      rc = update_progress_string(ctx, &progress_str, 0);
      if ( rc )
          goto out;
-@@ -635,70 +633,6 @@
+@@ -633,6 +635,70 @@
      return rc;
  }
  
--int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap)
--{
--    int rc;
--    unsigned long p2m_size=1045504;//=0xff400;
--    xen_pfn_t nr_pfns;
--    unsigned long *db=malloc(sizeof(unsigned long) * p2m_size);
--
--    DECLARE_DOMCTL;
--    DECLARE_HYPERCALL_BOUNCE(db, p2m_size * sizeof(*db), XC_HYPERCALL_BUFFER_BOUNCE_OUT);
--    memset(&domctl, 0, sizeof(domctl));
--
--    if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
--    {
--        PERROR("Unable to obtain p2m_size");
--        //goto out;
--    }
--
--    //p2m_size =(unsigned long)nr_pfns;
--    //for(i=0; i<10; i++) printf("%lu - ",db[i]);
--    //printf("%lu\n",db[32]);
--
--    domctl.cmd = XEN_DOMCTL_shadow_op;
--    domctl.domain = (domid_t)dom;
--    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_PEEK;
--    domctl.u.shadow_op.pages  = p2m_size;
--    set_xen_guest_handle(domctl.u.shadow_op.dirty_bitmap, db);
--
--    rc = do_domctl(xch, &domctl);
--    printf("%lu\n",db[32]);
--
--    xc_hypercall_bounce_post(xch, db);
--
--    //out:
--      //  return rc;
--    return rc;
--}
--
--int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom)
--{
--    int rc;
--    unsigned long p2m_size=1045504;//=0xff400;
--    //xen_pfn_t nr_pfns;
--
--    DECLARE_DOMCTL;
--    memset(&domctl, 0, sizeof(domctl));
--
--    /*if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
--    {
--        PERROR("Unable to obtain p2m_size");
--        goto out;
--    }*/
--
--    domctl.cmd = XEN_DOMCTL_shadow_op;
--    domctl.domain = (domid_t)dom;
--    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_CLEAN;
--    domctl.u.shadow_op.pages  = p2m_size;
--
--    rc = do_domctl(xch, &domctl);
--
--    /*out:
--        return rc;*/
--    return rc;
--}
--
++int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap)
++{
++    int rc;
++    unsigned long p2m_size=1045504;//=0xff400;
++    xen_pfn_t nr_pfns;
++    unsigned long *db=malloc(sizeof(unsigned long) * p2m_size);
++
++    DECLARE_DOMCTL;
++    DECLARE_HYPERCALL_BOUNCE(db, p2m_size * sizeof(*db), XC_HYPERCALL_BUFFER_BOUNCE_OUT);
++    memset(&domctl, 0, sizeof(domctl));
++
++    if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
++    {
++        PERROR("Unable to obtain p2m_size");
++        //goto out;
++    }
++
++    //p2m_size =(unsigned long)nr_pfns;
++    //for(i=0; i<10; i++) printf("%lu - ",db[i]);
++    //printf("%lu\n",db[32]);
++
++    domctl.cmd = XEN_DOMCTL_shadow_op;
++    domctl.domain = (domid_t)dom;
++    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_PEEK;
++    domctl.u.shadow_op.pages  = p2m_size;
++    set_xen_guest_handle(domctl.u.shadow_op.dirty_bitmap, db);
++
++    rc = do_domctl(xch, &domctl);
++    printf("%lu\n",db[32]);
++
++    xc_hypercall_bounce_post(xch, db);
++
++    //out:
++      //  return rc;
++    return rc;
++}
++
++int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom)
++{
++    int rc;
++    unsigned long p2m_size=1045504;//=0xff400;
++    //xen_pfn_t nr_pfns;
++
++    DECLARE_DOMCTL;
++    memset(&domctl, 0, sizeof(domctl));
++
++    /*if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
++    {
++        PERROR("Unable to obtain p2m_size");
++        goto out;
++    }*/
++
++    domctl.cmd = XEN_DOMCTL_shadow_op;
++    domctl.domain = (domid_t)dom;
++    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_CLEAN;
++    domctl.u.shadow_op.pages  = p2m_size;
++
++    rc = do_domctl(xch, &domctl);
++
++    /*out:
++        return rc;*/
++    return rc;
++}
++
  static int verify_frames(struct xc_sr_context *ctx)
  {
      xc_interface *xch = ctx->xch;
-@@ -980,32 +914,6 @@
+@@ -914,6 +980,32 @@
  
      return rc;
  };
--  
--int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom)
--{
--    int rc; 
--    DECLARE_DOMCTL;
--    memset(&domctl, 0, sizeof(domctl));
--    domctl.cmd = XEN_DOMCTL_shadow_op;
--    domctl.domain = (domid_t)dom;
--    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY;
--    rc = do_domctl(xch, &domctl);
--    //printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
--    return rc;
--}
--
--int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom)
--{
--    int rc;
--    DECLARE_DOMCTL;
--    memset(&domctl, 0, sizeof(domctl));
--    domctl.cmd = XEN_DOMCTL_shadow_op;
--    domctl.domain = (domid_t)dom;
--    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_OFF;
--    //printf("\n%s:%d:%s\n",__FILE__,__LINE__,__func__);
--    rc = do_domctl(xch, &domctl);
--    return rc;
--}
++  
++int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom)
++{
++    int rc; 
++    DECLARE_DOMCTL;
++    memset(&domctl, 0, sizeof(domctl));
++    domctl.cmd = XEN_DOMCTL_shadow_op;
++    domctl.domain = (domid_t)dom;
++    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY;
++    rc = do_domctl(xch, &domctl);
++    //printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
++    return rc;
++}
++
++int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom)
++{
++    int rc;
++    DECLARE_DOMCTL;
++    memset(&domctl, 0, sizeof(domctl));
++    domctl.cmd = XEN_DOMCTL_shadow_op;
++    domctl.domain = (domid_t)dom;
++    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_OFF;
++    //printf("\n%s:%d:%s\n",__FILE__,__LINE__,__func__);
++    rc = do_domctl(xch, &domctl);
++    return rc;
++}
  
  int xc_domain_save(xc_interface *xch, int io_fd, uint32_t dom,
                     uint32_t max_iters, uint32_t max_factor, uint32_t flags,
@@ -1137,64 +1138,64 @@ Seulement dans xen-4.7.0/tools/libxl: .libxl_remus.o.d
 Seulement dans xen-4.7.0/tools/libxl: libxl_save_callout.o
 Seulement dans xen-4.7.0/tools/libxl: .libxl_save_callout.o.d
 Seulement dans xen-4.7.0/tools/libxl: libxl-save-helper
-diff -ur xen-4.7.0/tools/libxl/libxl_save_helper.c xen-4.7.0_copie/tools/libxl/libxl_save_helper.c
---- xen-4.7.0/tools/libxl/libxl_save_helper.c	2018-09-28 14:54:01.460386000 +0100
-+++ xen-4.7.0_copie/tools/libxl/libxl_save_helper.c	2016-06-20 11:38:15.000000000 +0100
-@@ -37,7 +37,6 @@
+diff -ur xen-4.7.0_copie/tools/libxl/libxl_save_helper.c xen-4.7.0/tools/libxl/libxl_save_helper.c
+--- xen-4.7.0_copie/tools/libxl/libxl_save_helper.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxl/libxl_save_helper.c	2018-09-28 14:54:01.460386000 +0100
+@@ -37,6 +37,7 @@
  #include "libxl_osdeps.h"
  
  #include <stdlib.h>
--#include <stdio.h>
++#include <stdio.h>
  #include <unistd.h>
  #include <assert.h>
  #include <inttypes.h>
-@@ -245,7 +244,7 @@
+@@ -244,7 +245,7 @@
  #define NEXTARG (++argv, assert(*argv), *argv)
  
      const char *mode = *++argv;
--    assert(mode); 
-+    assert(mode);
+-    assert(mode);
++    assert(mode); 
  
      if (!strcmp(mode,"--save-domain")) {
  
-@@ -302,40 +301,6 @@
+@@ -301,6 +302,40 @@
          helper_stub_restore_results(store_mfn,console_mfn,0);
          complete(r);
  
--    } else if (!strcmp(mode,"--enable-log-dirty")) {
--
--        uint32_t dom =                      strtoul(NEXTARG,0,10);
--	  startup("enable");
--	// setup_signals(save_signal_handler);
--	
--        r = xc_domain_enable_log_dirty(xch, dom);
--	 complete(r);
--	   
--    } else if (!strcmp(mode,"--disable-log-dirty")) {
--        uint32_t dom =                      strtoul(NEXTARG,0,10);
--        startup("disable");
--        r = xc_domain_disable_log_dirty(xch, dom);  
--        complete(r);      
--
--    } else if (!strcmp(mode,"--collect_dirty_logs")) {
--        uint32_t dom =                      strtoul(NEXTARG,0,10);
--
--        startup("collect");
--
--        xc_hypercall_buffer_t *dirty_bitmap=NULL;
--        r = xc_domain_collect_dirty_logs(xch, dom, dirty_bitmap); 
--
--        complete(r);      
--        
--    }else if (!strcmp(mode,"--clean_dirty_bitmap")) {
--        uint32_t dom =                      strtoul(NEXTARG,0,10);
--
--        startup("clean");
--
--        r = xc_domain_clean_dirty_bitmap(xch, dom); 
--
--        complete(r);      
--        
++    } else if (!strcmp(mode,"--enable-log-dirty")) {
++
++        uint32_t dom =                      strtoul(NEXTARG,0,10);
++	  startup("enable");
++	// setup_signals(save_signal_handler);
++	
++        r = xc_domain_enable_log_dirty(xch, dom);
++	 complete(r);
++	   
++    } else if (!strcmp(mode,"--disable-log-dirty")) {
++        uint32_t dom =                      strtoul(NEXTARG,0,10);
++        startup("disable");
++        r = xc_domain_disable_log_dirty(xch, dom);  
++        complete(r);      
++
++    } else if (!strcmp(mode,"--collect_dirty_logs")) {
++        uint32_t dom =                      strtoul(NEXTARG,0,10);
++
++        startup("collect");
++
++        xc_hypercall_buffer_t *dirty_bitmap=NULL;
++        r = xc_domain_collect_dirty_logs(xch, dom, dirty_bitmap); 
++
++        complete(r);      
++        
++    }else if (!strcmp(mode,"--clean_dirty_bitmap")) {
++        uint32_t dom =                      strtoul(NEXTARG,0,10);
++
++        startup("clean");
++
++        r = xc_domain_clean_dirty_bitmap(xch, dom); 
++
++        complete(r);      
++        
      } else {
          assert(!"unexpected mode argument");
      }
@@ -1274,132 +1275,132 @@ Seulement dans xen-4.7.0/tools/libxl: .test_timedereg.o.d
 Seulement dans xen-4.7.0/tools/libxl: xenlight.pc
 Seulement dans xen-4.7.0/tools/libxl: xenlight.pc.in
 Seulement dans xen-4.7.0/tools/libxl: xl
-diff -ur xen-4.7.0/tools/libxl/xl_cmdimpl.c xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c
---- xen-4.7.0/tools/libxl/xl_cmdimpl.c	2018-09-28 14:54:01.464394000 +0100
-+++ xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c	2016-06-20 11:38:15.000000000 +0100
-@@ -35,14 +35,13 @@
+diff -ur xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c xen-4.7.0/tools/libxl/xl_cmdimpl.c
+--- xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxl/xl_cmdimpl.c	2018-09-28 14:54:01.464394000 +0100
+@@ -35,13 +35,14 @@
  #include <inttypes.h>
  #include <limits.h>
  #include <xen/hvm/e820.h>
--#include <assert.h>
++#include <assert.h>
  
  #include "libxl.h"
  #include "libxl_utils.h"
  #include "libxl_json.h"
  #include "libxlutil.h"
  #include "xl.h"
-- 
-+
+-
++ 
  /* For calls which return an errno on failure */
  #define CHK_ERRNOVAL( call ) ({                                         \
          int chk_errnoval = (call);                                      \
-@@ -4641,7 +4640,7 @@
+@@ -4640,7 +4641,7 @@
              goto failed_suspend;
          else
              goto failed_resume;
--    } 
-+    }
+-    }
++    } 
  
      //fprintf(stderr, "migration sender: Transfer complete.\n");
      // Should only be printed when debugging as it's a bit messy with
-@@ -5055,6 +5054,7 @@
+@@ -5054,7 +5055,6 @@
          {"live", 0, 0, 0x200},
          COMMON_LONG_OPTS
      };
-+
+-
      SWITCH_FOREACH_OPT(opt, "FC:s:e", opts, "migrate", 2) {
      case 'C':
          config_filename = optarg;
-@@ -5447,40 +5447,6 @@
+@@ -5447,6 +5447,40 @@
      return 0;
  }
  
--int main_enable_log_dirty(int argc, char **argv)
--{
--    int ret;
--    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
--    ret=execl(path,path,"--enable-log-dirty",argv[1],NULL); //argv[1]=domid
--    //printf("%s:%s",argv[0],argv[1]);
--    return ret;
--}
--
--int main_collect_dirty_logs(int argc, char **argv)
--{
--    int ret=0;
--    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
--    ret=execl(path,path,"--collect_dirty_logs",argv[1],NULL);
--    return ret;
--}
--
--int main_clean_dirty_bitmap(int argc, char **argv)
--{
--    int ret=0;
--    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
--    ret=execl(path,path,"--clean_dirty_bitmap",argv[1],NULL);
--    return ret;
--}
--
--int main_disable_log_dirty(int argc, char **argv)
--{
--    int ret;
--    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
--    ret=execl(path,path,"--disable-log-dirty",argv[1],NULL);
--    //printf("%s:%s",argv[0],argv[1]);
--    return ret;
--}
--
++int main_enable_log_dirty(int argc, char **argv)
++{
++    int ret;
++    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
++    ret=execl(path,path,"--enable-log-dirty",argv[1],NULL); //argv[1]=domid
++    //printf("%s:%s",argv[0],argv[1]);
++    return ret;
++}
++
++int main_collect_dirty_logs(int argc, char **argv)
++{
++    int ret=0;
++    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
++    ret=execl(path,path,"--collect_dirty_logs",argv[1],NULL);
++    return ret;
++}
++
++int main_clean_dirty_bitmap(int argc, char **argv)
++{
++    int ret=0;
++    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
++    ret=execl(path,path,"--clean_dirty_bitmap",argv[1],NULL);
++    return ret;
++}
++
++int main_disable_log_dirty(int argc, char **argv)
++{
++    int ret;
++    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
++    ret=execl(path,path,"--disable-log-dirty",argv[1],NULL);
++    //printf("%s:%s",argv[0],argv[1]);
++    return ret;
++}
++
  int main_config_update(int argc, char **argv)
  {
      uint32_t domid;
 Seulement dans xen-4.7.0/tools/libxl: xl_cmdimpl.o
 Seulement dans xen-4.7.0/tools/libxl: .xl_cmdimpl.o.d
-diff -ur xen-4.7.0/tools/libxl/xl_cmdtable.c xen-4.7.0_copie/tools/libxl/xl_cmdtable.c
---- xen-4.7.0/tools/libxl/xl_cmdtable.c	2018-09-28 14:54:01.464394000 +0100
-+++ xen-4.7.0_copie/tools/libxl/xl_cmdtable.c	2016-06-20 11:38:15.000000000 +0100
-@@ -36,30 +36,6 @@
+diff -ur xen-4.7.0_copie/tools/libxl/xl_cmdtable.c xen-4.7.0/tools/libxl/xl_cmdtable.c
+--- xen-4.7.0_copie/tools/libxl/xl_cmdtable.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxl/xl_cmdtable.c	2018-09-28 14:54:01.464394000 +0100
+@@ -36,6 +36,30 @@
        "-A, --vncviewer-autopass\n"
        "                        Pass VNC password to viewer via stdin."
      },
--    { "enable-log-dirty",
--      &main_enable_log_dirty, 1, 1,
--      "Enable log dirty mode for domain <domid>",
--      "[options] [domainid]",
--      "-h                      Print this help.\n"
--    },
--    { "collect-dirty-logs",
--      &main_collect_dirty_logs, 1, 1,
--      "Collect dirty pages from pml buffer for domain <domid>",
--      "[options] [domainid]",
--      "-h                      Print this help.\n"
--    },
--    { "clean-dirty-bitmap",
--      &main_clean_dirty_bitmap, 1, 1,
--      "Clean the dirty bitmap of domain <domid>",
--      "[options] [domainid]",
--      "-h                      Print this help.\n"
--    },
--    { "disable-log-dirty",
--      &main_disable_log_dirty, 1, 1,
--      "Disable log dirty mode for domain <domid>",
--      "[options] [domaid]",
--      "-h                      Print this help.\n"
--    },
++    { "enable-log-dirty",
++      &main_enable_log_dirty, 1, 1,
++      "Enable log dirty mode for domain <domid>",
++      "[options] [domainid]",
++      "-h                      Print this help.\n"
++    },
++    { "collect-dirty-logs",
++      &main_collect_dirty_logs, 1, 1,
++      "Collect dirty pages from pml buffer for domain <domid>",
++      "[options] [domainid]",
++      "-h                      Print this help.\n"
++    },
++    { "clean-dirty-bitmap",
++      &main_clean_dirty_bitmap, 1, 1,
++      "Clean the dirty bitmap of domain <domid>",
++      "[options] [domainid]",
++      "-h                      Print this help.\n"
++    },
++    { "disable-log-dirty",
++      &main_disable_log_dirty, 1, 1,
++      "Disable log dirty mode for domain <domid>",
++      "[options] [domaid]",
++      "-h                      Print this help.\n"
++    },
      { "config-update",
        &main_config_update, 1, 1,
        "Update a running domain's saved configuration, used when rebuilding "
 Seulement dans xen-4.7.0/tools/libxl: xl_cmdtable.o
 Seulement dans xen-4.7.0/tools/libxl: .xl_cmdtable.o.d
-diff -ur xen-4.7.0/tools/libxl/xl.h xen-4.7.0_copie/tools/libxl/xl.h
---- xen-4.7.0/tools/libxl/xl.h	2018-09-28 14:54:01.464394000 +0100
-+++ xen-4.7.0_copie/tools/libxl/xl.h	2016-06-20 11:38:15.000000000 +0100
-@@ -65,10 +65,6 @@
+diff -ur xen-4.7.0_copie/tools/libxl/xl.h xen-4.7.0/tools/libxl/xl.h
+--- xen-4.7.0_copie/tools/libxl/xl.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/tools/libxl/xl.h	2018-09-28 14:54:01.464394000 +0100
+@@ -65,6 +65,10 @@
  int main_list(int argc, char **argv);
  int main_vm_list(int argc, char **argv);
  int main_create(int argc, char **argv);
--int main_enable_log_dirty(int argc, char **argv);
--int main_collect_dirty_logs(int argc, char **argv);
--int main_clean_dirty_bitmap(int argc, char **argv);
--int main_disable_log_dirty(int argc, char **argv);
++int main_enable_log_dirty(int argc, char **argv);
++int main_collect_dirty_logs(int argc, char **argv);
++int main_clean_dirty_bitmap(int argc, char **argv);
++int main_disable_log_dirty(int argc, char **argv);
  int main_config_update(int argc, char **argv);
  int main_button_press(int argc, char **argv);
  int main_vcpupin(int argc, char **argv);
@@ -1470,15 +1471,15 @@ Seulement dans xen-4.7.0/tools/pygrub: build
 Seulement dans xen-4.7.0/tools/pygrub: .build.d
 Seulement dans xen-4.7.0/tools/python: build
 Seulement dans xen-4.7.0/tools/python: .install.d
-diff -ur xen-4.7.0/tools/qemu-xen/po/de_DE.po xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po
---- xen-4.7.0/tools/qemu-xen/po/de_DE.po	2018-09-28 15:39:19.962405961 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po xen-4.7.0/tools/qemu-xen/po/de_DE.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/de_DE.po	2018-09-28 15:39:19.962405961 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 1.4.50\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2014-07-17 20:39+0200\n"
+-"POT-Creation-Date: 2014-07-17 20:39+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2012-02-28 16:00+0100\n"
  "Last-Translator: Kevin Wolf <kwolf@redhat.com>\n"
  "Language-Team: Deutsch <de@li.org>\n"
@@ -1486,99 +1487,99 @@ diff -ur xen-4.7.0/tools/qemu-xen/po/de_DE.po xen-4.7.0_copie/tools/qemu-xen/po/
  "Content-Transfer-Encoding: 8bit\n"
  "Plural-Forms: nplurals=2; plural=(n!=1);\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:321
+-#: ui/gtk.c:321
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr " - Strg+Alt+G drücken, um Eingabegeräte freizugeben"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:325
+-#: ui/gtk.c:325
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [Angehalten]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1601
+-#: ui/gtk.c:1601
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "_Angehalten"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1607
+-#: ui/gtk.c:1607
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "_Reset"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1610
+-#: ui/gtk.c:1610
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "_Herunterfahren"
  
--#: ui/gtk.c:1703
-+#: ui/gtk.c:1616
+-#: ui/gtk.c:1616
++#: ui/gtk.c:1703
  msgid "_Quit"
  msgstr "_Beenden"
  
--#: ui/gtk.c:1787
-+#: ui/gtk.c:1692
+-#: ui/gtk.c:1692
++#: ui/gtk.c:1787
  msgid "_Fullscreen"
  msgstr "_Vollbild"
  
--#: ui/gtk.c:1801
-+#: ui/gtk.c:1702
+-#: ui/gtk.c:1702
++#: ui/gtk.c:1801
  msgid "Zoom _In"
  msgstr "_Heranzoomen"
  
--#: ui/gtk.c:1808
-+#: ui/gtk.c:1709
+-#: ui/gtk.c:1709
++#: ui/gtk.c:1808
  msgid "Zoom _Out"
  msgstr "_Wegzoomen"
  
--#: ui/gtk.c:1815
-+#: ui/gtk.c:1716
+-#: ui/gtk.c:1716
++#: ui/gtk.c:1815
  msgid "Best _Fit"
  msgstr "_Einpassen"
  
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1723
+-#: ui/gtk.c:1723
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "Auf _Fenstergröße skalieren"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1729
+-#: ui/gtk.c:1729
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "Tastatur _automatisch einfangen"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1732
+-#: ui/gtk.c:1732
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "_Eingabegeräte einfangen"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1761
+-#: ui/gtk.c:1761
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "Reiter anzeigen"
  
--#: ui/gtk.c:1863
-+#: ui/gtk.c:1764
+-#: ui/gtk.c:1764
++#: ui/gtk.c:1863
  msgid "Detach Tab"
  msgstr "Reiter abtrennen"
  
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1778
+-#: ui/gtk.c:1778
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "_Maschine"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1783
+-#: ui/gtk.c:1783
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "_Ansicht"
-diff -ur xen-4.7.0/tools/qemu-xen/po/fr_FR.po xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po
---- xen-4.7.0/tools/qemu-xen/po/fr_FR.po	2018-09-28 15:39:19.998423991 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po xen-4.7.0/tools/qemu-xen/po/fr_FR.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/fr_FR.po	2018-09-28 15:39:19.998423991 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 1.4.50\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2014-07-28 23:14+0200\n"
+-"POT-Creation-Date: 2014-07-28 23:14+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2014-07-28 23:25+0200\n"
  "Last-Translator: Aurelien Jarno <aurelien@aurel32.net>\n"
  "Language-Team: French <FR@li.org>\n"
@@ -1586,488 +1587,488 @@ diff -ur xen-4.7.0/tools/qemu-xen/po/fr_FR.po xen-4.7.0_copie/tools/qemu-xen/po/
  "Plural-Forms: nplurals=2; plural=n != 1;\n"
  "X-Generator: Lokalize 1.4\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:321
+-#: ui/gtk.c:321
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr "- Appuyer sur Ctrl+Alt+G pour arrêter la capture"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:325
+-#: ui/gtk.c:325
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [En pause]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1601
+-#: ui/gtk.c:1601
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "_Pause"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1607
+-#: ui/gtk.c:1607
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "_Réinitialiser"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1610
+-#: ui/gtk.c:1610
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "_Éteindre"
  
--#: ui/gtk.c:1703
-+#: ui/gtk.c:1616
+-#: ui/gtk.c:1616
++#: ui/gtk.c:1703
  msgid "_Quit"
  msgstr "_Quitter"
  
--#: ui/gtk.c:1787
-+#: ui/gtk.c:1692
+-#: ui/gtk.c:1692
++#: ui/gtk.c:1787
  msgid "_Fullscreen"
  msgstr "Mode _plein écran"
  
--#: ui/gtk.c:1801
-+#: ui/gtk.c:1702
+-#: ui/gtk.c:1702
++#: ui/gtk.c:1801
  msgid "Zoom _In"
  msgstr "Zoom _avant"
  
--#: ui/gtk.c:1808
-+#: ui/gtk.c:1709
+-#: ui/gtk.c:1709
++#: ui/gtk.c:1808
  msgid "Zoom _Out"
  msgstr "_Zoom arrière"
  
--#: ui/gtk.c:1815
-+#: ui/gtk.c:1716
+-#: ui/gtk.c:1716
++#: ui/gtk.c:1815
  msgid "Best _Fit"
  msgstr "Zoom _idéal"
  
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1723
+-#: ui/gtk.c:1723
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "Zoomer pour a_juster"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1729
+-#: ui/gtk.c:1729
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "Capturer en _survolant"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1732
+-#: ui/gtk.c:1732
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "_Capturer les entrées"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1761
+-#: ui/gtk.c:1761
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "Montrer les _onglets"
  
--#: ui/gtk.c:1863
-+#: ui/gtk.c:1764
+-#: ui/gtk.c:1764
++#: ui/gtk.c:1863
  msgid "Detach Tab"
  msgstr "_Détacher l'onglet"
  
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1778
+-#: ui/gtk.c:1778
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "_Machine"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1783
+-#: ui/gtk.c:1783
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "_Vue"
-diff -ur xen-4.7.0/tools/qemu-xen/po/hu.po xen-4.7.0_copie/tools/qemu-xen/po/hu.po
---- xen-4.7.0/tools/qemu-xen/po/hu.po	2018-09-28 15:39:19.966407964 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/hu.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/hu.po xen-4.7.0/tools/qemu-xen/po/hu.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/hu.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/hu.po	2018-09-28 15:39:19.966407964 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 1.4.50\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+-"POT-Creation-Date: 2013-07-05 22:36+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2013-05-06 20:42+0200\n"
  "Last-Translator: Ákos Kovács <akoskovacs@gmx.com>\n"
  "Language-Team: Hungarian <hu@li.org>\n"
-@@ -15,73 +15,47 @@
+@@ -15,47 +15,73 @@
  "Content-Type: text/plain; charset=UTF-8\n"
  "Content-Transfer-Encoding: 8bit\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:214
+-#: ui/gtk.c:214
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr " - Nyomj Ctrl+Alt+G-t a bemeneti eszközök elengedéséhez"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:218
+-#: ui/gtk.c:218
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [Megállítva]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1318
+-#: ui/gtk.c:1318
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "_Megállítás"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1324
+-#: ui/gtk.c:1324
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "Új_raindítás"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1327
+-#: ui/gtk.c:1327
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "_Leállítás"
  
--#: ui/gtk.c:1703
--msgid "_Quit"
--msgstr ""
--
--#: ui/gtk.c:1787
--msgid "_Fullscreen"
--msgstr ""
--
--#: ui/gtk.c:1801
--#, fuzzy
--msgid "Zoom _In"
--msgstr "Ablakmérethez _igazítás"
--
--#: ui/gtk.c:1808
--#, fuzzy
--msgid "Zoom _Out"
--msgstr "Ablakmérethez _igazítás"
--
--#: ui/gtk.c:1815
--msgid "Best _Fit"
--msgstr ""
--
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1381
+-#: ui/gtk.c:1381
++#: ui/gtk.c:1703
++msgid "_Quit"
++msgstr ""
++
++#: ui/gtk.c:1787
++msgid "_Fullscreen"
++msgstr ""
++
++#: ui/gtk.c:1801
++#, fuzzy
++msgid "Zoom _In"
++msgstr "Ablakmérethez _igazítás"
++
++#: ui/gtk.c:1808
++#, fuzzy
++msgid "Zoom _Out"
++msgstr "Ablakmérethez _igazítás"
++
++#: ui/gtk.c:1815
++msgid "Best _Fit"
++msgstr ""
++
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "Ablakmérethez _igazítás"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1387
+-#: ui/gtk.c:1387
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "Automatikus _elfogás"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1390
+-#: ui/gtk.c:1390
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "_Bemeneti eszközök megragadása"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1416
+-#: ui/gtk.c:1416
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "_Fülek megjelenítése"
  
--#: ui/gtk.c:1863
--msgid "Detach Tab"
--msgstr ""
--
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1430
+-#: ui/gtk.c:1430
++#: ui/gtk.c:1863
++msgid "Detach Tab"
++msgstr ""
++
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "_Gép"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1435
+-#: ui/gtk.c:1435
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "_Nézet"
  
-diff -ur xen-4.7.0/tools/qemu-xen/po/it.po xen-4.7.0_copie/tools/qemu-xen/po/it.po
---- xen-4.7.0/tools/qemu-xen/po/it.po	2018-09-28 15:39:19.998423991 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/it.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/it.po xen-4.7.0/tools/qemu-xen/po/it.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/it.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/it.po	2018-09-28 15:39:19.998423991 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 1.4.50\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2014-07-29 08:14+0200\n"
+-"POT-Creation-Date: 2014-07-29 08:14+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2014-07-29 08:25+0200\n"
  "Last-Translator: Paolo Bonzini <pbonzini@redhat.com>\n"
  "Language-Team: Italian <it@li.org>\n"
-@@ -16,70 +16,66 @@
+@@ -16,66 +16,70 @@
  "Content-Transfer-Encoding: 8bit\n"
  "Plural-Forms: nplurals=2; plural=n != 1;\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:321
+-#: ui/gtk.c:321
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr " - Premere Ctrl+Alt+G per rilasciare l'input"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:325
+-#: ui/gtk.c:325
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [Pausa]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1601
+-#: ui/gtk.c:1601
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "_Pausa"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1607
+-#: ui/gtk.c:1607
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "_Reset"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1610
+-#: ui/gtk.c:1610
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "_Spegni"
  
--#: ui/gtk.c:1703
-+#: ui/gtk.c:1616
+-#: ui/gtk.c:1616
++#: ui/gtk.c:1703
  msgid "_Quit"
  msgstr "_Esci"
  
--#: ui/gtk.c:1787
--msgid "_Fullscreen"
--msgstr ""
--
--#: ui/gtk.c:1801
-+#: ui/gtk.c:1702
+-#: ui/gtk.c:1702
++#: ui/gtk.c:1787
++msgid "_Fullscreen"
++msgstr ""
++
++#: ui/gtk.c:1801
  msgid "Zoom _In"
  msgstr "_Aumenta zoom"
  
--#: ui/gtk.c:1808
-+#: ui/gtk.c:1709
+-#: ui/gtk.c:1709
++#: ui/gtk.c:1808
  msgid "Zoom _Out"
  msgstr "_Riduci zoom"
  
--#: ui/gtk.c:1815
-+#: ui/gtk.c:1716
+-#: ui/gtk.c:1716
++#: ui/gtk.c:1815
  msgid "Best _Fit"
  msgstr "A_nnulla zoom"
  
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1723
+-#: ui/gtk.c:1723
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "Adatta alla _finestra"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1729
+-#: ui/gtk.c:1729
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "Cattura _automatica input"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1732
+-#: ui/gtk.c:1732
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "_Cattura input"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1761
+-#: ui/gtk.c:1761
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "Mostra _tab"
  
--#: ui/gtk.c:1863
-+#: ui/gtk.c:1764
+-#: ui/gtk.c:1764
++#: ui/gtk.c:1863
  msgid "Detach Tab"
  msgstr "_Sposta in una nuova finestra"
  
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1778
+-#: ui/gtk.c:1778
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "_Macchina virtuale"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1783
+-#: ui/gtk.c:1783
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "_Visualizza"
-diff -ur xen-4.7.0/tools/qemu-xen/po/messages.po xen-4.7.0_copie/tools/qemu-xen/po/messages.po
---- xen-4.7.0/tools/qemu-xen/po/messages.po	2018-09-28 15:39:19.918383925 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/messages.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/messages.po xen-4.7.0/tools/qemu-xen/po/messages.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/messages.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/messages.po	2018-09-28 15:39:19.918383925 +0100
 @@ -5,9 +5,9 @@
  #, fuzzy
  msgid ""
  msgstr ""
--"Project-Id-Version: QEMU 2.4.1\n"
-+"Project-Id-Version: QEMU 1.5.50\n"
+-"Project-Id-Version: QEMU 1.5.50\n"
++"Project-Id-Version: QEMU 2.4.1\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+-"POT-Creation-Date: 2013-07-05 22:36+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
  "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
  "Language-Team: LANGUAGE <LL@li.org>\n"
-@@ -16,70 +16,46 @@
+@@ -16,46 +16,70 @@
  "Content-Type: text/plain; charset=UTF-8\n"
  "Content-Transfer-Encoding: 8bit\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:214
+-#: ui/gtk.c:214
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr ""
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:218
+-#: ui/gtk.c:218
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr ""
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1318
+-#: ui/gtk.c:1318
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr ""
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1324
+-#: ui/gtk.c:1324
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr ""
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1327
+-#: ui/gtk.c:1327
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr ""
  
--#: ui/gtk.c:1703
--msgid "_Quit"
--msgstr ""
--
--#: ui/gtk.c:1787
--msgid "_Fullscreen"
--msgstr ""
--
--#: ui/gtk.c:1801
--msgid "Zoom _In"
--msgstr ""
--
--#: ui/gtk.c:1808
--msgid "Zoom _Out"
--msgstr ""
--
--#: ui/gtk.c:1815
--msgid "Best _Fit"
--msgstr ""
--
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1381
+-#: ui/gtk.c:1381
++#: ui/gtk.c:1703
++msgid "_Quit"
++msgstr ""
++
++#: ui/gtk.c:1787
++msgid "_Fullscreen"
++msgstr ""
++
++#: ui/gtk.c:1801
++msgid "Zoom _In"
++msgstr ""
++
++#: ui/gtk.c:1808
++msgid "Zoom _Out"
++msgstr ""
++
++#: ui/gtk.c:1815
++msgid "Best _Fit"
++msgstr ""
++
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr ""
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1387
+-#: ui/gtk.c:1387
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr ""
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1390
+-#: ui/gtk.c:1390
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr ""
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1416
+-#: ui/gtk.c:1416
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr ""
  
--#: ui/gtk.c:1863
--msgid "Detach Tab"
--msgstr ""
--
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1430
+-#: ui/gtk.c:1430
++#: ui/gtk.c:1863
++msgid "Detach Tab"
++msgstr ""
++
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr ""
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1435
+-#: ui/gtk.c:1435
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr ""
-diff -ur xen-4.7.0/tools/qemu-xen/po/tr.po xen-4.7.0_copie/tools/qemu-xen/po/tr.po
---- xen-4.7.0/tools/qemu-xen/po/tr.po	2018-09-28 15:39:19.998423991 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/tr.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/tr.po xen-4.7.0/tools/qemu-xen/po/tr.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/tr.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/tr.po	2018-09-28 15:39:19.998423991 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 1.4.50\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+-"POT-Creation-Date: 2013-07-05 22:36+0200\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2013-04-22 18:35+0300\n"
  "Last-Translator: Ozan Çağlayan <ozancag@gmail.com>\n"
  "Language-Team: Türkçe <>\n"
-@@ -17,72 +17,46 @@
+@@ -17,46 +17,72 @@
  "Plural-Forms: nplurals=1; plural=0;\n"
  "X-Generator: Gtranslator 2.91.6\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:214
+-#: ui/gtk.c:214
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr " - Yakalamayı durdurmak için Ctrl+Alt+G tuşlarına basın"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:218
+-#: ui/gtk.c:218
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [Duraklatıldı]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1318
+-#: ui/gtk.c:1318
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "_Duraklat"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1324
+-#: ui/gtk.c:1324
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "_Sıfırla"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1327
+-#: ui/gtk.c:1327
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "_Kapat"
  
--#: ui/gtk.c:1703
--msgid "_Quit"
--msgstr ""
--
--#: ui/gtk.c:1787
--msgid "_Fullscreen"
--msgstr ""
--
--#: ui/gtk.c:1801
--#, fuzzy
--msgid "Zoom _In"
--msgstr "Yakınlaş ve Sığ_dır"
--
--#: ui/gtk.c:1808
--#, fuzzy
--msgid "Zoom _Out"
--msgstr "Yakınlaş ve Sığ_dır"
--
--#: ui/gtk.c:1815
--msgid "Best _Fit"
--msgstr ""
--
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1381
+-#: ui/gtk.c:1381
++#: ui/gtk.c:1703
++msgid "_Quit"
++msgstr ""
++
++#: ui/gtk.c:1787
++msgid "_Fullscreen"
++msgstr ""
++
++#: ui/gtk.c:1801
++#, fuzzy
++msgid "Zoom _In"
++msgstr "Yakınlaş ve Sığ_dır"
++
++#: ui/gtk.c:1808
++#, fuzzy
++msgid "Zoom _Out"
++msgstr "Yakınlaş ve Sığ_dır"
++
++#: ui/gtk.c:1815
++msgid "Best _Fit"
++msgstr ""
++
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "Yakınlaş ve Sığ_dır"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1387
+-#: ui/gtk.c:1387
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "Ü_zerindeyken Yakala"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1390
+-#: ui/gtk.c:1390
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "Girdiyi _Yakala"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1416
+-#: ui/gtk.c:1416
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "Se_kmeleri Göster"
  
--#: ui/gtk.c:1863
--msgid "Detach Tab"
--msgstr ""
--
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1430
+-#: ui/gtk.c:1430
++#: ui/gtk.c:1863
++msgid "Detach Tab"
++msgstr ""
++
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "_Makine"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1435
+-#: ui/gtk.c:1435
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "_Görüntüle"
-diff -ur xen-4.7.0/tools/qemu-xen/po/zh_CN.po xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po
---- xen-4.7.0/tools/qemu-xen/po/zh_CN.po	2018-09-28 15:39:19.998423991 +0100
-+++ xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po	2016-05-26 17:35:36.000000000 +0100
+diff -ur xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po xen-4.7.0/tools/qemu-xen/po/zh_CN.po
+--- xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po	2016-05-26 17:35:36.000000000 +0100
++++ xen-4.7.0/tools/qemu-xen/po/zh_CN.po	2018-09-28 15:39:19.998423991 +0100
 @@ -6,7 +6,7 @@
  msgstr ""
  "Project-Id-Version: QEMU 2.2\n"
  "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
--"POT-Creation-Date: 2018-09-28 15:39+0100\n"
-+"POT-Creation-Date: 2014-07-31 10:03+0800\n"
+-"POT-Creation-Date: 2014-07-31 10:03+0800\n"
++"POT-Creation-Date: 2018-09-28 15:39+0100\n"
  "PO-Revision-Date: 2014-07-31 10:00+0800\n"
  "Last-Translator: Fam Zheng <famz@redhat.com>\n"
  "Language-Team: Chinese <zh@li.org>\n"
@@ -2075,88 +2076,88 @@ diff -ur xen-4.7.0/tools/qemu-xen/po/zh_CN.po xen-4.7.0_copie/tools/qemu-xen/po/
  "Plural-Forms: nplurals=2; plural=n != 1;\n"
  "X-Generator: Lokalize 1.4\n"
  
--#: ui/gtk.c:260
-+#: ui/gtk.c:321
+-#: ui/gtk.c:321
++#: ui/gtk.c:260
  msgid " - Press Ctrl+Alt+G to release grab"
  msgstr " - 按下 Ctrl+Alt+G 取消捕获"
  
--#: ui/gtk.c:264
-+#: ui/gtk.c:325
+-#: ui/gtk.c:325
++#: ui/gtk.c:264
  msgid " [Paused]"
  msgstr " [已暂停]"
  
--#: ui/gtk.c:1688
-+#: ui/gtk.c:1601
+-#: ui/gtk.c:1601
++#: ui/gtk.c:1688
  msgid "_Pause"
  msgstr "暂停(_P)"
  
--#: ui/gtk.c:1694
-+#: ui/gtk.c:1607
+-#: ui/gtk.c:1607
++#: ui/gtk.c:1694
  msgid "_Reset"
  msgstr "重置(_R)"
  
--#: ui/gtk.c:1697
-+#: ui/gtk.c:1610
+-#: ui/gtk.c:1610
++#: ui/gtk.c:1697
  msgid "Power _Down"
  msgstr "关闭电源(_D)"
  
--#: ui/gtk.c:1703
-+#: ui/gtk.c:1616
+-#: ui/gtk.c:1616
++#: ui/gtk.c:1703
  msgid "_Quit"
  msgstr "退出(_Q)"
  
--#: ui/gtk.c:1787
-+#: ui/gtk.c:1692
+-#: ui/gtk.c:1692
++#: ui/gtk.c:1787
  msgid "_Fullscreen"
  msgstr "全屏(_F)"
  
--#: ui/gtk.c:1801
-+#: ui/gtk.c:1702
+-#: ui/gtk.c:1702
++#: ui/gtk.c:1801
  msgid "Zoom _In"
  msgstr "放大(_I)"
  
--#: ui/gtk.c:1808
-+#: ui/gtk.c:1709
+-#: ui/gtk.c:1709
++#: ui/gtk.c:1808
  msgid "Zoom _Out"
  msgstr "缩小(_O)"
  
--#: ui/gtk.c:1815
-+#: ui/gtk.c:1716
+-#: ui/gtk.c:1716
++#: ui/gtk.c:1815
  msgid "Best _Fit"
  msgstr "最合适大小(_F)"
  
--#: ui/gtk.c:1822
-+#: ui/gtk.c:1723
+-#: ui/gtk.c:1723
++#: ui/gtk.c:1822
  msgid "Zoom To _Fit"
  msgstr "缩放以适应大小(_F)"
  
--#: ui/gtk.c:1828
-+#: ui/gtk.c:1729
+-#: ui/gtk.c:1729
++#: ui/gtk.c:1828
  msgid "Grab On _Hover"
  msgstr "鼠标经过时捕获(_H)"
  
--#: ui/gtk.c:1831
-+#: ui/gtk.c:1732
+-#: ui/gtk.c:1732
++#: ui/gtk.c:1831
  msgid "_Grab Input"
  msgstr "捕获输入(_G)"
  
--#: ui/gtk.c:1860
-+#: ui/gtk.c:1761
+-#: ui/gtk.c:1761
++#: ui/gtk.c:1860
  msgid "Show _Tabs"
  msgstr "显示标签页(_T)"
  
--#: ui/gtk.c:1863
-+#: ui/gtk.c:1764
+-#: ui/gtk.c:1764
++#: ui/gtk.c:1863
  msgid "Detach Tab"
  msgstr "分离标签页"
  
--#: ui/gtk.c:1875
-+#: ui/gtk.c:1778
+-#: ui/gtk.c:1778
++#: ui/gtk.c:1875
  msgid "_Machine"
  msgstr "虚拟机(_M)"
  
--#: ui/gtk.c:1880
-+#: ui/gtk.c:1783
+-#: ui/gtk.c:1783
++#: ui/gtk.c:1880
  msgid "_View"
  msgstr "视图(_V)"
 Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool/backend: __init__.pyc
@@ -2378,14 +2379,14 @@ Seulement dans xen-4.7.0/xen/arch/x86: domain.o
 Seulement dans xen-4.7.0/xen/arch/x86: .domain.o.d
 Seulement dans xen-4.7.0/xen/arch/x86: domain_page.o
 Seulement dans xen-4.7.0/xen/arch/x86: .domain_page.o.d
-diff -ur xen-4.7.0/xen/arch/x86/domctl.c xen-4.7.0_copie/xen/arch/x86/domctl.c
---- xen-4.7.0/xen/arch/x86/domctl.c	2018-09-28 14:54:01.821103000 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/domctl.c	2016-06-20 11:38:15.000000000 +0100
-@@ -240,7 +240,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/domctl.c xen-4.7.0/xen/arch/x86/domctl.c
+--- xen-4.7.0_copie/xen/arch/x86/domctl.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/domctl.c	2018-09-28 14:54:01.821103000 +0100
+@@ -240,6 +240,7 @@
      long ret = 0;
      bool_t copyback = 0;
      unsigned long i;
--    //printk("arch_do_domctl!!!\n");
++    //printk("arch_do_domctl!!!\n");
  
      switch ( domctl->cmd )
      {
@@ -2498,180 +2499,180 @@ Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: intr.o
 Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .intr.o.d
 Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: realmode.o
 Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .realmode.o.d
-diff -ur xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c
---- xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c	2019-01-03 21:42:41.532195393 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c	2016-06-20 11:38:15.000000000 +0100
-@@ -15,7 +15,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c
+--- xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c	2019-01-03 21:42:41.532195393 +0100
+@@ -15,6 +15,7 @@
   * this program; If not, see <http://www.gnu.org/licenses/>.
   */
  
--#include <xen/time.h>
++#include <xen/time.h>
  #include <xen/config.h>
  #include <xen/init.h>
  #include <xen/mm.h>
-@@ -1417,13 +1416,11 @@
+@@ -1416,11 +1417,13 @@
      return !!(v->arch.hvm_vmx.secondary_exec_control &
                SECONDARY_EXEC_ENABLE_PML);
  }
-- 
-+
+-
++ 
  int vmx_vcpu_enable_pml(struct vcpu *v)
  {
--    //int activate=vmx_vcpu_pml_enabled(v);
++    //int activate=vmx_vcpu_pml_enabled(v);
      if ( vmx_vcpu_pml_enabled(v) )
          return 0;
--    //printk("%s:%d:%s vmx_vcpu_pml_enabled:%d",__FILE__,__LINE__,__func__,activate);
++    //printk("%s:%d:%s vmx_vcpu_pml_enabled:%d",__FILE__,__LINE__,__func__,activate);
  
      v->arch.hvm_vmx.pml_pg = v->domain->arch.paging.alloc_page(v->domain);
      if ( !v->arch.hvm_vmx.pml_pg )
-@@ -1466,12 +1463,8 @@
+@@ -1463,8 +1466,12 @@
  
  void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
  {
--    uint64_t *pml_buf;//uint64_t
-+    uint64_t *pml_buf;
+-    uint64_t *pml_buf;
++    uint64_t *pml_buf;//uint64_t
      unsigned long pml_idx;
--    //unsigned int diff_t;
--    //s_time_t start_t, end_t;
--
--    //start_t = get_s_time();
++    //unsigned int diff_t;
++    //s_time_t start_t, end_t;
++
++    //start_t = get_s_time();
  
      ASSERT((v == current) || (!vcpu_runnable(v) && !v->is_running));
      ASSERT(vmx_vcpu_pml_enabled(v));
-@@ -1485,21 +1478,17 @@
+@@ -1478,17 +1485,21 @@
          goto out;
  
      pml_buf = __map_domain_page(v->arch.hvm_vmx.pml_pg);
--    //printk("%s:%d:%s addresse pml_buf: %p\n",__FILE__,__LINE__,__func__,pml_buf);
++    //printk("%s:%d:%s addresse pml_buf: %p\n",__FILE__,__LINE__,__func__,pml_buf);
  
      /*
       * PML index can be either 2^16-1 (buffer is full), or 0 ~ NR_PML_ENTRIES-1
       * (buffer is not full), and in latter case PML index always points to next
       * available entity.
       */
--   
--   
++   
++   
      if ( pml_idx >= NR_PML_ENTRIES )
          pml_idx = 0;
      else
          pml_idx++;
  
--    //printk("%lu -------- avant \n",pml_idx);
++    //printk("%lu -------- avant \n",pml_idx);
      for ( ; pml_idx < NR_PML_ENTRIES; pml_idx++ )
      {
          unsigned long gfn = pml_buf[pml_idx] >> PAGE_SHIFT;
-@@ -1514,19 +1503,13 @@
+@@ -1503,13 +1514,19 @@
           */
          p2m_change_type_one(v->domain, gfn, p2m_ram_logdirty, p2m_ram_rw);
          paging_mark_gfn_dirty(v->domain, gfn);
--        //printk("gfn : %lx \n",gfn);
++        //printk("gfn : %lx \n",gfn);
      }
--    //printk("%lu -------- apres \n",pml_idx);
++    //printk("%lu -------- apres \n",pml_idx);
  
      unmap_domain_page(pml_buf);
  
      /* Reset PML index */
      __vmwrite(GUEST_PML_INDEX, NR_PML_ENTRIES - 1);
  
--    /*end_t = get_s_time();
--    diff_t = end_t - start_t;
--    printk("##T_flush : %u\n",diff_t);*/
--
++    /*end_t = get_s_time();
++    diff_t = end_t - start_t;
++    printk("##T_flush : %u\n",diff_t);*/
++
   out:
      vmx_vmcs_exit(v);
  }
-@@ -1550,7 +1533,6 @@
+@@ -1533,6 +1550,7 @@
      int rc;
  
      ASSERT(atomic_read(&d->pause_count));
--    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
++    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
  
      if ( vmx_domain_pml_enabled(d) )
          return 0;
 Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: vmcs.o
 Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .vmcs.o.d
-diff -ur xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c
---- xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c	2019-03-06 15:59:42.577758369 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c	2016-06-20 11:38:15.000000000 +0100
-@@ -15,7 +15,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c
+--- xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c	2019-03-06 15:59:42.577758369 +0100
+@@ -15,6 +15,7 @@
   * this program; If not, see <http://www.gnu.org/licenses/>.
   */
  
--#include <xen/time.h>
++#include <xen/time.h>
  #include <xen/config.h>
  #include <xen/init.h>
  #include <xen/lib.h>
-@@ -59,10 +58,8 @@
+@@ -58,8 +59,10 @@
  #include <asm/altp2m.h>
  #include <asm/event.h>
  #include <asm/monitor.h>
--#include <asm/time.h>
++#include <asm/time.h>
  #include <public/arch-x86/cpuid.h>
  
--
++
  static bool_t __initdata opt_force_ept;
  boolean_param("force-ept", opt_force_ept);
  
-@@ -100,13 +97,11 @@
+@@ -97,11 +100,13 @@
  
  uint8_t __read_mostly posted_intr_vector;
  static uint8_t __read_mostly pi_wakeup_vector;
--unsigned int pml_exits;
++unsigned int pml_exits;
  
  void vmx_pi_per_cpu_init(unsigned int cpu)
  {
      INIT_LIST_HEAD(&per_cpu(vmx_pi_blocking, cpu).list);
      spin_lock_init(&per_cpu(vmx_pi_blocking, cpu).lock);
--    pml_exits = 0;
++    pml_exits = 0;
  }
  
  static void vmx_vcpu_block(struct vcpu *v)
-@@ -3190,10 +3185,9 @@
+@@ -3185,9 +3190,10 @@
  
  void vmx_vmexit_handler(struct cpu_user_regs *regs)
  {
--    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0, sleep=0;
--    unsigned int vector = 0, mode, diff_t;
-+    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0;
-+    unsigned int vector = 0, mode;
+-    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0;
+-    unsigned int vector = 0, mode;
++    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0, sleep=0;
++    unsigned int vector = 0, mode, diff_t;
      struct vcpu *v = current;
--    s_time_t start_t=get_s_time(), end_t;
++    s_time_t start_t=get_s_time(), end_t;
  
      __vmread(GUEST_RIP,    &regs->rip);
      __vmread(GUEST_RSP,    &regs->rsp);
-@@ -3708,7 +3702,6 @@
+@@ -3702,6 +3708,7 @@
  
          __vmread(GUEST_PHYSICAL_ADDRESS, &gpa);
          __vmread(EXIT_QUALIFICATION, &exit_qualification);
--        //printk("gpa:%lx",gpa);
++        //printk("gpa:%lx",gpa);
          ept_handle_violation(exit_qualification, gpa);
          break;
      }
-@@ -3751,17 +3744,9 @@
+@@ -3744,9 +3751,17 @@
          break;
  
      case EXIT_REASON_PML_FULL:
--        //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
--        pml_exits = pml_exits+1; 
++        //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
++        pml_exits = pml_exits+1; 
          vmx_vcpu_flush_pml_buffer(v);
--        do{
--            sleep++;
--            end_t = get_s_time();
--            diff_t = end_t - start_t;
--        }while(diff_t < 4000000);
--        printk("##Th : %u, pml_exit = %u\n",diff_t,pml_exits);
++        do{
++            sleep++;
++            end_t = get_s_time();
++            diff_t = end_t - start_t;
++        }while(diff_t < 4000000);
++        printk("##Th : %u, pml_exit = %u\n",diff_t,pml_exits);
          break;
-- 
-+
+-
++ 
      case EXIT_REASON_XSAVES:
          vmx_handle_xsaves();
          break;
-@@ -3793,8 +3778,6 @@
+@@ -3778,6 +3793,8 @@
          break;
      }
  
--
--    //printk("##vmexit\n");
++
++    //printk("##vmexit\n");
  out:
      if ( nestedhvm_vcpu_in_guestmode(v) )
          nvmx_idtv_handling();
@@ -2717,23 +2718,23 @@ Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: guest_walk_3level.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .guest_walk_3level.o.d
 Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: guest_walk_4level.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .guest_walk_4level.o.d
-diff -ur xen-4.7.0/xen/arch/x86/mm/hap/hap.c xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c
---- xen-4.7.0/xen/arch/x86/mm/hap/hap.c	2018-09-28 14:54:01.829119000 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c	2016-06-20 11:38:15.000000000 +0100
+diff -ur xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c xen-4.7.0/xen/arch/x86/mm/hap/hap.c
+--- xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/mm/hap/hap.c	2018-09-28 14:54:01.829119000 +0100
 @@ -136,7 +136,7 @@
              paging_unlock(d);
  
              domain_pause(d);
--            //printk("fffffffffffffffffffffff\n");
-+
+-
++            //printk("fffffffffffffffffffffff\n");
              /* Flush dirty GFNs potentially cached by hardware. */
              p2m_flush_hardware_cached_dirty(d);
  
-@@ -191,7 +191,6 @@
+@@ -191,6 +191,7 @@
  static int hap_enable_log_dirty(struct domain *d, bool_t log_global)
  {
      /* turn on PG_log_dirty bit in paging mode */
--    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
++    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
      paging_lock(d);
      d->arch.paging.mode |= PG_log_dirty;
      paging_unlock(d);
@@ -2747,33 +2748,33 @@ Seulement dans xen-4.7.0/xen/arch/x86/mm: mem_paging.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm: .mem_paging.o.d
 Seulement dans xen-4.7.0/xen/arch/x86/mm: mem_sharing.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm: .mem_sharing.o.d
-diff -ur xen-4.7.0/xen/arch/x86/mm/p2m.c xen-4.7.0_copie/xen/arch/x86/mm/p2m.c
---- xen-4.7.0/xen/arch/x86/mm/p2m.c	2018-09-28 14:54:01.829119000 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/mm/p2m.c	2016-06-20 11:38:15.000000000 +0100
-@@ -292,7 +292,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/mm/p2m.c xen-4.7.0/xen/arch/x86/mm/p2m.c
+--- xen-4.7.0_copie/xen/arch/x86/mm/p2m.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/mm/p2m.c	2018-09-28 14:54:01.829119000 +0100
+@@ -292,6 +292,7 @@
  void p2m_enable_hardware_log_dirty(struct domain *d)
  {
      struct p2m_domain *p2m = p2m_get_hostp2m(d);
--    //printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
++    //printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
  
      if ( p2m->enable_hardware_log_dirty )
      {
-diff -ur xen-4.7.0/xen/arch/x86/mm/p2m-ept.c xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c
---- xen-4.7.0/xen/arch/x86/mm/p2m-ept.c	2018-09-28 14:54:01.829119000 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c	2016-06-20 11:38:15.000000000 +0100
-@@ -1148,7 +1148,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c xen-4.7.0/xen/arch/x86/mm/p2m-ept.c
+--- xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/mm/p2m-ept.c	2018-09-28 14:54:01.829119000 +0100
+@@ -1148,6 +1148,7 @@
  {
      /* Domain must have been paused */
      ASSERT(atomic_read(&p2m->domain->pause_count));
--    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
++    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
  
      /*
       * No need to return whether vmx_domain_enable_pml has succeeded, as
-@@ -1203,7 +1202,6 @@
+@@ -1202,6 +1203,7 @@
  
      if ( cpu_has_vmx_pml )
      {
--        printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
++        printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
          p2m->enable_hardware_log_dirty = ept_enable_pml;
          p2m->disable_hardware_log_dirty = ept_disable_pml;
          p2m->flush_hardware_cached_dirty = ept_flush_pml_buffers;
@@ -2785,236 +2786,236 @@ Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m-pod.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m-pod.o.d
 Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m-pt.o
 Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m-pt.o.d
-diff -ur xen-4.7.0/xen/arch/x86/mm/paging.c xen-4.7.0_copie/xen/arch/x86/mm/paging.c
---- xen-4.7.0/xen/arch/x86/mm/paging.c	2018-10-03 21:30:15.279202174 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/mm/paging.c	2016-06-20 11:38:15.000000000 +0100
-@@ -86,26 +86,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/mm/paging.c xen-4.7.0/xen/arch/x86/mm/paging.c
+--- xen-4.7.0_copie/xen/arch/x86/mm/paging.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/mm/paging.c	2018-10-03 21:30:15.279202174 +0100
+@@ -86,6 +86,26 @@
      return mfn;
  }
  
--/* Alloc and init a new leaf with xxentries */
--static mfn_t paging_new_log_dirty_leaf_long(struct domain *d)
--{    
--    mfn_t mfn = paging_new_log_dirty_page(d);//mfn2, 
--    if ( mfn_valid(mfn) )
--    {
--        int i;
--        mfn_t *node = map_domain_page(mfn);
--        for ( i = 0; i < LOGDIRTY_LEAF_LONG_ENTRIES << 1; i++ )
--        {
--            /*mfn2=paging_new_log_dirty_page(d);
--            if ( mfn_valid(mfn2) )
--                clear_domain_page(mfn2);*/
--            node[i] = _mfn(INVALID_MFN);//mfn2;            
--        }       
--        unmap_domain_page(node);
--    }  
--    return mfn;
--}
--
++/* Alloc and init a new leaf with xxentries */
++static mfn_t paging_new_log_dirty_leaf_long(struct domain *d)
++{    
++    mfn_t mfn = paging_new_log_dirty_page(d);//mfn2, 
++    if ( mfn_valid(mfn) )
++    {
++        int i;
++        mfn_t *node = map_domain_page(mfn);
++        for ( i = 0; i < LOGDIRTY_LEAF_LONG_ENTRIES << 1; i++ )
++        {
++            /*mfn2=paging_new_log_dirty_page(d);
++            if ( mfn_valid(mfn2) )
++                clear_domain_page(mfn2);*/
++            node[i] = _mfn(INVALID_MFN);//mfn2;            
++        }       
++        unmap_domain_page(node);
++    }  
++    return mfn;
++}
++
  /* Alloc and init a new non-leaf node */
  static mfn_t paging_new_log_dirty_node(struct domain *d)
  {
-@@ -287,9 +267,10 @@
+@@ -267,10 +287,9 @@
  /* Mark a page as dirty, with taking guest pfn as parameter */
  void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
  {
-+    int changed;
+-    int changed;
      mfn_t mfn, *l4, *l3, *l2;
--    unsigned long *l1,*l0;
--    int i1, i2, i3, i4, decalage;
-+    unsigned long *l1;
-+    int i1, i2, i3, i4;
+-    unsigned long *l1;
+-    int i1, i2, i3, i4;
++    unsigned long *l1,*l0;
++    int i1, i2, i3, i4, decalage;
  
      if ( !paging_mode_log_dirty(d) )
          return;
-@@ -338,68 +319,22 @@
+@@ -319,22 +338,68 @@
  
      l2 = map_domain_page(mfn);
      mfn = l2[i2];
--    if ( !mfn_valid(mfn) ){
--        l2[i2] = mfn = paging_new_log_dirty_leaf_long(d);
--    }
-+    if ( !mfn_valid(mfn) )
-+        l2[i2] = mfn = paging_new_log_dirty_leaf(d);
+-    if ( !mfn_valid(mfn) )
+-        l2[i2] = mfn = paging_new_log_dirty_leaf(d);
++    if ( !mfn_valid(mfn) ){
++        l2[i2] = mfn = paging_new_log_dirty_leaf_long(d);
++    }
      unmap_domain_page(l2);
      if ( !mfn_valid(mfn) )
          goto out;
  
      l1 = map_domain_page(mfn);
--    /*
--    *On obtient le bloc de l1 à partir d'où incrémenter
--    */
--    decalage = (i1 >> 9); //On fait i1:(PAGE_SIZE/sizeof(long)) et PAGE_SIZE(==1 << 12)/sizeof(long)(== 1 << 3) = (1 << 9)
--    i1 %= (PAGE_SIZE >> 3);//(PAGE_SIZE/sizeof(long))
--
--    mfn=l1[decalage];
--    if ( !mfn_valid(mfn) ){
--        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
--    }
--    //unmap_domain_page(l1);
--    if ( !mfn_valid(mfn) )
--        goto out;
--
--    l0=map_domain_page(mfn);
--    if(l0)
--    {
--        l0[i1]++;
--        unmap_domain_page(l0);
--    }
--
--    /*
--    *On obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
--    */
--    decalage += LOGDIRTY_LEAF_LONG_ENTRIES;
--    mfn=l1[decalage];
--    if ( !mfn_valid(mfn) ){
--        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
--    }
--    //unmap_domain_page(l1);
--    if ( !mfn_valid(mfn) )
--        goto out;
--
--    l0=map_domain_page(mfn);
--    if(l0)
--    {
--        l0[i1] = pfn;
--        //printk("%lx\n",pfn);
--        unmap_domain_page(l0);
--    }
--
-+    changed = !__test_and_set_bit(i1, l1);
+-    changed = !__test_and_set_bit(i1, l1);
++    /*
++    *On obtient le bloc de l1 à partir d'où incrémenter
++    */
++    decalage = (i1 >> 9); //On fait i1:(PAGE_SIZE/sizeof(long)) et PAGE_SIZE(==1 << 12)/sizeof(long)(== 1 << 3) = (1 << 9)
++    i1 %= (PAGE_SIZE >> 3);//(PAGE_SIZE/sizeof(long))
++
++    mfn=l1[decalage];
++    if ( !mfn_valid(mfn) ){
++        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
++    }
++    //unmap_domain_page(l1);
++    if ( !mfn_valid(mfn) )
++        goto out;
++
++    l0=map_domain_page(mfn);
++    if(l0)
++    {
++        l0[i1]++;
++        unmap_domain_page(l0);
++    }
++
++    /*
++    *On obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
++    */
++    decalage += LOGDIRTY_LEAF_LONG_ENTRIES;
++    mfn=l1[decalage];
++    if ( !mfn_valid(mfn) ){
++        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
++    }
++    //unmap_domain_page(l1);
++    if ( !mfn_valid(mfn) )
++        goto out;
++
++    l0=map_domain_page(mfn);
++    if(l0)
++    {
++        l0[i1] = pfn;
++        //printk("%lx\n",pfn);
++        unmap_domain_page(l0);
++    }
++
      unmap_domain_page(l1);
--
--    d->arch.paging.log_dirty.dirty_count++;
--
--    //changed = !__test_and_set_bit(i1, l1);
--    /*if ( changed )
-+    if ( changed )
+-    if ( changed )
++
++    d->arch.paging.log_dirty.dirty_count++;
++
++    //changed = !__test_and_set_bit(i1, l1);
++    /*if ( changed )
      {
          PAGING_DEBUG(LOGDIRTY,
                       "marked mfn %" PRI_mfn " (pfn=%lx), dom %d\n",
                       mfn_x(mfn), pfn, d->domain_id);
          d->arch.paging.log_dirty.dirty_count++;
--        //printk("%s:%d:%s nb de dirty pages: %d\n",__FILE__,__LINE__,__func__,d->arch.paging.log_dirty.dirty_count);
--    }:*/
-+    }
+-    }
++        //printk("%s:%d:%s nb de dirty pages: %d\n",__FILE__,__LINE__,__func__,d->arch.paging.log_dirty.dirty_count);
++    }:*/
  
  out:
      /* We've already recorded any failed allocations */
-@@ -478,11 +413,11 @@
+@@ -413,11 +478,11 @@
                                 struct xen_domctl_shadow_op *sc,
                                 bool_t resuming)
  {
--    int rv = 0, clean = 0, peek = 1;//, buf_log_offset = (1 << 15)
-+    int rv = 0, clean = 0, peek = 1;
+-    int rv = 0, clean = 0, peek = 1;
++    int rv = 0, clean = 0, peek = 1;//, buf_log_offset = (1 << 15)
      unsigned long pages = 0;
      mfn_t *l4 = NULL, *l3 = NULL, *l2 = NULL;
--    unsigned long *l1 = NULL, *l0=NULL;//, *buf_log=NULL
--    int i4, i3, i2, i1, i0=0, decalage, count=0;//, count=0;
-+    unsigned long *l1 = NULL;
-+    int i4, i3, i2;
+-    unsigned long *l1 = NULL;
+-    int i4, i3, i2;
++    unsigned long *l1 = NULL, *l0=NULL;//, *buf_log=NULL
++    int i4, i3, i2, i1, i0=0, decalage, count=0;//, count=0;
  
      if ( !resuming )
      {
-@@ -561,62 +496,6 @@
+@@ -496,6 +561,62 @@
                        map_domain_page(l2[i2]) : NULL);
                  if ( unlikely(((sc->pages - pages + 7) >> 3) < bytes) )
                      bytes = (unsigned int)((sc->pages - pages + 7) >> 3);
--                for ( i1 = 0; i1 < LOGDIRTY_LEAF_LONG_ENTRIES; i1++ )
--                {
--                    if(clean)
--                    {
--                        l0 = ((l1 && mfn_valid(l1[i1])) ? map_domain_page(l1[i1]) : NULL);
--                        if (l0)
--                        {
--                            clear_page(l0); 
--                            unmap_domain_page(l0);
--                        }
--                        decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
--                        l0 = ((l1 && mfn_valid(l1[decalage])) ? map_domain_page(l1[decalage]) : NULL);
--                        if (l0)
--                        {
--                            clear_page(l0); 
--                            unmap_domain_page(l0);
--                        }
--                    }else
--                    {
--                        for( i0 = 0; i0 < LOGDIRTY_NODE_ENTRIES; i0++)
--                        {
--                            l0 = ((l1 && mfn_valid(l1[i1])) ?
--                                 map_domain_page(l1[i1]) : NULL);
--                            if(l0)
--                            {
--                                if(l0[i0]!=0)
--                                {
--                                    //printk("(WSS) %lu : ", l0[i0]);
--                                }
--                                
--                                unmap_domain_page(l0);
--                            }
--
--                            /**
--                             * Ensuite on fait un décalage pour se placer au début de la 
--                             * liste des adresses
--                             * */
--                            decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
--                            /**
--                             * Maintenant on récupère les adresses elles-mêmes
--                             * */
--                            l0 = ((l1 && mfn_valid(l1[decalage])) ?
--                                 map_domain_page(l1[decalage]) : NULL);
--                            if(l0)
--                            {
--                                if(l0[i0]!=0)
--                                {
--                                    count++;
--                                    //printk("%lx\n", l0[i0]);
--                                } 
--                                unmap_domain_page(l0);
--                            }
--                        }
--
--                    }
--                }
++                for ( i1 = 0; i1 < LOGDIRTY_LEAF_LONG_ENTRIES; i1++ )
++                {
++                    if(clean)
++                    {
++                        l0 = ((l1 && mfn_valid(l1[i1])) ? map_domain_page(l1[i1]) : NULL);
++                        if (l0)
++                        {
++                            clear_page(l0); 
++                            unmap_domain_page(l0);
++                        }
++                        decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
++                        l0 = ((l1 && mfn_valid(l1[decalage])) ? map_domain_page(l1[decalage]) : NULL);
++                        if (l0)
++                        {
++                            clear_page(l0); 
++                            unmap_domain_page(l0);
++                        }
++                    }else
++                    {
++                        for( i0 = 0; i0 < LOGDIRTY_NODE_ENTRIES; i0++)
++                        {
++                            l0 = ((l1 && mfn_valid(l1[i1])) ?
++                                 map_domain_page(l1[i1]) : NULL);
++                            if(l0)
++                            {
++                                if(l0[i0]!=0)
++                                {
++                                    //printk("(WSS) %lu : ", l0[i0]);
++                                }
++                                
++                                unmap_domain_page(l0);
++                            }
++
++                            /**
++                             * Ensuite on fait un décalage pour se placer au début de la 
++                             * liste des adresses
++                             * */
++                            decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
++                            /**
++                             * Maintenant on récupère les adresses elles-mêmes
++                             * */
++                            l0 = ((l1 && mfn_valid(l1[decalage])) ?
++                                 map_domain_page(l1[decalage]) : NULL);
++                            if(l0)
++                            {
++                                if(l0[i0]!=0)
++                                {
++                                    count++;
++                                    //printk("%lx\n", l0[i0]);
++                                } 
++                                unmap_domain_page(l0);
++                            }
++                        }
++
++                    }
++                }
                  if ( likely(peek) )
                  {
                      if ( (l1 ? copy_to_guest_offset(sc->dirty_bitmap,
-@@ -632,8 +511,8 @@
+@@ -511,8 +632,8 @@
                  pages += bytes << 3;
                  if ( l1 )
                  {
--                    /*if ( clean )
--                        clear_page(l1);*/
-+                    if ( clean )
-+                        clear_page(l1);
+-                    if ( clean )
+-                        clear_page(l1);
++                    /*if ( clean )
++                        clear_page(l1);*/
                      unmap_domain_page(l1);
                  }
              }
-@@ -661,9 +540,6 @@
+@@ -540,6 +661,9 @@
          if ( rv )
              break;
      }
--    //printk("[END_WSS]\n");
--    printk("%d\n", count);
--
++    //printk("[END_WSS]\n");
++    printk("%d\n", count);
++
      if ( l4 )
          unmap_domain_page(l4);
  
-@@ -700,7 +576,6 @@
+@@ -576,6 +700,7 @@
           * paging modes (shadow or hap).  Safe because the domain is paused. */
          d->arch.paging.log_dirty.clean_dirty_bitmap(d);
      }
--
++
      domain_unpause(d);
      return rv;
  
-@@ -709,8 +584,6 @@
+@@ -584,6 +709,8 @@
      paging_unlock(d);
      domain_unpause(d);
  
--    if ( l0 )
--        unmap_domain_page(l0);
++    if ( l0 )
++        unmap_domain_page(l0);
      if ( l1 )
          unmap_domain_page(l1);
      if ( l2 )
@@ -3109,31 +3110,31 @@ Seulement dans xen-4.7.0/xen/arch/x86/x86_64: domain.o
 Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .domain.o.d
 Seulement dans xen-4.7.0/xen/arch/x86/x86_64: entry.o
 Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .entry.o.d
-diff -ur xen-4.7.0/xen/arch/x86/x86_64/entry.S xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S
---- xen-4.7.0/xen/arch/x86/x86_64/entry.S	2018-09-28 14:54:01.833127000 +0100
-+++ xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S	2016-06-20 11:38:15.000000000 +0100
-@@ -787,7 +787,6 @@
+diff -ur xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S xen-4.7.0/xen/arch/x86/x86_64/entry.S
+--- xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/arch/x86/x86_64/entry.S	2018-09-28 14:54:01.833127000 +0100
+@@ -787,6 +787,7 @@
          .quad do_hvm_op
          .quad do_sysctl             /* 35 */
          .quad do_domctl
--        .quad do_test_hypercall
++        .quad do_test_hypercall
          .quad do_kexec_op
          .quad do_tmem_op
          .quad do_ni_hypercall       /* reserved for XenClient */
-@@ -839,7 +838,6 @@
+@@ -838,6 +839,7 @@
          .byte 2 /* do_hvm_op            */
          .byte 1 /* do_sysctl            */  /* 35 */
          .byte 1 /* do_domctl            */
--        .byte 0 /* do_test_hypercall    */
++        .byte 0 /* do_test_hypercall    */
          .byte 2 /* do_kexec             */
          .byte 1 /* do_tmem_op           */
          .byte 0 /* reserved for XenClient */
-@@ -852,7 +850,7 @@
+@@ -850,7 +852,7 @@
          .rept NR_hypercalls-(.-hypercall_args_table)
          .byte 0 /* do_ni_hypercall      */
          .endr
-- 
-+
+-
++ 
  /* Table of automatically generated entry points.  One per vector. */
          .section .init.rodata, "a", @progbits
  GLOBAL(autogen_entrypoints)
@@ -3195,25 +3196,25 @@ Seulement dans xen-4.7.0/xen/common: decompress.o
 Seulement dans xen-4.7.0/xen/common: .decompress.o.d
 Seulement dans xen-4.7.0/xen/common: domain.o
 Seulement dans xen-4.7.0/xen/common: .domain.o.d
-diff -ur xen-4.7.0/xen/common/domctl.c xen-4.7.0_copie/xen/common/domctl.c
---- xen-4.7.0/xen/common/domctl.c	2018-09-28 14:54:01.837135000 +0100
-+++ xen-4.7.0_copie/xen/common/domctl.c	2016-06-20 11:38:15.000000000 +0100
-@@ -426,18 +426,12 @@
+diff -ur xen-4.7.0_copie/xen/common/domctl.c xen-4.7.0/xen/common/domctl.c
+--- xen-4.7.0_copie/xen/common/domctl.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/common/domctl.c	2018-09-28 14:54:01.837135000 +0100
+@@ -426,12 +426,18 @@
      return ERR_PTR(ret);
  }
  
--long do_test_hypercall(XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl)
--{
--    return do_domctl(u_domctl);
--}
--
++long do_test_hypercall(XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl)
++{
++    return do_domctl(u_domctl);
++}
++
  long do_domctl(XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl)
  {
      long ret = 0;
      bool_t copyback = 0;
      struct xen_domctl curop, *op = &curop;
      struct domain *d;
--    //printk("do_domctl\n");
++    //printk("do_domctl\n");
  
      if ( copy_from_guest(op, u_domctl, 1) )
          return -EFAULT;
@@ -3413,15 +3414,15 @@ Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: utmisc.o
 Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: .utmisc.o.d
 Seulement dans xen-4.7.0/xen/drivers: built_in.o
 Seulement dans xen-4.7.0/xen/drivers/char: built_in.o
-diff -ur xen-4.7.0/xen/drivers/char/console.c xen-4.7.0_copie/xen/drivers/char/console.c
---- xen-4.7.0/xen/drivers/char/console.c	2019-02-27 16:58:26.779155646 +0100
-+++ xen-4.7.0_copie/xen/drivers/char/console.c	2016-06-20 11:38:15.000000000 +0100
+diff -ur xen-4.7.0_copie/xen/drivers/char/console.c xen-4.7.0/xen/drivers/char/console.c
+--- xen-4.7.0_copie/xen/drivers/char/console.c	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/drivers/char/console.c	2019-02-27 16:58:26.779155646 +0100
 @@ -67,7 +67,7 @@
  static uint32_t __initdata opt_conring_size;
  size_param("conring_size", opt_conring_size);
  
--#define _CONRING_SIZE 10485760
-+#define _CONRING_SIZE 16384
+-#define _CONRING_SIZE 16384
++#define _CONRING_SIZE 10485760
  #define CONRING_IDX_MASK(i) ((i)&(conring_size-1))
  static char __initdata _conring[_CONRING_SIZE];
  static char *__read_mostly conring = _conring;
@@ -3510,37 +3511,37 @@ Seulement dans xen-4.7.0/xen/drivers/video: .vga.o.d
 Seulement dans xen-4.7.0/xen/include: asm
 Seulement dans xen-4.7.0/xen/include/asm-x86: asm-offsets.h
 Seulement dans xen-4.7.0/xen/include/asm-x86: cpuid-autogen.h
-diff -ur xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h
---- xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h	2018-09-28 14:54:01.857175000 +0100
-+++ xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h	2016-06-20 11:38:15.000000000 +0100
+diff -ur xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h
+--- xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h	2018-09-28 14:54:01.857175000 +0100
 @@ -218,7 +218,7 @@
      /* Remember EFLAGS while in virtual 8086 mode */
      uint32_t             vm86_saved_eflags;
      int                  hostenv_migrated;
-- 
-+
+-
++ 
      /* Bitmap to control vmexit policy for Non-root VMREAD/VMWRITE */
      struct page_info     *vmread_bitmap;
      struct page_info     *vmwrite_bitmap;
-diff -ur xen-4.7.0/xen/include/asm-x86/paging.h xen-4.7.0_copie/xen/include/asm-x86/paging.h
---- xen-4.7.0/xen/include/asm-x86/paging.h	2018-09-28 14:54:01.857175000 +0100
-+++ xen-4.7.0_copie/xen/include/asm-x86/paging.h	2016-06-20 11:38:15.000000000 +0100
-@@ -169,7 +169,6 @@
+diff -ur xen-4.7.0_copie/xen/include/asm-x86/paging.h xen-4.7.0/xen/include/asm-x86/paging.h
+--- xen-4.7.0_copie/xen/include/asm-x86/paging.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/asm-x86/paging.h	2018-09-28 14:54:01.857175000 +0100
+@@ -169,6 +169,7 @@
   * TODO2: Abstract out the radix-tree mechanics?
   */
  #define LOGDIRTY_NODE_ENTRIES (1 << PAGETABLE_ORDER)
--#define LOGDIRTY_LEAF_LONG_ENTRIES (1 << PAGETABLE_ORDER_LONG)
++#define LOGDIRTY_LEAF_LONG_ENTRIES (1 << PAGETABLE_ORDER_LONG)
  #define L1_LOGDIRTY_IDX(pfn) ((pfn) & ((1 << (PAGE_SHIFT+3)) - 1))
  #define L2_LOGDIRTY_IDX(pfn) (((pfn) >> (PAGE_SHIFT+3)) & \
                                (LOGDIRTY_NODE_ENTRIES-1))
-diff -ur xen-4.7.0/xen/include/asm-x86/x86_64/page.h xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h
---- xen-4.7.0/xen/include/asm-x86/x86_64/page.h	2018-09-28 14:54:01.857175000 +0100
-+++ xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h	2016-06-20 11:38:15.000000000 +0100
-@@ -11,7 +11,6 @@
+diff -ur xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h xen-4.7.0/xen/include/asm-x86/x86_64/page.h
+--- xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/asm-x86/x86_64/page.h	2018-09-28 14:54:01.857175000 +0100
+@@ -11,6 +11,7 @@
  #define ROOT_PAGETABLE_SHIFT    L4_PAGETABLE_SHIFT
  
  #define PAGETABLE_ORDER         9
--#define PAGETABLE_ORDER_LONG    6
++#define PAGETABLE_ORDER_LONG    6
  #define L1_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
  #define L2_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
  #define L3_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
@@ -3549,44 +3550,44 @@ Seulement dans xen-4.7.0/xen/include: config
 Seulement dans xen-4.7.0/xen/include: generated
 Seulement dans xen-4.7.0/xen/include: headers.chk
 Seulement dans xen-4.7.0/xen/include: headers++.chk
-diff -ur xen-4.7.0/xen/include/public/domctl.h xen-4.7.0_copie/xen/include/public/domctl.h
---- xen-4.7.0/xen/include/public/domctl.h	2018-09-28 14:54:01.861183000 +0100
-+++ xen-4.7.0_copie/xen/include/public/domctl.h	2016-06-20 11:38:15.000000000 +0100
-@@ -193,9 +193,8 @@
+diff -ur xen-4.7.0_copie/xen/include/public/domctl.h xen-4.7.0/xen/include/public/domctl.h
+--- xen-4.7.0_copie/xen/include/public/domctl.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/public/domctl.h	2018-09-28 14:54:01.861183000 +0100
+@@ -193,8 +193,9 @@
   /*
    * No longer supported, was equiv. to ENABLE with mode flags
    * ENABLE_REFCOUNT and ENABLE_TRANSLATE:
--  * */
--#define XEN_DOMCTL_SHADOW_OP_COLLECT_DIRTY_LOGS  3
--  
-+#define XEN_DOMCTL_SHADOW_OP_ENABLE_TRANSLATE  3
-+  */
+-#define XEN_DOMCTL_SHADOW_OP_ENABLE_TRANSLATE  3
+-  */
++  * */
++#define XEN_DOMCTL_SHADOW_OP_COLLECT_DIRTY_LOGS  3
++  
  
  /* Mode flags for XEN_DOMCTL_SHADOW_OP_ENABLE. */
   /*
-diff -ur xen-4.7.0/xen/include/public/xen.h xen-4.7.0_copie/xen/include/public/xen.h
---- xen-4.7.0/xen/include/public/xen.h	2018-09-28 14:54:01.861183000 +0100
-+++ xen-4.7.0_copie/xen/include/public/xen.h	2016-06-20 11:38:15.000000000 +0100
-@@ -115,7 +115,6 @@
+diff -ur xen-4.7.0_copie/xen/include/public/xen.h xen-4.7.0/xen/include/public/xen.h
+--- xen-4.7.0_copie/xen/include/public/xen.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/public/xen.h	2018-09-28 14:54:01.861183000 +0100
+@@ -115,6 +115,7 @@
  #define __HYPERVISOR_tmem_op              38
  #define __HYPERVISOR_xc_reserved_op       39 /* reserved for XenClient */
  #define __HYPERVISOR_xenpmu_op            40
--#define __HYPERVISOR_test_hypercall       41
++#define __HYPERVISOR_test_hypercall       41
  
  /* Architecture-specific hypercall definitions. */
  #define __HYPERVISOR_arch_0               48
 Seulement dans xen-4.7.0/xen/include/xen: compile.h
-diff -ur xen-4.7.0/xen/include/xen/hypercall.h xen-4.7.0_copie/xen/include/xen/hypercall.h
---- xen-4.7.0/xen/include/xen/hypercall.h	2018-09-28 14:54:01.865191000 +0100
-+++ xen-4.7.0_copie/xen/include/xen/hypercall.h	2016-06-20 11:38:15.000000000 +0100
-@@ -22,10 +22,6 @@
+diff -ur xen-4.7.0_copie/xen/include/xen/hypercall.h xen-4.7.0/xen/include/xen/hypercall.h
+--- xen-4.7.0_copie/xen/include/xen/hypercall.h	2016-06-20 11:38:15.000000000 +0100
++++ xen-4.7.0/xen/include/xen/hypercall.h	2018-09-28 14:54:01.865191000 +0100
+@@ -22,6 +22,10 @@
  do_ni_hypercall(
      void);
  
--extern long 
--do_test_hypercall(
--    XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl);
--
++extern long 
++do_test_hypercall(
++    XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl);
++
  extern long
  do_sched_op(
      int cmd,
