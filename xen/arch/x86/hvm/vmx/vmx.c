@@ -15,6 +15,7 @@
  * this program; If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <xen/time.h>
 #include <xen/config.h>
 #include <xen/init.h>
 #include <xen/lib.h>
@@ -58,7 +59,9 @@
 #include <asm/altp2m.h>
 #include <asm/event.h>
 #include <asm/monitor.h>
+#include <asm/time.h>
 #include <public/arch-x86/cpuid.h>
+
 
 static bool_t __initdata opt_force_ept;
 boolean_param("force-ept", opt_force_ept);
@@ -97,11 +100,13 @@ static DEFINE_PER_CPU(struct vmx_pi_blocking_vcpu, vmx_pi_blocking);
 
 uint8_t __read_mostly posted_intr_vector;
 static uint8_t __read_mostly pi_wakeup_vector;
+unsigned int pml_exits;
 
 void vmx_pi_per_cpu_init(unsigned int cpu)
 {
     INIT_LIST_HEAD(&per_cpu(vmx_pi_blocking, cpu).list);
     spin_lock_init(&per_cpu(vmx_pi_blocking, cpu).lock);
+    pml_exits = 0;
 }
 
 static void vmx_vcpu_block(struct vcpu *v)
@@ -3185,9 +3190,10 @@ static int vmx_handle_apic_write(void)
 
 void vmx_vmexit_handler(struct cpu_user_regs *regs)
 {
-    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0;
-    unsigned int vector = 0, mode;
+    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0, sleep=0;
+    unsigned int vector = 0, mode, diff_t;
     struct vcpu *v = current;
+    s_time_t start_t=get_s_time(), end_t;
 
     __vmread(GUEST_RIP,    &regs->rip);
     __vmread(GUEST_RSP,    &regs->rsp);
@@ -3745,8 +3751,15 @@ void vmx_vmexit_handler(struct cpu_user_regs *regs)
         break;
 
     case EXIT_REASON_PML_FULL:
-    //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
+        //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
+        pml_exits = pml_exits+1; 
         vmx_vcpu_flush_pml_buffer(v);
+        do{
+            sleep++;
+            end_t = get_s_time();
+            diff_t = end_t - start_t;
+        }while(diff_t < 4000000);
+        printk("##Th : %u, pml_exit = %u\n",diff_t,pml_exits);
         break;
  
     case EXIT_REASON_XSAVES:
@@ -3780,6 +3793,8 @@ void vmx_vmexit_handler(struct cpu_user_regs *regs)
         break;
     }
 
+
+    //printk("##vmexit\n");
 out:
     if ( nestedhvm_vcpu_in_guestmode(v) )
         nvmx_idtv_handling();

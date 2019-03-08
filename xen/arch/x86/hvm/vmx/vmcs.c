@@ -15,6 +15,7 @@
  * this program; If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <xen/time.h>
 #include <xen/config.h>
 #include <xen/init.h>
 #include <xen/mm.h>
@@ -1467,6 +1468,10 @@ void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
 {
     uint64_t *pml_buf;//uint64_t
     unsigned long pml_idx;
+    //unsigned int diff_t;
+    //s_time_t start_t, end_t;
+
+    //start_t = get_s_time();
 
     ASSERT((v == current) || (!vcpu_runnable(v) && !v->is_running));
     ASSERT(vmx_vcpu_pml_enabled(v));
@@ -1517,6 +1522,10 @@ void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
 
     /* Reset PML index */
     __vmwrite(GUEST_PML_INDEX, NR_PML_ENTRIES - 1);
+
+    /*end_t = get_s_time();
+    diff_t = end_t - start_t;
+    printk("##T_flush : %u\n",diff_t);*/
 
  out:
     vmx_vmcs_exit(v);

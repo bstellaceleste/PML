@@ -5,7 +5,9 @@
         "hypercall.h": "c",
         "ioctls.h": "c",
         "ioctl.h": "c",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "init.h": "c",
+        "video.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
