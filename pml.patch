@@ -1,0 +1,3606 @@
+Seulement dans xen-4.7.0: autom4te.cache
+Seulement dans xen-4.7.0: compil
+Seulement dans xen-4.7.0: conf.cfg
+Seulement dans xen-4.7.0/config: Docs.mk
+Seulement dans xen-4.7.0/config: Paths.mk
+Seulement dans xen-4.7.0/config: Stubdom.mk
+Seulement dans xen-4.7.0/config: Tools.mk
+Seulement dans xen-4.7.0/config: Toplevel.mk
+Seulement dans xen-4.7.0: config.log
+Seulement dans xen-4.7.0: configs files
+Seulement dans xen-4.7.0: config.status
+Seulement dans xen-4.7.0: dist
+Seulement dans xen-4.7.0/docs: config.status
+Seulement dans xen-4.7.0/docs: html
+Seulement dans xen-4.7.0/docs: man1
+Seulement dans xen-4.7.0/docs: man5
+Seulement dans xen-4.7.0/docs: man8
+Seulement dans xen-4.7.0/docs: pod2htmd.tmp
+Seulement dans xen-4.7.0/docs: txt
+Seulement dans xen-4.7.0: erreurs
+Seulement dans xen-4.7.0/extras/mini-os: .git
+Seulement dans xen-4.7.0/extras/mini-os/include: list.h
+Seulement dans xen-4.7.0/extras/mini-os/include: mini-os
+Seulement dans xen-4.7.0/extras/mini-os/include/x86: mini-os
+Seulement dans xen-4.7.0/extras: mini-os-remote
+Seulement dans xen-4.7.0: .git
+Seulement dans xen-4.7.0: index.html
+Seulement dans xen-4.7.0: migration
+Seulement dans xen-4.7.0: mk_wrld
+Seulement dans xen-4.7.0: patches
+Seulement dans xen-4.7.0/stubdom: config.log
+Seulement dans xen-4.7.0/stubdom: config.status
+Seulement dans xen-4.7.0/stubdom: cross-root-i686
+Seulement dans xen-4.7.0/stubdom: cross-root-x86_64
+Seulement dans xen-4.7.0/stubdom: grub-0.97.tar.gz
+Seulement dans xen-4.7.0/stubdom: grub-upstream
+Seulement dans xen-4.7.0/stubdom: grub-x86_32
+Seulement dans xen-4.7.0/stubdom: grub-x86_64
+Seulement dans xen-4.7.0/stubdom: include
+Seulement dans xen-4.7.0/stubdom: ioemu
+Seulement dans xen-4.7.0/stubdom: libs-x86_32
+Seulement dans xen-4.7.0/stubdom: libs-x86_64
+Seulement dans xen-4.7.0/stubdom: libxc-x86_32
+Seulement dans xen-4.7.0/stubdom: libxc-x86_64
+Seulement dans xen-4.7.0/stubdom: lwip-1.3.0.tar.gz
+Seulement dans xen-4.7.0/stubdom: lwip-x86_32
+Seulement dans xen-4.7.0/stubdom: lwip-x86_64
+Seulement dans xen-4.7.0/stubdom: mini-os-x86_32-grub
+Seulement dans xen-4.7.0/stubdom: mini-os-x86_64-grub
+Seulement dans xen-4.7.0/stubdom: mini-os-x86_64-ioemu
+Seulement dans xen-4.7.0/stubdom: mini-os-x86_64-xenstore
+Seulement dans xen-4.7.0/stubdom: mk-headers-x86_32
+Seulement dans xen-4.7.0/stubdom: mk-headers-x86_64
+Seulement dans xen-4.7.0/stubdom: newlib-1.16.0
+Seulement dans xen-4.7.0/stubdom: newlib-1.16.0.tar.gz
+Seulement dans xen-4.7.0/stubdom: newlib-x86_32
+Seulement dans xen-4.7.0/stubdom: newlib-x86_64
+Seulement dans xen-4.7.0/stubdom: pciutils-2.2.9.tar.bz2
+Seulement dans xen-4.7.0/stubdom: pciutils-x86_32
+Seulement dans xen-4.7.0/stubdom: pciutils-x86_64
+Seulement dans xen-4.7.0/stubdom: polarssl-1.1.4-gpl.tgz
+Seulement dans xen-4.7.0/stubdom: polarssl-x86_32
+Seulement dans xen-4.7.0/stubdom: polarssl-x86_64
+Seulement dans xen-4.7.0/stubdom: stubdompath.sh
+Seulement dans xen-4.7.0/stubdom: xenstore
+Seulement dans xen-4.7.0/stubdom: zlib-1.2.3.tar.gz
+Seulement dans xen-4.7.0/stubdom: zlib-x86_32
+Seulement dans xen-4.7.0/stubdom: zlib-x86_64
+Seulement dans xen-4.7.0/tools/blktap2/control: libblktapctl.a
+Seulement dans xen-4.7.0/tools/blktap2/control: libblktapctl.so
+Seulement dans xen-4.7.0/tools/blktap2/control: libblktapctl.so.1.0
+Seulement dans xen-4.7.0/tools/blktap2/control: libblktapctl.so.1.0.0
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-allocate.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-allocate.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-allocate.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-allocate.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-attach.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-attach.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-attach.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-attach.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-check.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-check.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-check.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-check.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-close.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-close.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-close.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-close.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-create.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-create.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-create.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-create.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-destroy.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-destroy.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-destroy.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-destroy.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-detach.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-detach.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-detach.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-detach.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-free.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-free.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-free.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-free.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-ipc.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-ipc.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-ipc.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-ipc.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-list.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-list.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-list.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-list.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-major.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-major.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-major.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-major.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-open.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-open.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-open.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-open.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-pause.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-pause.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-pause.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-pause.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-spawn.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-spawn.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-spawn.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-spawn.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-unpause.o
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-unpause.o.d
+Seulement dans xen-4.7.0/tools/blktap2/control: tap-ctl-unpause.opic
+Seulement dans xen-4.7.0/tools/blktap2/control: .tap-ctl-unpause.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: aes.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .aes.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: atomicio.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .atomicio.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: blk_linux.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .blk_linux.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-aio.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-aio.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-cache.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-cache.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-log.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-log.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-qcow.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-qcow.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-ram.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-ram.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-remus.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-remus.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: block-vhd.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .block-vhd.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: hashtable_itr.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .hashtable_itr.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: hashtable.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .hashtable.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: hashtable_utility.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .hashtable_utility.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: img2qcow
+Seulement dans xen-4.7.0/tools/blktap2/drivers: img2qcow.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .img2qcow.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: io-optimize.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .io-optimize.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: lock.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .lock.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: lock-util
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .lock-util.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: md5.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .md5.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: qcow2raw
+Seulement dans xen-4.7.0/tools/blktap2/drivers: qcow2raw.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .qcow2raw.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: qcow-create
+Seulement dans xen-4.7.0/tools/blktap2/drivers: qcow-create.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .qcow-create.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: scheduler.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .scheduler.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk2
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk2.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk2.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-client
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-client.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-client.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-control.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-control.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-diff
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-diff.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-diff.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-disktype.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-disktype.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-driver.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-driver.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-filter.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-filter.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-image.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-image.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-interface.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-interface.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-log.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-log.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-queue.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-queue.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-server.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-server.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-stream
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-stream.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-stream.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-utils.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-utils.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: tapdisk-vbd.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .tapdisk-vbd.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: td.o
+Seulement dans xen-4.7.0/tools/blktap2/drivers: .td.o.d
+Seulement dans xen-4.7.0/tools/blktap2/drivers: td-util
+Seulement dans xen-4.7.0/tools/blktap2/lvm: lvm-util.o
+Seulement dans xen-4.7.0/tools/blktap2/lvm: .lvm-util.o.d
+Seulement dans xen-4.7.0/tools/blktap2/lvm: lvm-util.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: atomicio.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .atomicio.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: atomicio.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .atomicio.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.a
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd-journal.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .libvhd-journal.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd-journal.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .libvhd-journal.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .libvhd.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .libvhd.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.so
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.so.1.0
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: libvhd.so.1.0.0
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: ...@..@lvm@lvm-util.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: relative-path.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .relative-path.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: relative-path.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .relative-path.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-check.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-check.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-check.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-check.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-coalesce.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-coalesce.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-coalesce.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-coalesce.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-create.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-create.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-create.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-create.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-fill.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-fill.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-fill.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-fill.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-modify.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-modify.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-modify.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-modify.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-query.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-query.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-query.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-query.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-read.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-read.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-read.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-read.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-repair.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-repair.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-repair.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-repair.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-resize.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-resize.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-resize.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-resize.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-revert.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-revert.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-revert.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-revert.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-scan.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-scan.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-scan.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-scan.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-set-field.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-set-field.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-set-field.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-set-field.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-snapshot.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-snapshot.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-snapshot.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-snapshot.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-uuid.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-uuid.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: vhd-util-uuid.opic
+Seulement dans xen-4.7.0/tools/blktap2/vhd/lib: .vhd-util-uuid.opic.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd: vhd-update
+Seulement dans xen-4.7.0/tools/blktap2/vhd: vhd-update.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd: .vhd-update.o.d
+Seulement dans xen-4.7.0/tools/blktap2/vhd: vhd-util
+Seulement dans xen-4.7.0/tools/blktap2/vhd: vhd-util.o
+Seulement dans xen-4.7.0/tools/blktap2/vhd: .vhd-util.o.d
+Seulement dans xen-4.7.0/tools: config.h
+Seulement dans xen-4.7.0/tools: config.log
+Seulement dans xen-4.7.0/tools: config.status
+Seulement dans xen-4.7.0/tools/console/client: main.o
+Seulement dans xen-4.7.0/tools/console/client: _paths.h
+Seulement dans xen-4.7.0/tools/console: .client@main.o.d
+Seulement dans xen-4.7.0/tools/console/daemon: io.o
+Seulement dans xen-4.7.0/tools/console/daemon: main.o
+Seulement dans xen-4.7.0/tools/console/daemon: utils.o
+Seulement dans xen-4.7.0/tools/console: .daemon@io.o.d
+Seulement dans xen-4.7.0/tools/console: .daemon@main.o.d
+Seulement dans xen-4.7.0/tools/console: .daemon@utils.o.d
+Seulement dans xen-4.7.0/tools/console: xenconsole
+Seulement dans xen-4.7.0/tools/console: xenconsoled
+Seulement dans xen-4.7.0/tools/debugger/gdbsx: gdbsx
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: gx_all.a
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: gx_comm.o
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: .gx_comm.o.d
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: gx_local.o
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: .gx_local.o.d
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: gx_main.o
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: .gx_main.o.d
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: gx_utils.o
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/gx: .gx_utils.o.d
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/xg: xg_all.a
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/xg: xg_main.o
+Seulement dans xen-4.7.0/tools/debugger/gdbsx/xg: .xg_main.o.d
+Seulement dans xen-4.7.0/tools/debugger/kdd: kdd
+Seulement dans xen-4.7.0/tools/debugger/kdd: kdd.o
+Seulement dans xen-4.7.0/tools/debugger/kdd: .kdd.o.d
+Seulement dans xen-4.7.0/tools/debugger/kdd: kdd-xen.o
+Seulement dans xen-4.7.0/tools/debugger/kdd: .kdd-xen.o.d
+Seulement dans xen-4.7.0/tools/firmware/etherboot: ipxe
+Seulement dans xen-4.7.0/tools/firmware/etherboot: ipxe.tar.gz
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: 32bitbios_support.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .32bitbios_support.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: acpi.a
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: build.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: .build.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_15cpu.asl
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_15cpu.c
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_15cpu.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: .dsdt_15cpu.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu.asl
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu.c
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: .dsdt_anycpu.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu_qemu_xen.asl
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu_qemu_xen.c
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: dsdt_anycpu_qemu_xen.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: .dsdt_anycpu_qemu_xen.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: mk_dsdt
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: ssdt_pm.h
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: ssdt_s3.h
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: ssdt_s4.h
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: ssdt_tpm.h
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: static_tables.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader/acpi: .static_tables.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: cacheattr.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .cacheattr.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: ctype.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .ctype.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: e820.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .e820.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: hvmloader
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: hvmloader.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .hvmloader.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: hvm_param.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .hvm_param.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: mp_tables.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .mp_tables.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: optionroms.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .optionroms.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: pci.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .pci.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: pir.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .pir.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: rombios.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .rombios.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: roms.inc
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: seabios.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .seabios.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: smbios.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .smbios.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: smp.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .smp.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: util.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .util.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: vnuma.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .vnuma.o.d
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: xenbus.o
+Seulement dans xen-4.7.0/tools/firmware/hvmloader: .xenbus.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: 32bitbios_all.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: 32bitbios_flat.h
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: 32bitbios.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: .32bitbios.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: pmm.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: .pmm.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit/tcgbios: tcgbiosext.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit/tcgbios: tcgbios.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit/tcgbios: .tcgbios.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit/tcgbios: tpm_drivers.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit/tcgbios: .tpm_drivers.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: util.o
+Seulement dans xen-4.7.0/tools/firmware/rombios/32bit: .util.o.d
+Seulement dans xen-4.7.0/tools/firmware/rombios: BIOS-bochs-latest
+Seulement dans xen-4.7.0/tools/firmware/rombios: biossums
+Seulement dans xen-4.7.0/tools/firmware/rombios: _rombios_.c
+Seulement dans xen-4.7.0/tools/firmware/rombios: rombios.s
+Seulement dans xen-4.7.0/tools/firmware/rombios: rombios.sym
+Seulement dans xen-4.7.0/tools/firmware/rombios: rombios.txt
+Seulement dans xen-4.7.0/tools/firmware: seabios-dir
+Seulement dans xen-4.7.0/tools/firmware: seabios-dir-remote
+Seulement dans xen-4.7.0/tools/firmware/vgabios: biossums
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vbetables-gen
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vbetables.h
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios-cirrus.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios-cirrus.debug.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios-cirrus.debug.txt
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios-cirrus.txt
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios.debug.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios.debug.txt
+Seulement dans xen-4.7.0/tools/firmware/vgabios: VGABIOS-lgpl-latest.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: VGABIOS-lgpl-latest.cirrus.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: VGABIOS-lgpl-latest.cirrus.debug.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: VGABIOS-lgpl-latest.debug.bin
+Seulement dans xen-4.7.0/tools/firmware/vgabios: vgabios.txt
+Seulement dans xen-4.7.0/tools/flask/utils: flask-get-bool
+Seulement dans xen-4.7.0/tools/flask/utils: flask-getenforce
+Seulement dans xen-4.7.0/tools/flask/utils: flask-label-pci
+Seulement dans xen-4.7.0/tools/flask/utils: flask-loadpolicy
+Seulement dans xen-4.7.0/tools/flask/utils: flask-set-bool
+Seulement dans xen-4.7.0/tools/flask/utils: flask-setenforce
+Seulement dans xen-4.7.0/tools/flask/utils: get-bool.o
+Seulement dans xen-4.7.0/tools/flask/utils: .get-bool.o.d
+Seulement dans xen-4.7.0/tools/flask/utils: getenforce.o
+Seulement dans xen-4.7.0/tools/flask/utils: .getenforce.o.d
+Seulement dans xen-4.7.0/tools/flask/utils: label-pci.o
+Seulement dans xen-4.7.0/tools/flask/utils: .label-pci.o.d
+Seulement dans xen-4.7.0/tools/flask/utils: loadpolicy.o
+Seulement dans xen-4.7.0/tools/flask/utils: .loadpolicy.o.d
+Seulement dans xen-4.7.0/tools/flask/utils: set-bool.o
+Seulement dans xen-4.7.0/tools/flask/utils: .set-bool.o.d
+Seulement dans xen-4.7.0/tools/flask/utils: setenforce.o
+Seulement dans xen-4.7.0/tools/flask/utils: .setenforce.o.d
+Seulement dans xen-4.7.0/tools/helpers: init-dom-json.o
+Seulement dans xen-4.7.0/tools/helpers: .init-dom-json.o.d
+Seulement dans xen-4.7.0/tools/helpers: init-xenstore-domain
+Seulement dans xen-4.7.0/tools/helpers: init-xenstore-domain.o
+Seulement dans xen-4.7.0/tools/helpers: .init-xenstore-domain.o.d
+Seulement dans xen-4.7.0/tools/helpers: xen-init-dom0
+Seulement dans xen-4.7.0/tools/helpers: xen-init-dom0.o
+Seulement dans xen-4.7.0/tools/helpers: .xen-init-dom0.o.d
+Seulement dans xen-4.7.0/tools/hotplug/common: hotplugpath.sh
+Seulement dans xen-4.7.0/tools/hotplug/FreeBSD/rc.d: xencommons
+Seulement dans xen-4.7.0/tools/hotplug/FreeBSD/rc.d: xendriverdomain
+Seulement dans xen-4.7.0/tools/hotplug/Linux/init.d: sysconfig.xencommons
+Seulement dans xen-4.7.0/tools/hotplug/Linux/init.d: xencommons
+Seulement dans xen-4.7.0/tools/hotplug/Linux/init.d: xendomains
+Seulement dans xen-4.7.0/tools/hotplug/Linux/init.d: xendriverdomain
+Seulement dans xen-4.7.0/tools/hotplug/Linux/init.d: xen-watchdog
+Seulement dans xen-4.7.0/tools/hotplug/Linux: vif-setup
+Seulement dans xen-4.7.0/tools/hotplug/Linux: xendomains
+Seulement dans xen-4.7.0/tools/hotplug/Linux: xen-hotplug-common.sh
+Seulement dans xen-4.7.0/tools/hotplug/NetBSD/rc.d: xencommons
+Seulement dans xen-4.7.0/tools/hotplug/NetBSD/rc.d: xendriverdomain
+Seulement dans xen-4.7.0/tools/include: xen
+Seulement dans xen-4.7.0/tools/include/xen-foreign: arm32.h
+Seulement dans xen-4.7.0/tools/include/xen-foreign: arm64.h
+Seulement dans xen-4.7.0/tools/include/xen-foreign: checker
+Seulement dans xen-4.7.0/tools/include/xen-foreign: checker.c
+Seulement dans xen-4.7.0/tools/include/xen-foreign: structs.pyc
+Seulement dans xen-4.7.0/tools/include/xen-foreign: x86_32.h
+Seulement dans xen-4.7.0/tools/include/xen-foreign: x86_64.h
+Seulement dans xen-4.7.0/tools/include: xen-xsm
+Seulement dans xen-4.7.0/tools/libfsimage/common: fsimage_grub.opic
+Seulement dans xen-4.7.0/tools/libfsimage/common: .fsimage_grub.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/common: fsimage.opic
+Seulement dans xen-4.7.0/tools/libfsimage/common: .fsimage.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/common: fsimage_plugin.opic
+Seulement dans xen-4.7.0/tools/libfsimage/common: .fsimage_plugin.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/common: libfsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/common: libfsimage.so.1.0
+Seulement dans xen-4.7.0/tools/libfsimage/common: libfsimage.so.1.0.0
+Seulement dans xen-4.7.0/tools/libfsimage/ext2fs-lib: ext2fs-lib.opic
+Seulement dans xen-4.7.0/tools/libfsimage/ext2fs-lib: .ext2fs-lib.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/ext2fs-lib: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/fat: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/fat: fsys_fat.opic
+Seulement dans xen-4.7.0/tools/libfsimage/fat: .fsys_fat.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/iso9660: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/iso9660: fsys_iso9660.opic
+Seulement dans xen-4.7.0/tools/libfsimage/iso9660: .fsys_iso9660.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/reiserfs: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/reiserfs: fsys_reiserfs.opic
+Seulement dans xen-4.7.0/tools/libfsimage/reiserfs: .fsys_reiserfs.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/ufs: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/ufs: fsys_ufs.opic
+Seulement dans xen-4.7.0/tools/libfsimage/ufs: .fsys_ufs.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/xfs: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/xfs: fsys_xfs.opic
+Seulement dans xen-4.7.0/tools/libfsimage/xfs: .fsys_xfs.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: fsimage.so
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: fsi_zfs.opic
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: .fsi_zfs.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: fsys_zfs.opic
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: .fsys_zfs.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: zfs_fletcher.opic
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: .zfs_fletcher.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: zfs_lzjb.opic
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: .zfs_lzjb.opic.d
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: zfs_sha256.opic
+Seulement dans xen-4.7.0/tools/libfsimage/zfs: .zfs_sha256.opic.d
+Seulement dans xen-4.7.0/tools/libs/call: buffer.o
+Seulement dans xen-4.7.0/tools/libs/call: .buffer.o.d
+Seulement dans xen-4.7.0/tools/libs/call: buffer.opic
+Seulement dans xen-4.7.0/tools/libs/call: .buffer.opic.d
+Seulement dans xen-4.7.0/tools/libs/call: core.o
+Seulement dans xen-4.7.0/tools/libs/call: .core.o.d
+Seulement dans xen-4.7.0/tools/libs/call: core.opic
+Seulement dans xen-4.7.0/tools/libs/call: .core.opic.d
+Seulement dans xen-4.7.0/tools/libs/call: headers.chk
+Seulement dans xen-4.7.0/tools/libs/call: libxencall.a
+Seulement dans xen-4.7.0/tools/libs/call: libxencall.so
+Seulement dans xen-4.7.0/tools/libs/call: libxencall.so.1
+Seulement dans xen-4.7.0/tools/libs/call: libxencall.so.1.0
+Seulement dans xen-4.7.0/tools/libs/call: linux.o
+Seulement dans xen-4.7.0/tools/libs/call: .linux.o.d
+Seulement dans xen-4.7.0/tools/libs/call: linux.opic
+Seulement dans xen-4.7.0/tools/libs/call: .linux.opic.d
+Seulement dans xen-4.7.0/tools/libs/evtchn: core.o
+Seulement dans xen-4.7.0/tools/libs/evtchn: .core.o.d
+Seulement dans xen-4.7.0/tools/libs/evtchn: core.opic
+Seulement dans xen-4.7.0/tools/libs/evtchn: .core.opic.d
+Seulement dans xen-4.7.0/tools/libs/evtchn: headers.chk
+Seulement dans xen-4.7.0/tools/libs/evtchn: libxenevtchn.a
+Seulement dans xen-4.7.0/tools/libs/evtchn: libxenevtchn.so
+Seulement dans xen-4.7.0/tools/libs/evtchn: libxenevtchn.so.1
+Seulement dans xen-4.7.0/tools/libs/evtchn: libxenevtchn.so.1.0
+Seulement dans xen-4.7.0/tools/libs/evtchn: linux.o
+Seulement dans xen-4.7.0/tools/libs/evtchn: .linux.o.d
+Seulement dans xen-4.7.0/tools/libs/evtchn: linux.opic
+Seulement dans xen-4.7.0/tools/libs/evtchn: .linux.opic.d
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: core.o
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: .core.o.d
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: core.opic
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: .core.opic.d
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: headers.chk
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: libxenforeignmemory.a
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: libxenforeignmemory.so
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: libxenforeignmemory.so.1
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: libxenforeignmemory.so.1.0
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: linux.o
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: .linux.o.d
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: linux.opic
+Seulement dans xen-4.7.0/tools/libs/foreignmemory: .linux.opic.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: gntshr_core.o
+Seulement dans xen-4.7.0/tools/libs/gnttab: .gntshr_core.o.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: gntshr_core.opic
+Seulement dans xen-4.7.0/tools/libs/gnttab: .gntshr_core.opic.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: gnttab_core.o
+Seulement dans xen-4.7.0/tools/libs/gnttab: .gnttab_core.o.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: gnttab_core.opic
+Seulement dans xen-4.7.0/tools/libs/gnttab: .gnttab_core.opic.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: headers.chk
+Seulement dans xen-4.7.0/tools/libs/gnttab: libxengnttab.a
+Seulement dans xen-4.7.0/tools/libs/gnttab: libxengnttab.so
+Seulement dans xen-4.7.0/tools/libs/gnttab: libxengnttab.so.1
+Seulement dans xen-4.7.0/tools/libs/gnttab: libxengnttab.so.1.0
+Seulement dans xen-4.7.0/tools/libs/gnttab: linux.o
+Seulement dans xen-4.7.0/tools/libs/gnttab: .linux.o.d
+Seulement dans xen-4.7.0/tools/libs/gnttab: linux.opic
+Seulement dans xen-4.7.0/tools/libs/gnttab: .linux.opic.d
+Seulement dans xen-4.7.0/tools/libs/toollog: headers.chk
+Seulement dans xen-4.7.0/tools/libs/toollog: libxentoollog.a
+Seulement dans xen-4.7.0/tools/libs/toollog: libxentoollog.so
+Seulement dans xen-4.7.0/tools/libs/toollog: libxentoollog.so.1
+Seulement dans xen-4.7.0/tools/libs/toollog: libxentoollog.so.1.0
+Seulement dans xen-4.7.0/tools/libs/toollog: xtl_core.o
+Seulement dans xen-4.7.0/tools/libs/toollog: .xtl_core.o.d
+Seulement dans xen-4.7.0/tools/libs/toollog: xtl_core.opic
+Seulement dans xen-4.7.0/tools/libs/toollog: .xtl_core.opic.d
+Seulement dans xen-4.7.0/tools/libs/toollog: xtl_logger_stdio.o
+Seulement dans xen-4.7.0/tools/libs/toollog: .xtl_logger_stdio.o.d
+Seulement dans xen-4.7.0/tools/libs/toollog: xtl_logger_stdio.opic
+Seulement dans xen-4.7.0/tools/libs/toollog: .xtl_logger_stdio.opic.d
+Seulement dans xen-4.7.0/tools/libvchan: init.o
+Seulement dans xen-4.7.0/tools/libvchan: .init.o.d
+Seulement dans xen-4.7.0/tools/libvchan: init.opic
+Seulement dans xen-4.7.0/tools/libvchan: .init.opic.d
+Seulement dans xen-4.7.0/tools/libvchan: io.o
+Seulement dans xen-4.7.0/tools/libvchan: .io.o.d
+Seulement dans xen-4.7.0/tools/libvchan: io.opic
+Seulement dans xen-4.7.0/tools/libvchan: .io.opic.d
+Seulement dans xen-4.7.0/tools/libvchan: libxenvchan.a
+Seulement dans xen-4.7.0/tools/libvchan: libxenvchan.so
+Seulement dans xen-4.7.0/tools/libvchan: libxenvchan.so.4.7
+Seulement dans xen-4.7.0/tools/libvchan: libxenvchan.so.4.7.0
+Seulement dans xen-4.7.0/tools/libvchan: node.o
+Seulement dans xen-4.7.0/tools/libvchan: .node.o.d
+Seulement dans xen-4.7.0/tools/libvchan: node-select.o
+Seulement dans xen-4.7.0/tools/libvchan: .node-select.o.d
+Seulement dans xen-4.7.0/tools/libvchan: vchan-node1
+Seulement dans xen-4.7.0/tools/libvchan: vchan-node2
+diff -ur xen-4.7.0/tools/libxc/include/xenguest.h xen-4.7.0_copie/tools/libxc/include/xenguest.h
+--- xen-4.7.0/tools/libxc/include/xenguest.h	2018-09-28 14:54:01.448362000 +0100
++++ xen-4.7.0_copie/tools/libxc/include/xenguest.h	2016-06-20 11:38:15.000000000 +0100
+@@ -105,14 +105,6 @@
+                    struct save_callbacks* callbacks, int hvm,
+                    xc_migration_stream_t stream_type, int recv_fd);
+ 
+-int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom);
+-
+-int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom);
+-
+-int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap);
+-
+-int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom);
+-
+ /* callbacks provided by xc_domain_restore */
+ struct restore_callbacks {
+     /* Called after a new checkpoint to suspend the guest.
+Seulement dans xen-4.7.0/tools/libxc: libelf-dominfo.o
+Seulement dans xen-4.7.0/tools/libxc: .libelf-dominfo.o.d
+Seulement dans xen-4.7.0/tools/libxc: libelf-dominfo.opic
+Seulement dans xen-4.7.0/tools/libxc: .libelf-dominfo.opic.d
+Seulement dans xen-4.7.0/tools/libxc: libelf-loader.o
+Seulement dans xen-4.7.0/tools/libxc: .libelf-loader.o.d
+Seulement dans xen-4.7.0/tools/libxc: libelf-loader.opic
+Seulement dans xen-4.7.0/tools/libxc: .libelf-loader.opic.d
+Seulement dans xen-4.7.0/tools/libxc: libelf-tools.o
+Seulement dans xen-4.7.0/tools/libxc: .libelf-tools.o.d
+Seulement dans xen-4.7.0/tools/libxc: libelf-tools.opic
+Seulement dans xen-4.7.0/tools/libxc: .libelf-tools.opic.d
+Seulement dans xen-4.7.0/tools/libxc: libxenctrl.a
+Seulement dans xen-4.7.0/tools/libxc: libxenctrl.so
+Seulement dans xen-4.7.0/tools/libxc: libxenctrl.so.4.7
+Seulement dans xen-4.7.0/tools/libxc: libxenctrl.so.4.7.0
+Seulement dans xen-4.7.0/tools/libxc: libxenguest.a
+Seulement dans xen-4.7.0/tools/libxc: libxenguest.so
+Seulement dans xen-4.7.0/tools/libxc: libxenguest.so.4.7
+Seulement dans xen-4.7.0/tools/libxc: libxenguest.so.4.7.0
+Seulement dans xen-4.7.0/tools/libxc: _paths.h
+Seulement dans xen-4.7.0/tools/libxc: xc_altp2m.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_altp2m.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_altp2m.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_altp2m.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_arinc653.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_arinc653.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_arinc653.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_arinc653.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_compression.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_compression.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_compression.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_compression.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_core.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_core.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_core.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_core.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_core_x86.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_core_x86.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_core_x86.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_core_x86.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_cpu_hotplug.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpu_hotplug.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_cpu_hotplug.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpu_hotplug.opic.d
+Seulement dans xen-4.7.0/tools/libxc: _xc_cpuid_autogen.h
+Seulement dans xen-4.7.0/tools/libxc: xc_cpuid_x86.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpuid_x86.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_cpuid_x86.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpuid_x86.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_cpupool.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpupool.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_cpupool.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_cpupool.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_csched2.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_csched2.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_csched2.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_csched2.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_csched.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_csched.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_csched.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_csched.opic.d
+diff -ur xen-4.7.0/tools/libxc/xc_domain.c xen-4.7.0_copie/tools/libxc/xc_domain.c
+--- xen-4.7.0/tools/libxc/xc_domain.c	2018-09-28 14:54:01.452370000 +0100
++++ xen-4.7.0_copie/tools/libxc/xc_domain.c	2016-06-20 11:38:15.000000000 +0100
+@@ -582,7 +582,7 @@
+ }
+ 
+ 
+-int  xc_shadow_control(xc_interface *xch,
++int xc_shadow_control(xc_interface *xch,
+                       uint32_t domid,
+                       unsigned int sop,
+                       xc_hypercall_buffer_t *dirty_bitmap,
+Seulement dans xen-4.7.0/tools/libxc: xc_domain.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_domain.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_domain.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_domain.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_binloader.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_binloader.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_binloader.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_binloader.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_boot.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_boot.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_boot.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_boot.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_bzimageloader.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_bzimageloader.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_bzimageloader.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_bzimageloader.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_compat_linux.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_compat_linux.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_compat_linux.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_compat_linux.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_core.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_core.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_core.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_core.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_decompress_lz4.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_decompress_lz4.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_decompress_lz4.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_decompress_lz4.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_elfloader.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_elfloader.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_elfloader.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_elfloader.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_hvmloader.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_hvmloader.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_hvmloader.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_hvmloader.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_x86.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_x86.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_dom_x86.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_dom_x86.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_evtchn_compat.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_evtchn_compat.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_evtchn_compat.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_evtchn_compat.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_evtchn.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_evtchn.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_evtchn.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_evtchn.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_flask.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_flask.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_flask.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_flask.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_foreign_memory.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_foreign_memory.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_foreign_memory.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_foreign_memory.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_gnttab_compat.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_gnttab_compat.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_gnttab_compat.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_gnttab_compat.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_gnttab.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_gnttab.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_gnttab.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_gnttab.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_hcall_buf.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_hcall_buf.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_hcall_buf.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_hcall_buf.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_kexec.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_kexec.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_kexec.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_kexec.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_linux.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_linux.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_linux.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_linux.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_mem_access.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_mem_access.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_mem_access.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_mem_access.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_mem_paging.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_mem_paging.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_mem_paging.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_mem_paging.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_memshr.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_memshr.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_memshr.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_memshr.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_misc.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_misc.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_misc.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_misc.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_monitor.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_monitor.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_monitor.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_monitor.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_offline_page.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_offline_page.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_offline_page.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_offline_page.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_pagetab.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_pagetab.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_pagetab.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_pagetab.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_physdev.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_physdev.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_physdev.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_physdev.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_pm.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_pm.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_pm.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_pm.opic.d
+diff -ur xen-4.7.0/tools/libxc/xc_private.h xen-4.7.0_copie/tools/libxc/xc_private.h
+--- xen-4.7.0/tools/libxc/xc_private.h	2018-09-28 14:54:01.452370000 +0100
++++ xen-4.7.0_copie/tools/libxc/xc_private.h	2016-06-20 11:38:15.000000000 +0100
+@@ -267,12 +267,11 @@
+     if ( xc_hypercall_bounce_pre(xch, domctl) )
+     {
+         PERROR("Could not bounce buffer for domctl hypercall");
+-        goto out1; 
++        goto out1;
+     }
+ 
+     ret = xencall1(xch->xcall, __HYPERVISOR_domctl,
+                    HYPERCALL_BUFFER_AS_ARG(domctl));
+-    //printf("ret:%d\n",ret);
+     if ( ret < 0 )
+     {
+         if ( errno == EACCES )
+@@ -285,34 +284,6 @@
+     return ret;
+ }
+ 
+-static inline int do_test_hypercall(xc_interface *xch, struct xen_domctl *domctl)
+-{
+-    int ret = -2;
+-    DECLARE_HYPERCALL_BOUNCE(domctl, sizeof(*domctl), XC_HYPERCALL_BUFFER_BOUNCE_BOTH);
+-    printf("\n %s:%d:%s\n",__FILE__,__LINE__,__func__);
+-
+-    domctl->interface_version = XEN_DOMCTL_INTERFACE_VERSION;
+-
+-    if ( xc_hypercall_bounce_pre(xch, domctl) )
+-    {
+-        PERROR("Could not bounce buffer for domctl hypercall");
+-       // goto out1;
+-    }
+-
+-    ret = xencall1(xch->xcall, __HYPERVISOR_test_hypercall,
+-                   HYPERCALL_BUFFER_AS_ARG(domctl));
+-    if ( ret < 0 )
+-    {
+-        if ( errno == EACCES )
+-            DPRINTF("domctl operation failed -- need to"
+-                    " rebuild the user-space tool set?\n");
+-    }
+-
+-    xc_hypercall_bounce_post(xch, domctl);
+- //out1:
+-    return ret;
+-}
+-
+ static inline int do_sysctl(xc_interface *xch, struct xen_sysctl *sysctl)
+ {
+     int ret = -1;
+Seulement dans xen-4.7.0/tools/libxc: xc_private.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_private.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_private.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_private.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_psr.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_psr.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_psr.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_psr.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_resource.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_resource.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_resource.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_resource.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_resume.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_resume.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_resume.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_resume.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_rt.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_rt.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_rt.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_rt.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common_x86.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common_x86.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common_x86.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common_x86.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common_x86_pv.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common_x86_pv.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_common_x86_pv.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_common_x86_pv.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_hvm.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_hvm.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_hvm.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_hvm.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_pv.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_pv.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_restore_x86_pv.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_restore_x86_pv.opic.d
+diff -ur xen-4.7.0/tools/libxc/xc_sr_save.c xen-4.7.0_copie/tools/libxc/xc_sr_save.c
+--- xen-4.7.0/tools/libxc/xc_sr_save.c	2018-09-28 14:54:01.452370000 +0100
++++ xen-4.7.0_copie/tools/libxc/xc_sr_save.c	2016-06-20 11:38:15.000000000 +0100
+@@ -1,6 +1,5 @@
+ #include <assert.h>
+ #include <arpa/inet.h>
+-#include <unistd.h>
+ 
+ #include "xc_sr_common.h"
+ 
+@@ -478,7 +477,6 @@
+     unsigned x;
+     int rc;
+ 
+-    printf("ctx->save.p2m_size : %lu",ctx->save.p2m_size);
+     rc = update_progress_string(ctx, &progress_str, 0);
+     if ( rc )
+         goto out;
+@@ -635,70 +633,6 @@
+     return rc;
+ }
+ 
+-int xc_domain_collect_dirty_logs(xc_interface *xch, uint32_t dom, xc_hypercall_buffer_t *dirty_bitmap)
+-{
+-    int rc;
+-    unsigned long p2m_size=1045504;//=0xff400;
+-    xen_pfn_t nr_pfns;
+-    unsigned long *db=malloc(sizeof(unsigned long) * p2m_size);
+-
+-    DECLARE_DOMCTL;
+-    DECLARE_HYPERCALL_BOUNCE(db, p2m_size * sizeof(*db), XC_HYPERCALL_BUFFER_BOUNCE_OUT);
+-    memset(&domctl, 0, sizeof(domctl));
+-
+-    if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
+-    {
+-        PERROR("Unable to obtain p2m_size");
+-        //goto out;
+-    }
+-
+-    //p2m_size =(unsigned long)nr_pfns;
+-    //for(i=0; i<10; i++) printf("%lu - ",db[i]);
+-    //printf("%lu\n",db[32]);
+-
+-    domctl.cmd = XEN_DOMCTL_shadow_op;
+-    domctl.domain = (domid_t)dom;
+-    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_PEEK;
+-    domctl.u.shadow_op.pages  = p2m_size;
+-    set_xen_guest_handle(domctl.u.shadow_op.dirty_bitmap, db);
+-
+-    rc = do_domctl(xch, &domctl);
+-    printf("%lu\n",db[32]);
+-
+-    xc_hypercall_bounce_post(xch, db);
+-
+-    //out:
+-      //  return rc;
+-    return rc;
+-}
+-
+-int xc_domain_clean_dirty_bitmap(xc_interface *xch, uint32_t dom)
+-{
+-    int rc;
+-    unsigned long p2m_size=1045504;//=0xff400;
+-    //xen_pfn_t nr_pfns;
+-
+-    DECLARE_DOMCTL;
+-    memset(&domctl, 0, sizeof(domctl));
+-
+-    /*if(xc_domain_nr_gpfns(xch, (domid_t)dom, &nr_pfns)<0)
+-    {
+-        PERROR("Unable to obtain p2m_size");
+-        goto out;
+-    }*/
+-
+-    domctl.cmd = XEN_DOMCTL_shadow_op;
+-    domctl.domain = (domid_t)dom;
+-    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_CLEAN;
+-    domctl.u.shadow_op.pages  = p2m_size;
+-
+-    rc = do_domctl(xch, &domctl);
+-
+-    /*out:
+-        return rc;*/
+-    return rc;
+-}
+-
+ static int verify_frames(struct xc_sr_context *ctx)
+ {
+     xc_interface *xch = ctx->xch;
+@@ -980,32 +914,6 @@
+ 
+     return rc;
+ };
+-  
+-int xc_domain_enable_log_dirty(xc_interface *xch, uint32_t dom)
+-{
+-    int rc; 
+-    DECLARE_DOMCTL;
+-    memset(&domctl, 0, sizeof(domctl));
+-    domctl.cmd = XEN_DOMCTL_shadow_op;
+-    domctl.domain = (domid_t)dom;
+-    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_ENABLE_LOGDIRTY;
+-    rc = do_domctl(xch, &domctl);
+-    //printf("\n%s:%d:%s,%d\n",__FILE__,__LINE__,__func__,rc);
+-    return rc;
+-}
+-
+-int xc_domain_disable_log_dirty(xc_interface *xch, uint32_t dom)
+-{
+-    int rc;
+-    DECLARE_DOMCTL;
+-    memset(&domctl, 0, sizeof(domctl));
+-    domctl.cmd = XEN_DOMCTL_shadow_op;
+-    domctl.domain = (domid_t)dom;
+-    domctl.u.shadow_op.op     = XEN_DOMCTL_SHADOW_OP_OFF;
+-    //printf("\n%s:%d:%s\n",__FILE__,__LINE__,__func__);
+-    rc = do_domctl(xch, &domctl);
+-    return rc;
+-}
+ 
+ int xc_domain_save(xc_interface *xch, int io_fd, uint32_t dom,
+                    uint32_t max_iters, uint32_t max_factor, uint32_t flags,
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save_x86_hvm.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save_x86_hvm.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save_x86_hvm.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save_x86_hvm.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save_x86_pv.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save_x86_pv.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_sr_save_x86_pv.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_sr_save_x86_pv.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_suspend.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_suspend.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_suspend.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_suspend.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_tbuf.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_tbuf.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_tbuf.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_tbuf.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_tmem.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_tmem.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_tmem.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_tmem.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xc_vm_event.o
+Seulement dans xen-4.7.0/tools/libxc: .xc_vm_event.o.d
+Seulement dans xen-4.7.0/tools/libxc: xc_vm_event.opic
+Seulement dans xen-4.7.0/tools/libxc: .xc_vm_event.opic.d
+Seulement dans xen-4.7.0/tools/libxc: xg_private.o
+Seulement dans xen-4.7.0/tools/libxc: .xg_private.o.d
+Seulement dans xen-4.7.0/tools/libxc: xg_private.opic
+Seulement dans xen-4.7.0/tools/libxc: .xg_private.opic.d
+Seulement dans xen-4.7.0/tools/libxl: flexarray.o
+Seulement dans xen-4.7.0/tools/libxl: .flexarray.o.d
+Seulement dans xen-4.7.0/tools/libxl: idl.pyc
+Seulement dans xen-4.7.0/tools/libxl: libxenlight.a
+Seulement dans xen-4.7.0/tools/libxl: libxenlight.so
+Seulement dans xen-4.7.0/tools/libxl: libxenlight.so.4.7
+Seulement dans xen-4.7.0/tools/libxl: libxenlight.so.4.7.0
+Seulement dans xen-4.7.0/tools/libxl: libxenlight_test.so
+Seulement dans xen-4.7.0/tools/libxl: libxl_aoutils.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_aoutils.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl.api-for-check
+Seulement dans xen-4.7.0/tools/libxl: ._libxl.api-for-check.d
+Seulement dans xen-4.7.0/tools/libxl: libxl.api-ok
+Seulement dans xen-4.7.0/tools/libxl: libxl_blktap2.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_blktap2.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_bootloader.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_bootloader.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_checkpoint_device.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_checkpoint_device.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_convert_callout.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_convert_callout.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_cpuid.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_cpuid.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_create.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_create.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_device.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_device.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_dm.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_dm.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_dom.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_dom.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_dom_save.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_dom_save.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_dom_suspend.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_dom_suspend.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_event.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_event.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_exec.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_exec.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_flask.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_flask.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_fork.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_fork.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_genid.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_genid.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_internal.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_internal.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_json.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_json.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_linux.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_linux.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_list.h
+Seulement dans xen-4.7.0/tools/libxl: libxl_no_colo.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_no_colo.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_nonetbuffer.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_nonetbuffer.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_numa.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_numa.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_paths.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_paths.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_pci.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_pci.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_psr.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_psr.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_pvusb.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_pvusb.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_qmp.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_qmp.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_remus_disk_drbd.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_remus_disk_drbd.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_remus.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_remus.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_save_callout.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_save_callout.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl-save-helper
+diff -ur xen-4.7.0/tools/libxl/libxl_save_helper.c xen-4.7.0_copie/tools/libxl/libxl_save_helper.c
+--- xen-4.7.0/tools/libxl/libxl_save_helper.c	2018-09-28 14:54:01.460386000 +0100
++++ xen-4.7.0_copie/tools/libxl/libxl_save_helper.c	2016-06-20 11:38:15.000000000 +0100
+@@ -37,7 +37,6 @@
+ #include "libxl_osdeps.h"
+ 
+ #include <stdlib.h>
+-#include <stdio.h>
+ #include <unistd.h>
+ #include <assert.h>
+ #include <inttypes.h>
+@@ -245,7 +244,7 @@
+ #define NEXTARG (++argv, assert(*argv), *argv)
+ 
+     const char *mode = *++argv;
+-    assert(mode); 
++    assert(mode);
+ 
+     if (!strcmp(mode,"--save-domain")) {
+ 
+@@ -302,40 +301,6 @@
+         helper_stub_restore_results(store_mfn,console_mfn,0);
+         complete(r);
+ 
+-    } else if (!strcmp(mode,"--enable-log-dirty")) {
+-
+-        uint32_t dom =                      strtoul(NEXTARG,0,10);
+-	  startup("enable");
+-	// setup_signals(save_signal_handler);
+-	
+-        r = xc_domain_enable_log_dirty(xch, dom);
+-	 complete(r);
+-	   
+-    } else if (!strcmp(mode,"--disable-log-dirty")) {
+-        uint32_t dom =                      strtoul(NEXTARG,0,10);
+-        startup("disable");
+-        r = xc_domain_disable_log_dirty(xch, dom);  
+-        complete(r);      
+-
+-    } else if (!strcmp(mode,"--collect_dirty_logs")) {
+-        uint32_t dom =                      strtoul(NEXTARG,0,10);
+-
+-        startup("collect");
+-
+-        xc_hypercall_buffer_t *dirty_bitmap=NULL;
+-        r = xc_domain_collect_dirty_logs(xch, dom, dirty_bitmap); 
+-
+-        complete(r);      
+-        
+-    }else if (!strcmp(mode,"--clean_dirty_bitmap")) {
+-        uint32_t dom =                      strtoul(NEXTARG,0,10);
+-
+-        startup("clean");
+-
+-        r = xc_domain_clean_dirty_bitmap(xch, dom); 
+-
+-        complete(r);      
+-        
+     } else {
+         assert(!"unexpected mode argument");
+     }
+Seulement dans xen-4.7.0/tools/libxl: libxl_save_helper.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_save_helper.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_callout.c
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_callout.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_callout.o
+Seulement dans xen-4.7.0/tools/libxl: ._libxl_save_msgs_callout.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_helper.c
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_helper.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_save_msgs_helper.o
+Seulement dans xen-4.7.0/tools/libxl: ._libxl_save_msgs_helper.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_stream_read.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_stream_read.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_stream_write.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_stream_write.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_test_fdevent.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_test_fdevent.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_test_timedereg.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_test_timedereg.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types.c
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_internal.c
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_internal.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_internal_json.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_internal.o
+Seulement dans xen-4.7.0/tools/libxl: ._libxl_types_internal.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_internal_private.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_json.h
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types.o
+Seulement dans xen-4.7.0/tools/libxl: ._libxl_types.o.d
+Seulement dans xen-4.7.0/tools/libxl: _libxl_types_private.h
+Seulement dans xen-4.7.0/tools/libxl: libxlu_cfg_l.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_cfg_l.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_cfg.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_cfg.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_cfg_y.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_cfg_y.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_disk_l.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_disk_l.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_disk.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_disk.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_pci.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_pci.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlutil.a
+Seulement dans xen-4.7.0/tools/libxl: libxl_utils.o
+Seulement dans xen-4.7.0/tools/libxl: libxlutil.so
+Seulement dans xen-4.7.0/tools/libxl: libxlutil.so.4.7
+Seulement dans xen-4.7.0/tools/libxl: libxlutil.so.4.7.0
+Seulement dans xen-4.7.0/tools/libxl: .libxl_utils.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_uuid.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_uuid.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxlu_vif.o
+Seulement dans xen-4.7.0/tools/libxl: .libxlu_vif.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_vnuma.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_vnuma.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_x86.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_x86.o.d
+Seulement dans xen-4.7.0/tools/libxl: libxl_xshelp.o
+Seulement dans xen-4.7.0/tools/libxl: .libxl_xshelp.o.d
+Seulement dans xen-4.7.0/tools/libxl: osdeps.o
+Seulement dans xen-4.7.0/tools/libxl: .osdeps.o.d
+Seulement dans xen-4.7.0/tools/libxl: _paths.h
+Seulement dans xen-4.7.0/tools/libxl: test_common.o
+Seulement dans xen-4.7.0/tools/libxl: .test_common.o.d
+Seulement dans xen-4.7.0/tools/libxl: test_fdderegrace
+Seulement dans xen-4.7.0/tools/libxl: test_fdderegrace.o
+Seulement dans xen-4.7.0/tools/libxl: .test_fdderegrace.o.d
+Seulement dans xen-4.7.0/tools/libxl: testidl
+Seulement dans xen-4.7.0/tools/libxl: testidl.c
+Seulement dans xen-4.7.0/tools/libxl: testidl.o
+Seulement dans xen-4.7.0/tools/libxl: .testidl.o.d
+Seulement dans xen-4.7.0/tools/libxl: test_timedereg
+Seulement dans xen-4.7.0/tools/libxl: test_timedereg.o
+Seulement dans xen-4.7.0/tools/libxl: .test_timedereg.o.d
+Seulement dans xen-4.7.0/tools/libxl: xenlight.pc
+Seulement dans xen-4.7.0/tools/libxl: xenlight.pc.in
+Seulement dans xen-4.7.0/tools/libxl: xl
+diff -ur xen-4.7.0/tools/libxl/xl_cmdimpl.c xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c
+--- xen-4.7.0/tools/libxl/xl_cmdimpl.c	2018-09-28 14:54:01.464394000 +0100
++++ xen-4.7.0_copie/tools/libxl/xl_cmdimpl.c	2016-06-20 11:38:15.000000000 +0100
+@@ -35,14 +35,13 @@
+ #include <inttypes.h>
+ #include <limits.h>
+ #include <xen/hvm/e820.h>
+-#include <assert.h>
+ 
+ #include "libxl.h"
+ #include "libxl_utils.h"
+ #include "libxl_json.h"
+ #include "libxlutil.h"
+ #include "xl.h"
+- 
++
+ /* For calls which return an errno on failure */
+ #define CHK_ERRNOVAL( call ) ({                                         \
+         int chk_errnoval = (call);                                      \
+@@ -4641,7 +4640,7 @@
+             goto failed_suspend;
+         else
+             goto failed_resume;
+-    } 
++    }
+ 
+     //fprintf(stderr, "migration sender: Transfer complete.\n");
+     // Should only be printed when debugging as it's a bit messy with
+@@ -5055,6 +5054,7 @@
+         {"live", 0, 0, 0x200},
+         COMMON_LONG_OPTS
+     };
++
+     SWITCH_FOREACH_OPT(opt, "FC:s:e", opts, "migrate", 2) {
+     case 'C':
+         config_filename = optarg;
+@@ -5447,40 +5447,6 @@
+     return 0;
+ }
+ 
+-int main_enable_log_dirty(int argc, char **argv)
+-{
+-    int ret;
+-    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
+-    ret=execl(path,path,"--enable-log-dirty",argv[1],NULL); //argv[1]=domid
+-    //printf("%s:%s",argv[0],argv[1]);
+-    return ret;
+-}
+-
+-int main_collect_dirty_logs(int argc, char **argv)
+-{
+-    int ret=0;
+-    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
+-    ret=execl(path,path,"--collect_dirty_logs",argv[1],NULL);
+-    return ret;
+-}
+-
+-int main_clean_dirty_bitmap(int argc, char **argv)
+-{
+-    int ret=0;
+-    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
+-    ret=execl(path,path,"--clean_dirty_bitmap",argv[1],NULL);
+-    return ret;
+-}
+-
+-int main_disable_log_dirty(int argc, char **argv)
+-{
+-    int ret;
+-    char path[]="/usr/local/lib/xen/bin/libxl-save-helper";
+-    ret=execl(path,path,"--disable-log-dirty",argv[1],NULL);
+-    //printf("%s:%s",argv[0],argv[1]);
+-    return ret;
+-}
+-
+ int main_config_update(int argc, char **argv)
+ {
+     uint32_t domid;
+Seulement dans xen-4.7.0/tools/libxl: xl_cmdimpl.o
+Seulement dans xen-4.7.0/tools/libxl: .xl_cmdimpl.o.d
+diff -ur xen-4.7.0/tools/libxl/xl_cmdtable.c xen-4.7.0_copie/tools/libxl/xl_cmdtable.c
+--- xen-4.7.0/tools/libxl/xl_cmdtable.c	2018-09-28 14:54:01.464394000 +0100
++++ xen-4.7.0_copie/tools/libxl/xl_cmdtable.c	2016-06-20 11:38:15.000000000 +0100
+@@ -36,30 +36,6 @@
+       "-A, --vncviewer-autopass\n"
+       "                        Pass VNC password to viewer via stdin."
+     },
+-    { "enable-log-dirty",
+-      &main_enable_log_dirty, 1, 1,
+-      "Enable log dirty mode for domain <domid>",
+-      "[options] [domainid]",
+-      "-h                      Print this help.\n"
+-    },
+-    { "collect-dirty-logs",
+-      &main_collect_dirty_logs, 1, 1,
+-      "Collect dirty pages from pml buffer for domain <domid>",
+-      "[options] [domainid]",
+-      "-h                      Print this help.\n"
+-    },
+-    { "clean-dirty-bitmap",
+-      &main_clean_dirty_bitmap, 1, 1,
+-      "Clean the dirty bitmap of domain <domid>",
+-      "[options] [domainid]",
+-      "-h                      Print this help.\n"
+-    },
+-    { "disable-log-dirty",
+-      &main_disable_log_dirty, 1, 1,
+-      "Disable log dirty mode for domain <domid>",
+-      "[options] [domaid]",
+-      "-h                      Print this help.\n"
+-    },
+     { "config-update",
+       &main_config_update, 1, 1,
+       "Update a running domain's saved configuration, used when rebuilding "
+Seulement dans xen-4.7.0/tools/libxl: xl_cmdtable.o
+Seulement dans xen-4.7.0/tools/libxl: .xl_cmdtable.o.d
+diff -ur xen-4.7.0/tools/libxl/xl.h xen-4.7.0_copie/tools/libxl/xl.h
+--- xen-4.7.0/tools/libxl/xl.h	2018-09-28 14:54:01.464394000 +0100
++++ xen-4.7.0_copie/tools/libxl/xl.h	2016-06-20 11:38:15.000000000 +0100
+@@ -65,10 +65,6 @@
+ int main_list(int argc, char **argv);
+ int main_vm_list(int argc, char **argv);
+ int main_create(int argc, char **argv);
+-int main_enable_log_dirty(int argc, char **argv);
+-int main_collect_dirty_logs(int argc, char **argv);
+-int main_clean_dirty_bitmap(int argc, char **argv);
+-int main_disable_log_dirty(int argc, char **argv);
+ int main_config_update(int argc, char **argv);
+ int main_button_press(int argc, char **argv);
+ int main_vcpupin(int argc, char **argv);
+Seulement dans xen-4.7.0/tools/libxl: xl.o
+Seulement dans xen-4.7.0/tools/libxl: .xl.o.d
+Seulement dans xen-4.7.0/tools/libxl: xl_sxp.o
+Seulement dans xen-4.7.0/tools/libxl: .xl_sxp.o.d
+Seulement dans xen-4.7.0/tools/libxl: xlutil.pc
+Seulement dans xen-4.7.0/tools/libxl: xlutil.pc.in
+Seulement dans xen-4.7.0/tools/memshr: bidir-daemon.o
+Seulement dans xen-4.7.0/tools/memshr: .bidir-daemon.o.d
+Seulement dans xen-4.7.0/tools/memshr: bidir-hash-blockshr.o
+Seulement dans xen-4.7.0/tools/memshr: .bidir-hash-blockshr.o.d
+Seulement dans xen-4.7.0/tools/memshr: bidir-hash-fgprtshr.o
+Seulement dans xen-4.7.0/tools/memshr: .bidir-hash-fgprtshr.o.d
+Seulement dans xen-4.7.0/tools/memshr: interface.o
+Seulement dans xen-4.7.0/tools/memshr: .interface.o.d
+Seulement dans xen-4.7.0/tools/memshr: libmemshr.a
+Seulement dans xen-4.7.0/tools/memshr: shm.o
+Seulement dans xen-4.7.0/tools/memshr: .shm.o.d
+Seulement dans xen-4.7.0/tools/misc: gtracestat
+Seulement dans xen-4.7.0/tools/misc: gtracestat.o
+Seulement dans xen-4.7.0/tools/misc: .gtracestat.o.d
+Seulement dans xen-4.7.0/tools/misc: gtraceview
+Seulement dans xen-4.7.0/tools/misc: gtraceview.o
+Seulement dans xen-4.7.0/tools/misc: .gtraceview.o.d
+Seulement dans xen-4.7.0/tools/misc: xencov
+Seulement dans xen-4.7.0/tools/misc: xencov.o
+Seulement dans xen-4.7.0/tools/misc: .xencov.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-cpuid
+Seulement dans xen-4.7.0/tools/misc: xen-cpuid.o
+Seulement dans xen-4.7.0/tools/misc: .xen-cpuid.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-detect
+Seulement dans xen-4.7.0/tools/misc: .xen-detect.d
+Seulement dans xen-4.7.0/tools/misc: xen-hptool
+Seulement dans xen-4.7.0/tools/misc: xen-hptool.o
+Seulement dans xen-4.7.0/tools/misc: .xen-hptool.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-hvmcrash
+Seulement dans xen-4.7.0/tools/misc: xen-hvmcrash.o
+Seulement dans xen-4.7.0/tools/misc: .xen-hvmcrash.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-hvmctx
+Seulement dans xen-4.7.0/tools/misc: xen-hvmctx.o
+Seulement dans xen-4.7.0/tools/misc: .xen-hvmctx.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-livepatch
+Seulement dans xen-4.7.0/tools/misc: xen-livepatch.o
+Seulement dans xen-4.7.0/tools/misc: .xen-livepatch.o.d
+Seulement dans xen-4.7.0/tools/misc: xenlockprof
+Seulement dans xen-4.7.0/tools/misc: xenlockprof.o
+Seulement dans xen-4.7.0/tools/misc: .xenlockprof.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-lowmemd
+Seulement dans xen-4.7.0/tools/misc: xen-lowmemd.o
+Seulement dans xen-4.7.0/tools/misc: .xen-lowmemd.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-mfndump
+Seulement dans xen-4.7.0/tools/misc: xen-mfndump.o
+Seulement dans xen-4.7.0/tools/misc: .xen-mfndump.o.d
+Seulement dans xen-4.7.0/tools/misc: xenperf
+Seulement dans xen-4.7.0/tools/misc: xenperf.o
+Seulement dans xen-4.7.0/tools/misc: .xenperf.o.d
+Seulement dans xen-4.7.0/tools/misc: xenpm
+Seulement dans xen-4.7.0/tools/misc: xenpm.o
+Seulement dans xen-4.7.0/tools/misc: .xenpm.o.d
+Seulement dans xen-4.7.0/tools/misc: xen-tmem-list-parse
+Seulement dans xen-4.7.0/tools/misc: .xen-tmem-list-parse.d
+Seulement dans xen-4.7.0/tools/misc: xenwatchdogd
+Seulement dans xen-4.7.0/tools/misc: xenwatchdogd.o
+Seulement dans xen-4.7.0/tools/misc: .xenwatchdogd.o.d
+Seulement dans xen-4.7.0/tools/pygrub: build
+Seulement dans xen-4.7.0/tools/pygrub: .build.d
+Seulement dans xen-4.7.0/tools/python: build
+Seulement dans xen-4.7.0/tools/python: .install.d
+diff -ur xen-4.7.0/tools/qemu-xen/po/de_DE.po xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po
+--- xen-4.7.0/tools/qemu-xen/po/de_DE.po	2018-09-28 15:39:19.962405961 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/de_DE.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 1.4.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2014-07-17 20:39+0200\n"
+ "PO-Revision-Date: 2012-02-28 16:00+0100\n"
+ "Last-Translator: Kevin Wolf <kwolf@redhat.com>\n"
+ "Language-Team: Deutsch <de@li.org>\n"
+@@ -16,70 +16,70 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:321
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr " - Strg+Alt+G drücken, um Eingabegeräte freizugeben"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:325
+ msgid " [Paused]"
+ msgstr " [Angehalten]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1601
+ msgid "_Pause"
+ msgstr "_Angehalten"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1607
+ msgid "_Reset"
+ msgstr "_Reset"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1610
+ msgid "Power _Down"
+ msgstr "_Herunterfahren"
+ 
+-#: ui/gtk.c:1703
++#: ui/gtk.c:1616
+ msgid "_Quit"
+ msgstr "_Beenden"
+ 
+-#: ui/gtk.c:1787
++#: ui/gtk.c:1692
+ msgid "_Fullscreen"
+ msgstr "_Vollbild"
+ 
+-#: ui/gtk.c:1801
++#: ui/gtk.c:1702
+ msgid "Zoom _In"
+ msgstr "_Heranzoomen"
+ 
+-#: ui/gtk.c:1808
++#: ui/gtk.c:1709
+ msgid "Zoom _Out"
+ msgstr "_Wegzoomen"
+ 
+-#: ui/gtk.c:1815
++#: ui/gtk.c:1716
+ msgid "Best _Fit"
+ msgstr "_Einpassen"
+ 
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1723
+ msgid "Zoom To _Fit"
+ msgstr "Auf _Fenstergröße skalieren"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1729
+ msgid "Grab On _Hover"
+ msgstr "Tastatur _automatisch einfangen"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1732
+ msgid "_Grab Input"
+ msgstr "_Eingabegeräte einfangen"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1761
+ msgid "Show _Tabs"
+ msgstr "Reiter anzeigen"
+ 
+-#: ui/gtk.c:1863
++#: ui/gtk.c:1764
+ msgid "Detach Tab"
+ msgstr "Reiter abtrennen"
+ 
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1778
+ msgid "_Machine"
+ msgstr "_Maschine"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1783
+ msgid "_View"
+ msgstr "_Ansicht"
+diff -ur xen-4.7.0/tools/qemu-xen/po/fr_FR.po xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po
+--- xen-4.7.0/tools/qemu-xen/po/fr_FR.po	2018-09-28 15:39:19.998423991 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/fr_FR.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 1.4.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2014-07-28 23:14+0200\n"
+ "PO-Revision-Date: 2014-07-28 23:25+0200\n"
+ "Last-Translator: Aurelien Jarno <aurelien@aurel32.net>\n"
+ "Language-Team: French <FR@li.org>\n"
+@@ -17,70 +17,70 @@
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ "X-Generator: Lokalize 1.4\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:321
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr "- Appuyer sur Ctrl+Alt+G pour arrêter la capture"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:325
+ msgid " [Paused]"
+ msgstr " [En pause]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1601
+ msgid "_Pause"
+ msgstr "_Pause"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1607
+ msgid "_Reset"
+ msgstr "_Réinitialiser"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1610
+ msgid "Power _Down"
+ msgstr "_Éteindre"
+ 
+-#: ui/gtk.c:1703
++#: ui/gtk.c:1616
+ msgid "_Quit"
+ msgstr "_Quitter"
+ 
+-#: ui/gtk.c:1787
++#: ui/gtk.c:1692
+ msgid "_Fullscreen"
+ msgstr "Mode _plein écran"
+ 
+-#: ui/gtk.c:1801
++#: ui/gtk.c:1702
+ msgid "Zoom _In"
+ msgstr "Zoom _avant"
+ 
+-#: ui/gtk.c:1808
++#: ui/gtk.c:1709
+ msgid "Zoom _Out"
+ msgstr "_Zoom arrière"
+ 
+-#: ui/gtk.c:1815
++#: ui/gtk.c:1716
+ msgid "Best _Fit"
+ msgstr "Zoom _idéal"
+ 
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1723
+ msgid "Zoom To _Fit"
+ msgstr "Zoomer pour a_juster"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1729
+ msgid "Grab On _Hover"
+ msgstr "Capturer en _survolant"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1732
+ msgid "_Grab Input"
+ msgstr "_Capturer les entrées"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1761
+ msgid "Show _Tabs"
+ msgstr "Montrer les _onglets"
+ 
+-#: ui/gtk.c:1863
++#: ui/gtk.c:1764
+ msgid "Detach Tab"
+ msgstr "_Détacher l'onglet"
+ 
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1778
+ msgid "_Machine"
+ msgstr "_Machine"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1783
+ msgid "_View"
+ msgstr "_Vue"
+diff -ur xen-4.7.0/tools/qemu-xen/po/hu.po xen-4.7.0_copie/tools/qemu-xen/po/hu.po
+--- xen-4.7.0/tools/qemu-xen/po/hu.po	2018-09-28 15:39:19.966407964 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/hu.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 1.4.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+ "PO-Revision-Date: 2013-05-06 20:42+0200\n"
+ "Last-Translator: Ákos Kovács <akoskovacs@gmx.com>\n"
+ "Language-Team: Hungarian <hu@li.org>\n"
+@@ -15,73 +15,47 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:214
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr " - Nyomj Ctrl+Alt+G-t a bemeneti eszközök elengedéséhez"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:218
+ msgid " [Paused]"
+ msgstr " [Megállítva]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1318
+ msgid "_Pause"
+ msgstr "_Megállítás"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1324
+ msgid "_Reset"
+ msgstr "Új_raindítás"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1327
+ msgid "Power _Down"
+ msgstr "_Leállítás"
+ 
+-#: ui/gtk.c:1703
+-msgid "_Quit"
+-msgstr ""
+-
+-#: ui/gtk.c:1787
+-msgid "_Fullscreen"
+-msgstr ""
+-
+-#: ui/gtk.c:1801
+-#, fuzzy
+-msgid "Zoom _In"
+-msgstr "Ablakmérethez _igazítás"
+-
+-#: ui/gtk.c:1808
+-#, fuzzy
+-msgid "Zoom _Out"
+-msgstr "Ablakmérethez _igazítás"
+-
+-#: ui/gtk.c:1815
+-msgid "Best _Fit"
+-msgstr ""
+-
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1381
+ msgid "Zoom To _Fit"
+ msgstr "Ablakmérethez _igazítás"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1387
+ msgid "Grab On _Hover"
+ msgstr "Automatikus _elfogás"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1390
+ msgid "_Grab Input"
+ msgstr "_Bemeneti eszközök megragadása"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1416
+ msgid "Show _Tabs"
+ msgstr "_Fülek megjelenítése"
+ 
+-#: ui/gtk.c:1863
+-msgid "Detach Tab"
+-msgstr ""
+-
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1430
+ msgid "_Machine"
+ msgstr "_Gép"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1435
+ msgid "_View"
+ msgstr "_Nézet"
+ 
+diff -ur xen-4.7.0/tools/qemu-xen/po/it.po xen-4.7.0_copie/tools/qemu-xen/po/it.po
+--- xen-4.7.0/tools/qemu-xen/po/it.po	2018-09-28 15:39:19.998423991 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/it.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 1.4.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2014-07-29 08:14+0200\n"
+ "PO-Revision-Date: 2014-07-29 08:25+0200\n"
+ "Last-Translator: Paolo Bonzini <pbonzini@redhat.com>\n"
+ "Language-Team: Italian <it@li.org>\n"
+@@ -16,70 +16,66 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:321
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr " - Premere Ctrl+Alt+G per rilasciare l'input"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:325
+ msgid " [Paused]"
+ msgstr " [Pausa]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1601
+ msgid "_Pause"
+ msgstr "_Pausa"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1607
+ msgid "_Reset"
+ msgstr "_Reset"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1610
+ msgid "Power _Down"
+ msgstr "_Spegni"
+ 
+-#: ui/gtk.c:1703
++#: ui/gtk.c:1616
+ msgid "_Quit"
+ msgstr "_Esci"
+ 
+-#: ui/gtk.c:1787
+-msgid "_Fullscreen"
+-msgstr ""
+-
+-#: ui/gtk.c:1801
++#: ui/gtk.c:1702
+ msgid "Zoom _In"
+ msgstr "_Aumenta zoom"
+ 
+-#: ui/gtk.c:1808
++#: ui/gtk.c:1709
+ msgid "Zoom _Out"
+ msgstr "_Riduci zoom"
+ 
+-#: ui/gtk.c:1815
++#: ui/gtk.c:1716
+ msgid "Best _Fit"
+ msgstr "A_nnulla zoom"
+ 
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1723
+ msgid "Zoom To _Fit"
+ msgstr "Adatta alla _finestra"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1729
+ msgid "Grab On _Hover"
+ msgstr "Cattura _automatica input"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1732
+ msgid "_Grab Input"
+ msgstr "_Cattura input"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1761
+ msgid "Show _Tabs"
+ msgstr "Mostra _tab"
+ 
+-#: ui/gtk.c:1863
++#: ui/gtk.c:1764
+ msgid "Detach Tab"
+ msgstr "_Sposta in una nuova finestra"
+ 
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1778
+ msgid "_Machine"
+ msgstr "_Macchina virtuale"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1783
+ msgid "_View"
+ msgstr "_Visualizza"
+diff -ur xen-4.7.0/tools/qemu-xen/po/messages.po xen-4.7.0_copie/tools/qemu-xen/po/messages.po
+--- xen-4.7.0/tools/qemu-xen/po/messages.po	2018-09-28 15:39:19.918383925 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/messages.po	2016-05-26 17:35:36.000000000 +0100
+@@ -5,9 +5,9 @@
+ #, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: QEMU 2.4.1\n"
++"Project-Id-Version: QEMU 1.5.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+ "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+ "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+ "Language-Team: LANGUAGE <LL@li.org>\n"
+@@ -16,70 +16,46 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:214
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr ""
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:218
+ msgid " [Paused]"
+ msgstr ""
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1318
+ msgid "_Pause"
+ msgstr ""
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1324
+ msgid "_Reset"
+ msgstr ""
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1327
+ msgid "Power _Down"
+ msgstr ""
+ 
+-#: ui/gtk.c:1703
+-msgid "_Quit"
+-msgstr ""
+-
+-#: ui/gtk.c:1787
+-msgid "_Fullscreen"
+-msgstr ""
+-
+-#: ui/gtk.c:1801
+-msgid "Zoom _In"
+-msgstr ""
+-
+-#: ui/gtk.c:1808
+-msgid "Zoom _Out"
+-msgstr ""
+-
+-#: ui/gtk.c:1815
+-msgid "Best _Fit"
+-msgstr ""
+-
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1381
+ msgid "Zoom To _Fit"
+ msgstr ""
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1387
+ msgid "Grab On _Hover"
+ msgstr ""
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1390
+ msgid "_Grab Input"
+ msgstr ""
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1416
+ msgid "Show _Tabs"
+ msgstr ""
+ 
+-#: ui/gtk.c:1863
+-msgid "Detach Tab"
+-msgstr ""
+-
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1430
+ msgid "_Machine"
+ msgstr ""
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1435
+ msgid "_View"
+ msgstr ""
+diff -ur xen-4.7.0/tools/qemu-xen/po/tr.po xen-4.7.0_copie/tools/qemu-xen/po/tr.po
+--- xen-4.7.0/tools/qemu-xen/po/tr.po	2018-09-28 15:39:19.998423991 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/tr.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 1.4.50\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2013-07-05 22:36+0200\n"
+ "PO-Revision-Date: 2013-04-22 18:35+0300\n"
+ "Last-Translator: Ozan Çağlayan <ozancag@gmail.com>\n"
+ "Language-Team: Türkçe <>\n"
+@@ -17,72 +17,46 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Gtranslator 2.91.6\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:214
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr " - Yakalamayı durdurmak için Ctrl+Alt+G tuşlarına basın"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:218
+ msgid " [Paused]"
+ msgstr " [Duraklatıldı]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1318
+ msgid "_Pause"
+ msgstr "_Duraklat"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1324
+ msgid "_Reset"
+ msgstr "_Sıfırla"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1327
+ msgid "Power _Down"
+ msgstr "_Kapat"
+ 
+-#: ui/gtk.c:1703
+-msgid "_Quit"
+-msgstr ""
+-
+-#: ui/gtk.c:1787
+-msgid "_Fullscreen"
+-msgstr ""
+-
+-#: ui/gtk.c:1801
+-#, fuzzy
+-msgid "Zoom _In"
+-msgstr "Yakınlaş ve Sığ_dır"
+-
+-#: ui/gtk.c:1808
+-#, fuzzy
+-msgid "Zoom _Out"
+-msgstr "Yakınlaş ve Sığ_dır"
+-
+-#: ui/gtk.c:1815
+-msgid "Best _Fit"
+-msgstr ""
+-
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1381
+ msgid "Zoom To _Fit"
+ msgstr "Yakınlaş ve Sığ_dır"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1387
+ msgid "Grab On _Hover"
+ msgstr "Ü_zerindeyken Yakala"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1390
+ msgid "_Grab Input"
+ msgstr "Girdiyi _Yakala"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1416
+ msgid "Show _Tabs"
+ msgstr "Se_kmeleri Göster"
+ 
+-#: ui/gtk.c:1863
+-msgid "Detach Tab"
+-msgstr ""
+-
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1430
+ msgid "_Machine"
+ msgstr "_Makine"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1435
+ msgid "_View"
+ msgstr "_Görüntüle"
+diff -ur xen-4.7.0/tools/qemu-xen/po/zh_CN.po xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po
+--- xen-4.7.0/tools/qemu-xen/po/zh_CN.po	2018-09-28 15:39:19.998423991 +0100
++++ xen-4.7.0_copie/tools/qemu-xen/po/zh_CN.po	2016-05-26 17:35:36.000000000 +0100
+@@ -6,7 +6,7 @@
+ msgstr ""
+ "Project-Id-Version: QEMU 2.2\n"
+ "Report-Msgid-Bugs-To: qemu-devel@nongnu.org\n"
+-"POT-Creation-Date: 2018-09-28 15:39+0100\n"
++"POT-Creation-Date: 2014-07-31 10:03+0800\n"
+ "PO-Revision-Date: 2014-07-31 10:00+0800\n"
+ "Last-Translator: Fam Zheng <famz@redhat.com>\n"
+ "Language-Team: Chinese <zh@li.org>\n"
+@@ -17,70 +17,70 @@
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ "X-Generator: Lokalize 1.4\n"
+ 
+-#: ui/gtk.c:260
++#: ui/gtk.c:321
+ msgid " - Press Ctrl+Alt+G to release grab"
+ msgstr " - 按下 Ctrl+Alt+G 取消捕获"
+ 
+-#: ui/gtk.c:264
++#: ui/gtk.c:325
+ msgid " [Paused]"
+ msgstr " [已暂停]"
+ 
+-#: ui/gtk.c:1688
++#: ui/gtk.c:1601
+ msgid "_Pause"
+ msgstr "暂停(_P)"
+ 
+-#: ui/gtk.c:1694
++#: ui/gtk.c:1607
+ msgid "_Reset"
+ msgstr "重置(_R)"
+ 
+-#: ui/gtk.c:1697
++#: ui/gtk.c:1610
+ msgid "Power _Down"
+ msgstr "关闭电源(_D)"
+ 
+-#: ui/gtk.c:1703
++#: ui/gtk.c:1616
+ msgid "_Quit"
+ msgstr "退出(_Q)"
+ 
+-#: ui/gtk.c:1787
++#: ui/gtk.c:1692
+ msgid "_Fullscreen"
+ msgstr "全屏(_F)"
+ 
+-#: ui/gtk.c:1801
++#: ui/gtk.c:1702
+ msgid "Zoom _In"
+ msgstr "放大(_I)"
+ 
+-#: ui/gtk.c:1808
++#: ui/gtk.c:1709
+ msgid "Zoom _Out"
+ msgstr "缩小(_O)"
+ 
+-#: ui/gtk.c:1815
++#: ui/gtk.c:1716
+ msgid "Best _Fit"
+ msgstr "最合适大小(_F)"
+ 
+-#: ui/gtk.c:1822
++#: ui/gtk.c:1723
+ msgid "Zoom To _Fit"
+ msgstr "缩放以适应大小(_F)"
+ 
+-#: ui/gtk.c:1828
++#: ui/gtk.c:1729
+ msgid "Grab On _Hover"
+ msgstr "鼠标经过时捕获(_H)"
+ 
+-#: ui/gtk.c:1831
++#: ui/gtk.c:1732
+ msgid "_Grab Input"
+ msgstr "捕获输入(_G)"
+ 
+-#: ui/gtk.c:1860
++#: ui/gtk.c:1761
+ msgid "Show _Tabs"
+ msgstr "显示标签页(_T)"
+ 
+-#: ui/gtk.c:1863
++#: ui/gtk.c:1764
+ msgid "Detach Tab"
+ msgstr "分离标签页"
+ 
+-#: ui/gtk.c:1875
++#: ui/gtk.c:1778
+ msgid "_Machine"
+ msgstr "虚拟机(_M)"
+ 
+-#: ui/gtk.c:1880
++#: ui/gtk.c:1783
+ msgid "_View"
+ msgstr "视图(_V)"
+Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool/backend: __init__.pyc
+Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool/backend: stderr.pyc
+Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool/format: __init__.pyc
+Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool: __init__.pyc
+Seulement dans xen-4.7.0/tools/qemu-xen/scripts/tracetool: transform.pyc
+Seulement dans xen-4.7.0/tools: qemu-xen-dir
+Seulement dans xen-4.7.0/tools: qemu-xen-traditional-dir
+Seulement dans xen-4.7.0/tools/xcutils: lsevtchn
+Seulement dans xen-4.7.0/tools/xcutils: lsevtchn.o
+Seulement dans xen-4.7.0/tools/xcutils: .lsevtchn.o.d
+Seulement dans xen-4.7.0/tools/xcutils: readnotes
+Seulement dans xen-4.7.0/tools/xcutils: readnotes.o
+Seulement dans xen-4.7.0/tools/xcutils: .readnotes.o.d
+Seulement dans xen-4.7.0/tools/xenmon: setmask.o
+Seulement dans xen-4.7.0/tools/xenmon: .setmask.o.d
+Seulement dans xen-4.7.0/tools/xenmon: xenbaked
+Seulement dans xen-4.7.0/tools/xenmon: xenbaked.o
+Seulement dans xen-4.7.0/tools/xenmon: .xenbaked.o.d
+Seulement dans xen-4.7.0/tools/xenmon: xentrace_setmask
+Seulement dans xen-4.7.0/tools/xenpaging: file_ops.o
+Seulement dans xen-4.7.0/tools/xenpaging: .file_ops.o.d
+Seulement dans xen-4.7.0/tools/xenpaging: pagein.o
+Seulement dans xen-4.7.0/tools/xenpaging: .pagein.o.d
+Seulement dans xen-4.7.0/tools/xenpaging: policy_default.o
+Seulement dans xen-4.7.0/tools/xenpaging: .policy_default.o.d
+Seulement dans xen-4.7.0/tools/xenpaging: xenpaging
+Seulement dans xen-4.7.0/tools/xenpaging: xenpaging.o
+Seulement dans xen-4.7.0/tools/xenpaging: .xenpaging.o.d
+Seulement dans xen-4.7.0/tools/xenpmd: xenpmd
+Seulement dans xen-4.7.0/tools/xenpmd: xenpmd.o
+Seulement dans xen-4.7.0/tools/xenpmd: .xenpmd.o.d
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: libxenstat.a
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: libxenstat.so
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: libxenstat.so.0
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: libxenstat.so.0.0
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: xenstat_linux.o
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: xenstat.o
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat/src: xenstat_qmp.o
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat: .src@xenstat_linux.o.d
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat: .src@xenstat.o.d
+Seulement dans xen-4.7.0/tools/xenstat/libxenstat: .src@xenstat_qmp.o.d
+Seulement dans xen-4.7.0/tools/xenstat/xentop: xentop
+Seulement dans xen-4.7.0/tools/xenstat/xentop: .xentop.d
+Seulement dans xen-4.7.0/tools/xenstore: hashtable.o
+Seulement dans xen-4.7.0/tools/xenstore: .hashtable.o.d
+Seulement dans xen-4.7.0/tools/xenstore: libxenstore.a
+Seulement dans xen-4.7.0/tools/xenstore: libxenstore.so
+Seulement dans xen-4.7.0/tools/xenstore: libxenstore.so.3.0
+Seulement dans xen-4.7.0/tools/xenstore: libxenstore.so.3.0.3
+Seulement dans xen-4.7.0/tools/xenstore: talloc.o
+Seulement dans xen-4.7.0/tools/xenstore: .talloc.o.d
+Seulement dans xen-4.7.0/tools/xenstore: tdb.o
+Seulement dans xen-4.7.0/tools/xenstore: .tdb.o.d
+Seulement dans xen-4.7.0/tools/xenstore: utils.o
+Seulement dans xen-4.7.0/tools/xenstore: .utils.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstore
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-chmod
+Seulement dans xen-4.7.0/tools/xenstore: xenstore_client.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstore_client.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-control
+Seulement dans xen-4.7.0/tools/xenstore: xenstore_control.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstore_control.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstored
+Seulement dans xen-4.7.0/tools/xenstore: xenstored_core.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstored_core.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstored_domain.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstored_domain.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstored_posix.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstored_posix.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstored_transaction.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstored_transaction.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstored_watch.o
+Seulement dans xen-4.7.0/tools/xenstore: .xenstored_watch.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-exists
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-list
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-ls
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-read
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-rm
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-watch
+Seulement dans xen-4.7.0/tools/xenstore: xenstore-write
+Seulement dans xen-4.7.0/tools/xenstore: xs_lib.o
+Seulement dans xen-4.7.0/tools/xenstore: .xs_lib.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xs_lib.opic
+Seulement dans xen-4.7.0/tools/xenstore: .xs_lib.opic.d
+Seulement dans xen-4.7.0/tools/xenstore: xs.o
+Seulement dans xen-4.7.0/tools/xenstore: .xs.o.d
+Seulement dans xen-4.7.0/tools/xenstore: xs.opic
+Seulement dans xen-4.7.0/tools/xenstore: .xs.opic.d
+Seulement dans xen-4.7.0/tools/xenstore: xs_tdb_dump
+Seulement dans xen-4.7.0/tools/xenstore: xs_tdb_dump.o
+Seulement dans xen-4.7.0/tools/xenstore: .xs_tdb_dump.o.d
+Seulement dans xen-4.7.0/tools/xentrace: mread.o
+Seulement dans xen-4.7.0/tools/xentrace: .mread.o.d
+Seulement dans xen-4.7.0/tools/xentrace: setsize.o
+Seulement dans xen-4.7.0/tools/xentrace: .setsize.o.d
+Seulement dans xen-4.7.0/tools/xentrace: xenalyze
+Seulement dans xen-4.7.0/tools/xentrace: xenalyze.o
+Seulement dans xen-4.7.0/tools/xentrace: .xenalyze.o.d
+Seulement dans xen-4.7.0/tools/xentrace: xenctx
+Seulement dans xen-4.7.0/tools/xentrace: xenctx.o
+Seulement dans xen-4.7.0/tools/xentrace: .xenctx.o.d
+Seulement dans xen-4.7.0/tools/xentrace: xentrace
+Seulement dans xen-4.7.0/tools/xentrace: xentrace.o
+Seulement dans xen-4.7.0/tools/xentrace: .xentrace.o.d
+Seulement dans xen-4.7.0/tools/xentrace: xentrace_setsize
+Seulement dans xen-4.7.0: .vscode
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: boot.init.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: boot.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .boot.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi/cpufreq: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi/cpufreq: cpufreq.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi/cpufreq: .cpufreq.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi/cpufreq: powernow.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi/cpufreq: .powernow.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: cpuidle_menu.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .cpuidle_menu.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: cpu_idle.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .cpu_idle.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: lib.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .lib.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: power.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .power.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: suspend.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .suspend.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: wakeup_prot.o
+Seulement dans xen-4.7.0/xen/arch/x86/acpi: .wakeup_prot.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: alternative.init.o
+Seulement dans xen-4.7.0/xen/arch/x86: alternative.o
+Seulement dans xen-4.7.0/xen/arch/x86: .alternative.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: apic.o
+Seulement dans xen-4.7.0/xen/arch/x86: .apic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: asm-offsets.s
+Seulement dans xen-4.7.0/xen/arch/x86: .asm-offsets.s.d
+Seulement dans xen-4.7.0/xen/arch/x86: bitops.o
+Seulement dans xen-4.7.0/xen/arch/x86: .bitops.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/boot: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/boot: head.o
+Seulement dans xen-4.7.0/xen/arch/x86/boot: .head.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/boot: mkelf32
+Seulement dans xen-4.7.0/xen/arch/x86/boot: reloc.bin
+Seulement dans xen-4.7.0/xen/arch/x86/boot: reloc.lnk
+Seulement dans xen-4.7.0/xen/arch/x86/boot: reloc.o
+Seulement dans xen-4.7.0/xen/arch/x86/boot: reloc.S
+Seulement dans xen-4.7.0/xen/arch/x86: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86: bzimage.init.o
+Seulement dans xen-4.7.0/xen/arch/x86: bzimage.o
+Seulement dans xen-4.7.0/xen/arch/x86: .bzimage.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: clear_page.o
+Seulement dans xen-4.7.0/xen/arch/x86: .clear_page.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: compat.o
+Seulement dans xen-4.7.0/xen/arch/x86: .compat.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: copy_page.o
+Seulement dans xen-4.7.0/xen/arch/x86: .copy_page.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: amd.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .amd.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: centaur.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .centaur.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: common.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .common.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: intel_cacheinfo.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .intel_cacheinfo.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: intel.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .intel.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: amd_nonfatal.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .amd_nonfatal.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: barrier.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .barrier.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mcaction.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mcaction.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mce_amd.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mce_amd.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mce-apei.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mce-apei.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mce_intel.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mce_intel.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mce.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mce.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: mctelem.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .mctelem.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: non-fatal.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .non-fatal.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: util.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .util.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: vmce.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mcheck: .vmce.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mtrr: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mtrr: generic.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mtrr: .generic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mtrr: main.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu/mtrr: .main.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: mwait-idle.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .mwait-idle.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: vpmu_amd.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .vpmu_amd.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: vpmu_intel.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .vpmu_intel.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: vpmu.o
+Seulement dans xen-4.7.0/xen/arch/x86/cpu: .vpmu.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: cpuid.o
+Seulement dans xen-4.7.0/xen/arch/x86: .cpuid.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: crash.o
+Seulement dans xen-4.7.0/xen/arch/x86: .crash.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: debug.o
+Seulement dans xen-4.7.0/xen/arch/x86: .debug.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: delay.o
+Seulement dans xen-4.7.0/xen/arch/x86: .delay.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: dmi_scan.init.o
+Seulement dans xen-4.7.0/xen/arch/x86: dmi_scan.o
+Seulement dans xen-4.7.0/xen/arch/x86: .dmi_scan.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: domain_build.init.o
+Seulement dans xen-4.7.0/xen/arch/x86: domain_build.o
+Seulement dans xen-4.7.0/xen/arch/x86: .domain_build.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: domain.o
+Seulement dans xen-4.7.0/xen/arch/x86: .domain.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: domain_page.o
+Seulement dans xen-4.7.0/xen/arch/x86: .domain_page.o.d
+diff -ur xen-4.7.0/xen/arch/x86/domctl.c xen-4.7.0_copie/xen/arch/x86/domctl.c
+--- xen-4.7.0/xen/arch/x86/domctl.c	2018-09-28 14:54:01.821103000 +0100
++++ xen-4.7.0_copie/xen/arch/x86/domctl.c	2016-06-20 11:38:15.000000000 +0100
+@@ -240,7 +240,6 @@
+     long ret = 0;
+     bool_t copyback = 0;
+     unsigned long i;
+-    //printk("arch_do_domctl!!!\n");
+ 
+     switch ( domctl->cmd )
+     {
+Seulement dans xen-4.7.0/xen/arch/x86: domctl.o
+Seulement dans xen-4.7.0/xen/arch/x86: .domctl.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: e820.o
+Seulement dans xen-4.7.0/xen/arch/x86: .e820.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/efi: boot.c
+Seulement dans xen-4.7.0/xen/arch/x86/efi: boot.init.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: boot.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: .boot.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/efi: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: check.efi
+Seulement dans xen-4.7.0/xen/arch/x86/efi: check.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: compat.c
+Seulement dans xen-4.7.0/xen/arch/x86/efi: compat.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: .compat.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/efi: efi.h
+Seulement dans xen-4.7.0/xen/arch/x86/efi: mkreloc
+Seulement dans xen-4.7.0/xen/arch/x86/efi: relocs-dummy.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: .relocs-dummy.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/efi: runtime.c
+Seulement dans xen-4.7.0/xen/arch/x86/efi: runtime.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: .runtime.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/efi: stub.o
+Seulement dans xen-4.7.0/xen/arch/x86/efi: .stub.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: efi.lds
+Seulement dans xen-4.7.0/xen/arch/x86: .efi.lds.d
+Seulement dans xen-4.7.0/xen/arch/x86: extable.o
+Seulement dans xen-4.7.0/xen/arch/x86: .extable.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: flushtlb.o
+Seulement dans xen-4.7.0/xen/arch/x86: .flushtlb.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: bigsmp.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: .bigsmp.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: default.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: .default.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: delivery.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: .delivery.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: probe.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: .probe.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: x2apic.o
+Seulement dans xen-4.7.0/xen/arch/x86/genapic: .x2apic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: hpet.o
+Seulement dans xen-4.7.0/xen/arch/x86: .hpet.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: asid.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .asid.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: emulate.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .emulate.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: event.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .event.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: hpet.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .hpet.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: hvm.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .hvm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: i8254.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .i8254.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: intercept.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .intercept.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: io.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .io.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: ioreq.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .ioreq.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: irq.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .irq.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: mtrr.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .mtrr.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: nestedhvm.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .nestedhvm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: pmtimer.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .pmtimer.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: quirks.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .quirks.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: rtc.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .rtc.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: save.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .save.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: stdvga.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .stdvga.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: asid.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .asid.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: emulate.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .emulate.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: entry.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .entry.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: intr.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .intr.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: nestedsvm.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .nestedsvm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: svmdebug.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .svmdebug.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: svm.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .svm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: vmcb.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/svm: .vmcb.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: vioapic.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .vioapic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: viridian.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .viridian.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: vlapic.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .vlapic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: vmsi.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .vmsi.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: entry.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .entry.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: intr.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .intr.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: realmode.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .realmode.o.d
+diff -ur xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c
+--- xen-4.7.0/xen/arch/x86/hvm/vmx/vmcs.c	2019-01-03 21:42:41.532195393 +0100
++++ xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmcs.c	2016-06-20 11:38:15.000000000 +0100
+@@ -15,7 +15,6 @@
+  * this program; If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include <xen/time.h>
+ #include <xen/config.h>
+ #include <xen/init.h>
+ #include <xen/mm.h>
+@@ -1417,13 +1416,11 @@
+     return !!(v->arch.hvm_vmx.secondary_exec_control &
+               SECONDARY_EXEC_ENABLE_PML);
+ }
+- 
++
+ int vmx_vcpu_enable_pml(struct vcpu *v)
+ {
+-    //int activate=vmx_vcpu_pml_enabled(v);
+     if ( vmx_vcpu_pml_enabled(v) )
+         return 0;
+-    //printk("%s:%d:%s vmx_vcpu_pml_enabled:%d",__FILE__,__LINE__,__func__,activate);
+ 
+     v->arch.hvm_vmx.pml_pg = v->domain->arch.paging.alloc_page(v->domain);
+     if ( !v->arch.hvm_vmx.pml_pg )
+@@ -1466,12 +1463,8 @@
+ 
+ void vmx_vcpu_flush_pml_buffer(struct vcpu *v)
+ {
+-    uint64_t *pml_buf;//uint64_t
++    uint64_t *pml_buf;
+     unsigned long pml_idx;
+-    //unsigned int diff_t;
+-    //s_time_t start_t, end_t;
+-
+-    //start_t = get_s_time();
+ 
+     ASSERT((v == current) || (!vcpu_runnable(v) && !v->is_running));
+     ASSERT(vmx_vcpu_pml_enabled(v));
+@@ -1485,21 +1478,17 @@
+         goto out;
+ 
+     pml_buf = __map_domain_page(v->arch.hvm_vmx.pml_pg);
+-    //printk("%s:%d:%s addresse pml_buf: %p\n",__FILE__,__LINE__,__func__,pml_buf);
+ 
+     /*
+      * PML index can be either 2^16-1 (buffer is full), or 0 ~ NR_PML_ENTRIES-1
+      * (buffer is not full), and in latter case PML index always points to next
+      * available entity.
+      */
+-   
+-   
+     if ( pml_idx >= NR_PML_ENTRIES )
+         pml_idx = 0;
+     else
+         pml_idx++;
+ 
+-    //printk("%lu -------- avant \n",pml_idx);
+     for ( ; pml_idx < NR_PML_ENTRIES; pml_idx++ )
+     {
+         unsigned long gfn = pml_buf[pml_idx] >> PAGE_SHIFT;
+@@ -1514,19 +1503,13 @@
+          */
+         p2m_change_type_one(v->domain, gfn, p2m_ram_logdirty, p2m_ram_rw);
+         paging_mark_gfn_dirty(v->domain, gfn);
+-        //printk("gfn : %lx \n",gfn);
+     }
+-    //printk("%lu -------- apres \n",pml_idx);
+ 
+     unmap_domain_page(pml_buf);
+ 
+     /* Reset PML index */
+     __vmwrite(GUEST_PML_INDEX, NR_PML_ENTRIES - 1);
+ 
+-    /*end_t = get_s_time();
+-    diff_t = end_t - start_t;
+-    printk("##T_flush : %u\n",diff_t);*/
+-
+  out:
+     vmx_vmcs_exit(v);
+ }
+@@ -1550,7 +1533,6 @@
+     int rc;
+ 
+     ASSERT(atomic_read(&d->pause_count));
+-    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
+ 
+     if ( vmx_domain_pml_enabled(d) )
+         return 0;
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: vmcs.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .vmcs.o.d
+diff -ur xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c
+--- xen-4.7.0/xen/arch/x86/hvm/vmx/vmx.c	2019-03-06 15:59:42.577758369 +0100
++++ xen-4.7.0_copie/xen/arch/x86/hvm/vmx/vmx.c	2016-06-20 11:38:15.000000000 +0100
+@@ -15,7 +15,6 @@
+  * this program; If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include <xen/time.h>
+ #include <xen/config.h>
+ #include <xen/init.h>
+ #include <xen/lib.h>
+@@ -59,10 +58,8 @@
+ #include <asm/altp2m.h>
+ #include <asm/event.h>
+ #include <asm/monitor.h>
+-#include <asm/time.h>
+ #include <public/arch-x86/cpuid.h>
+ 
+-
+ static bool_t __initdata opt_force_ept;
+ boolean_param("force-ept", opt_force_ept);
+ 
+@@ -100,13 +97,11 @@
+ 
+ uint8_t __read_mostly posted_intr_vector;
+ static uint8_t __read_mostly pi_wakeup_vector;
+-unsigned int pml_exits;
+ 
+ void vmx_pi_per_cpu_init(unsigned int cpu)
+ {
+     INIT_LIST_HEAD(&per_cpu(vmx_pi_blocking, cpu).list);
+     spin_lock_init(&per_cpu(vmx_pi_blocking, cpu).lock);
+-    pml_exits = 0;
+ }
+ 
+ static void vmx_vcpu_block(struct vcpu *v)
+@@ -3190,10 +3185,9 @@
+ 
+ void vmx_vmexit_handler(struct cpu_user_regs *regs)
+ {
+-    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0, sleep=0;
+-    unsigned int vector = 0, mode, diff_t;
++    unsigned long exit_qualification, exit_reason, idtv_info, intr_info = 0;
++    unsigned int vector = 0, mode;
+     struct vcpu *v = current;
+-    s_time_t start_t=get_s_time(), end_t;
+ 
+     __vmread(GUEST_RIP,    &regs->rip);
+     __vmread(GUEST_RSP,    &regs->rsp);
+@@ -3708,7 +3702,6 @@
+ 
+         __vmread(GUEST_PHYSICAL_ADDRESS, &gpa);
+         __vmread(EXIT_QUALIFICATION, &exit_qualification);
+-        //printk("gpa:%lx",gpa);
+         ept_handle_violation(exit_qualification, gpa);
+         break;
+     }
+@@ -3751,17 +3744,9 @@
+         break;
+ 
+     case EXIT_REASON_PML_FULL:
+-        //printk("%s:%d:%s exit raison full\n",__FILE__,__LINE__,__func__);
+-        pml_exits = pml_exits+1; 
+         vmx_vcpu_flush_pml_buffer(v);
+-        do{
+-            sleep++;
+-            end_t = get_s_time();
+-            diff_t = end_t - start_t;
+-        }while(diff_t < 4000000);
+-        printk("##Th : %u, pml_exit = %u\n",diff_t,pml_exits);
+         break;
+- 
++
+     case EXIT_REASON_XSAVES:
+         vmx_handle_xsaves();
+         break;
+@@ -3793,8 +3778,6 @@
+         break;
+     }
+ 
+-
+-    //printk("##vmexit\n");
+ out:
+     if ( nestedhvm_vcpu_in_guestmode(v) )
+         nvmx_idtv_handling();
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: vmx.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .vmx.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: vvmx.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm/vmx: .vvmx.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: vpic.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .vpic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: vpt.o
+Seulement dans xen-4.7.0/xen/arch/x86/hvm: .vpt.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: i387.o
+Seulement dans xen-4.7.0/xen/arch/x86: .i387.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: i8259.o
+Seulement dans xen-4.7.0/xen/arch/x86: .i8259.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: io_apic.o
+Seulement dans xen-4.7.0/xen/arch/x86: .io_apic.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: ioport_emulate.o
+Seulement dans xen-4.7.0/xen/arch/x86: .ioport_emulate.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: irq.o
+Seulement dans xen-4.7.0/xen/arch/x86: .irq.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: machine_kexec.o
+Seulement dans xen-4.7.0/xen/arch/x86: .machine_kexec.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: microcode_amd.o
+Seulement dans xen-4.7.0/xen/arch/x86: .microcode_amd.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: microcode_intel.o
+Seulement dans xen-4.7.0/xen/arch/x86: .microcode_intel.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: microcode.o
+Seulement dans xen-4.7.0/xen/arch/x86: .microcode.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: altp2m.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .altp2m.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: guest_walk_2.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .guest_walk_2.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: guest_walk_3.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .guest_walk_3.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: guest_walk_4.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .guest_walk_4.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: guest_walk_2level.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .guest_walk_2level.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: guest_walk_3level.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .guest_walk_3level.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: guest_walk_4level.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .guest_walk_4level.o.d
+diff -ur xen-4.7.0/xen/arch/x86/mm/hap/hap.c xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c
+--- xen-4.7.0/xen/arch/x86/mm/hap/hap.c	2018-09-28 14:54:01.829119000 +0100
++++ xen-4.7.0_copie/xen/arch/x86/mm/hap/hap.c	2016-06-20 11:38:15.000000000 +0100
+@@ -136,7 +136,7 @@
+             paging_unlock(d);
+ 
+             domain_pause(d);
+-            //printk("fffffffffffffffffffffff\n");
++
+             /* Flush dirty GFNs potentially cached by hardware. */
+             p2m_flush_hardware_cached_dirty(d);
+ 
+@@ -191,7 +191,6 @@
+ static int hap_enable_log_dirty(struct domain *d, bool_t log_global)
+ {
+     /* turn on PG_log_dirty bit in paging mode */
+-    //printk("%s:%d:%s",__FILE__,__LINE__,__func__);
+     paging_lock(d);
+     d->arch.paging.mode |= PG_log_dirty;
+     paging_unlock(d);
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: hap.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .hap.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: nested_ept.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .nested_ept.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: nested_hap.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/hap: .nested_hap.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: mem_paging.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .mem_paging.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: mem_sharing.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .mem_sharing.o.d
+diff -ur xen-4.7.0/xen/arch/x86/mm/p2m.c xen-4.7.0_copie/xen/arch/x86/mm/p2m.c
+--- xen-4.7.0/xen/arch/x86/mm/p2m.c	2018-09-28 14:54:01.829119000 +0100
++++ xen-4.7.0_copie/xen/arch/x86/mm/p2m.c	2016-06-20 11:38:15.000000000 +0100
+@@ -292,7 +292,6 @@
+ void p2m_enable_hardware_log_dirty(struct domain *d)
+ {
+     struct p2m_domain *p2m = p2m_get_hostp2m(d);
+-    //printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
+ 
+     if ( p2m->enable_hardware_log_dirty )
+     {
+diff -ur xen-4.7.0/xen/arch/x86/mm/p2m-ept.c xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c
+--- xen-4.7.0/xen/arch/x86/mm/p2m-ept.c	2018-09-28 14:54:01.829119000 +0100
++++ xen-4.7.0_copie/xen/arch/x86/mm/p2m-ept.c	2016-06-20 11:38:15.000000000 +0100
+@@ -1148,7 +1148,6 @@
+ {
+     /* Domain must have been paused */
+     ASSERT(atomic_read(&p2m->domain->pause_count));
+-    printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
+ 
+     /*
+      * No need to return whether vmx_domain_enable_pml has succeeded, as
+@@ -1203,7 +1202,6 @@
+ 
+     if ( cpu_has_vmx_pml )
+     {
+-        printk("%s:%d:%s\n",__FILE__,__LINE__,__func__);
+         p2m->enable_hardware_log_dirty = ept_enable_pml;
+         p2m->disable_hardware_log_dirty = ept_disable_pml;
+         p2m->flush_hardware_cached_dirty = ept_flush_pml_buffers;
+Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m-ept.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m-ept.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m-pod.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m-pod.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm: p2m-pt.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .p2m-pt.o.d
+diff -ur xen-4.7.0/xen/arch/x86/mm/paging.c xen-4.7.0_copie/xen/arch/x86/mm/paging.c
+--- xen-4.7.0/xen/arch/x86/mm/paging.c	2018-10-03 21:30:15.279202174 +0100
++++ xen-4.7.0_copie/xen/arch/x86/mm/paging.c	2016-06-20 11:38:15.000000000 +0100
+@@ -86,26 +86,6 @@
+     return mfn;
+ }
+ 
+-/* Alloc and init a new leaf with xxentries */
+-static mfn_t paging_new_log_dirty_leaf_long(struct domain *d)
+-{    
+-    mfn_t mfn = paging_new_log_dirty_page(d);//mfn2, 
+-    if ( mfn_valid(mfn) )
+-    {
+-        int i;
+-        mfn_t *node = map_domain_page(mfn);
+-        for ( i = 0; i < LOGDIRTY_LEAF_LONG_ENTRIES << 1; i++ )
+-        {
+-            /*mfn2=paging_new_log_dirty_page(d);
+-            if ( mfn_valid(mfn2) )
+-                clear_domain_page(mfn2);*/
+-            node[i] = _mfn(INVALID_MFN);//mfn2;            
+-        }       
+-        unmap_domain_page(node);
+-    }  
+-    return mfn;
+-}
+-
+ /* Alloc and init a new non-leaf node */
+ static mfn_t paging_new_log_dirty_node(struct domain *d)
+ {
+@@ -287,9 +267,10 @@
+ /* Mark a page as dirty, with taking guest pfn as parameter */
+ void paging_mark_gfn_dirty(struct domain *d, unsigned long pfn)
+ {
++    int changed;
+     mfn_t mfn, *l4, *l3, *l2;
+-    unsigned long *l1,*l0;
+-    int i1, i2, i3, i4, decalage;
++    unsigned long *l1;
++    int i1, i2, i3, i4;
+ 
+     if ( !paging_mode_log_dirty(d) )
+         return;
+@@ -338,68 +319,22 @@
+ 
+     l2 = map_domain_page(mfn);
+     mfn = l2[i2];
+-    if ( !mfn_valid(mfn) ){
+-        l2[i2] = mfn = paging_new_log_dirty_leaf_long(d);
+-    }
++    if ( !mfn_valid(mfn) )
++        l2[i2] = mfn = paging_new_log_dirty_leaf(d);
+     unmap_domain_page(l2);
+     if ( !mfn_valid(mfn) )
+         goto out;
+ 
+     l1 = map_domain_page(mfn);
+-    /*
+-    *On obtient le bloc de l1 à partir d'où incrémenter
+-    */
+-    decalage = (i1 >> 9); //On fait i1:(PAGE_SIZE/sizeof(long)) et PAGE_SIZE(==1 << 12)/sizeof(long)(== 1 << 3) = (1 << 9)
+-    i1 %= (PAGE_SIZE >> 3);//(PAGE_SIZE/sizeof(long))
+-
+-    mfn=l1[decalage];
+-    if ( !mfn_valid(mfn) ){
+-        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
+-    }
+-    //unmap_domain_page(l1);
+-    if ( !mfn_valid(mfn) )
+-        goto out;
+-
+-    l0=map_domain_page(mfn);
+-    if(l0)
+-    {
+-        l0[i1]++;
+-        unmap_domain_page(l0);
+-    }
+-
+-    /*
+-    *On obtient le bloc de l1 à partir d'où insérer le pfn pris en paramètres
+-    */
+-    decalage += LOGDIRTY_LEAF_LONG_ENTRIES;
+-    mfn=l1[decalage];
+-    if ( !mfn_valid(mfn) ){
+-        l1[decalage] = mfn = paging_new_log_dirty_leaf(d);
+-    }
+-    //unmap_domain_page(l1);
+-    if ( !mfn_valid(mfn) )
+-        goto out;
+-
+-    l0=map_domain_page(mfn);
+-    if(l0)
+-    {
+-        l0[i1] = pfn;
+-        //printk("%lx\n",pfn);
+-        unmap_domain_page(l0);
+-    }
+-
++    changed = !__test_and_set_bit(i1, l1);
+     unmap_domain_page(l1);
+-
+-    d->arch.paging.log_dirty.dirty_count++;
+-
+-    //changed = !__test_and_set_bit(i1, l1);
+-    /*if ( changed )
++    if ( changed )
+     {
+         PAGING_DEBUG(LOGDIRTY,
+                      "marked mfn %" PRI_mfn " (pfn=%lx), dom %d\n",
+                      mfn_x(mfn), pfn, d->domain_id);
+         d->arch.paging.log_dirty.dirty_count++;
+-        //printk("%s:%d:%s nb de dirty pages: %d\n",__FILE__,__LINE__,__func__,d->arch.paging.log_dirty.dirty_count);
+-    }:*/
++    }
+ 
+ out:
+     /* We've already recorded any failed allocations */
+@@ -478,11 +413,11 @@
+                                struct xen_domctl_shadow_op *sc,
+                                bool_t resuming)
+ {
+-    int rv = 0, clean = 0, peek = 1;//, buf_log_offset = (1 << 15)
++    int rv = 0, clean = 0, peek = 1;
+     unsigned long pages = 0;
+     mfn_t *l4 = NULL, *l3 = NULL, *l2 = NULL;
+-    unsigned long *l1 = NULL, *l0=NULL;//, *buf_log=NULL
+-    int i4, i3, i2, i1, i0=0, decalage, count=0;//, count=0;
++    unsigned long *l1 = NULL;
++    int i4, i3, i2;
+ 
+     if ( !resuming )
+     {
+@@ -561,62 +496,6 @@
+                       map_domain_page(l2[i2]) : NULL);
+                 if ( unlikely(((sc->pages - pages + 7) >> 3) < bytes) )
+                     bytes = (unsigned int)((sc->pages - pages + 7) >> 3);
+-                for ( i1 = 0; i1 < LOGDIRTY_LEAF_LONG_ENTRIES; i1++ )
+-                {
+-                    if(clean)
+-                    {
+-                        l0 = ((l1 && mfn_valid(l1[i1])) ? map_domain_page(l1[i1]) : NULL);
+-                        if (l0)
+-                        {
+-                            clear_page(l0); 
+-                            unmap_domain_page(l0);
+-                        }
+-                        decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
+-                        l0 = ((l1 && mfn_valid(l1[decalage])) ? map_domain_page(l1[decalage]) : NULL);
+-                        if (l0)
+-                        {
+-                            clear_page(l0); 
+-                            unmap_domain_page(l0);
+-                        }
+-                    }else
+-                    {
+-                        for( i0 = 0; i0 < LOGDIRTY_NODE_ENTRIES; i0++)
+-                        {
+-                            l0 = ((l1 && mfn_valid(l1[i1])) ?
+-                                 map_domain_page(l1[i1]) : NULL);
+-                            if(l0)
+-                            {
+-                                if(l0[i0]!=0)
+-                                {
+-                                    //printk("(WSS) %lu : ", l0[i0]);
+-                                }
+-                                
+-                                unmap_domain_page(l0);
+-                            }
+-
+-                            /**
+-                             * Ensuite on fait un décalage pour se placer au début de la 
+-                             * liste des adresses
+-                             * */
+-                            decalage = i1 + LOGDIRTY_LEAF_LONG_ENTRIES;
+-                            /**
+-                             * Maintenant on récupère les adresses elles-mêmes
+-                             * */
+-                            l0 = ((l1 && mfn_valid(l1[decalage])) ?
+-                                 map_domain_page(l1[decalage]) : NULL);
+-                            if(l0)
+-                            {
+-                                if(l0[i0]!=0)
+-                                {
+-                                    count++;
+-                                    //printk("%lx\n", l0[i0]);
+-                                } 
+-                                unmap_domain_page(l0);
+-                            }
+-                        }
+-
+-                    }
+-                }
+                 if ( likely(peek) )
+                 {
+                     if ( (l1 ? copy_to_guest_offset(sc->dirty_bitmap,
+@@ -632,8 +511,8 @@
+                 pages += bytes << 3;
+                 if ( l1 )
+                 {
+-                    /*if ( clean )
+-                        clear_page(l1);*/
++                    if ( clean )
++                        clear_page(l1);
+                     unmap_domain_page(l1);
+                 }
+             }
+@@ -661,9 +540,6 @@
+         if ( rv )
+             break;
+     }
+-    //printk("[END_WSS]\n");
+-    printk("%d\n", count);
+-
+     if ( l4 )
+         unmap_domain_page(l4);
+ 
+@@ -700,7 +576,6 @@
+          * paging modes (shadow or hap).  Safe because the domain is paused. */
+         d->arch.paging.log_dirty.clean_dirty_bitmap(d);
+     }
+-
+     domain_unpause(d);
+     return rv;
+ 
+@@ -709,8 +584,6 @@
+     paging_unlock(d);
+     domain_unpause(d);
+ 
+-    if ( l0 )
+-        unmap_domain_page(l0);
+     if ( l1 )
+         unmap_domain_page(l1);
+     if ( l2 )
+Seulement dans xen-4.7.0/xen/arch/x86/mm: paging.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm: .paging.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: common.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: .common.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: guest_2.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: .guest_2.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: guest_3.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: .guest_3.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: guest_4.o
+Seulement dans xen-4.7.0/xen/arch/x86/mm/shadow: .guest_4.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: mm.o
+Seulement dans xen-4.7.0/xen/arch/x86: .mm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: monitor.o
+Seulement dans xen-4.7.0/xen/arch/x86: .monitor.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: mpparse.o
+Seulement dans xen-4.7.0/xen/arch/x86: .mpparse.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: msi.o
+Seulement dans xen-4.7.0/xen/arch/x86: .msi.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: nmi.o
+Seulement dans xen-4.7.0/xen/arch/x86: .nmi.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: note.o
+Seulement dans xen-4.7.0/xen/arch/x86: numa.o
+Seulement dans xen-4.7.0/xen/arch/x86: .numa.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: backtrace.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .backtrace.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: nmi_int.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .nmi_int.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: op_model_athlon.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .op_model_athlon.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: op_model_p4.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .op_model_p4.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: op_model_ppro.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .op_model_ppro.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: xenoprof.o
+Seulement dans xen-4.7.0/xen/arch/x86/oprofile: .xenoprof.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: pci.o
+Seulement dans xen-4.7.0/xen/arch/x86: .pci.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: percpu.o
+Seulement dans xen-4.7.0/xen/arch/x86: .percpu.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: physdev.o
+Seulement dans xen-4.7.0/xen/arch/x86: .physdev.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: platform_hypercall.o
+Seulement dans xen-4.7.0/xen/arch/x86: .platform_hypercall.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: prelink-efi.o
+Seulement dans xen-4.7.0/xen/arch/x86: prelink.o
+Seulement dans xen-4.7.0/xen/arch/x86: psr.o
+Seulement dans xen-4.7.0/xen/arch/x86: .psr.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: setup.o
+Seulement dans xen-4.7.0/xen/arch/x86: .setup.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: shutdown.o
+Seulement dans xen-4.7.0/xen/arch/x86: .shutdown.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: smpboot.o
+Seulement dans xen-4.7.0/xen/arch/x86: .smpboot.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: smp.o
+Seulement dans xen-4.7.0/xen/arch/x86: .smp.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: srat.o
+Seulement dans xen-4.7.0/xen/arch/x86: .srat.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: string.o
+Seulement dans xen-4.7.0/xen/arch/x86: .string.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: sysctl.o
+Seulement dans xen-4.7.0/xen/arch/x86: .sysctl.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: tboot.o
+Seulement dans xen-4.7.0/xen/arch/x86: .tboot.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: time.o
+Seulement dans xen-4.7.0/xen/arch/x86: .time.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: trace.o
+Seulement dans xen-4.7.0/xen/arch/x86: .trace.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: traps.o
+Seulement dans xen-4.7.0/xen/arch/x86: .traps.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: usercopy.o
+Seulement dans xen-4.7.0/xen/arch/x86: .usercopy.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: vm_event.o
+Seulement dans xen-4.7.0/xen/arch/x86: .vm_event.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: acpi_mmcfg.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .acpi_mmcfg.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64/compat: built_in.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64/compat: entry.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64/compat: .entry.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: compat.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .compat.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: cpufreq.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .cpufreq.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: cpu_idle.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .cpu_idle.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: domain.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .domain.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: entry.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .entry.o.d
+diff -ur xen-4.7.0/xen/arch/x86/x86_64/entry.S xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S
+--- xen-4.7.0/xen/arch/x86/x86_64/entry.S	2018-09-28 14:54:01.833127000 +0100
++++ xen-4.7.0_copie/xen/arch/x86/x86_64/entry.S	2016-06-20 11:38:15.000000000 +0100
+@@ -787,7 +787,6 @@
+         .quad do_hvm_op
+         .quad do_sysctl             /* 35 */
+         .quad do_domctl
+-        .quad do_test_hypercall
+         .quad do_kexec_op
+         .quad do_tmem_op
+         .quad do_ni_hypercall       /* reserved for XenClient */
+@@ -839,7 +838,6 @@
+         .byte 2 /* do_hvm_op            */
+         .byte 1 /* do_sysctl            */  /* 35 */
+         .byte 1 /* do_domctl            */
+-        .byte 0 /* do_test_hypercall    */
+         .byte 2 /* do_kexec             */
+         .byte 1 /* do_tmem_op           */
+         .byte 0 /* reserved for XenClient */
+@@ -852,7 +850,7 @@
+         .rept NR_hypercalls-(.-hypercall_args_table)
+         .byte 0 /* do_ni_hypercall      */
+         .endr
+- 
++
+ /* Table of automatically generated entry points.  One per vector. */
+         .section .init.rodata, "a", @progbits
+ GLOBAL(autogen_entrypoints)
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: gpr_switch.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .gpr_switch.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: kexec_reloc.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .kexec_reloc.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: machine_kexec.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .machine_kexec.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: mmconf-fam10h.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .mmconf-fam10h.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: mmconfig_64.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .mmconfig_64.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: mmconfig-shared.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .mmconfig-shared.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: mm.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .mm.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: pci.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .pci.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: physdev.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .physdev.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: platform_hypercall.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .platform_hypercall.o.d
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: traps.o
+Seulement dans xen-4.7.0/xen/arch/x86/x86_64: .traps.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: x86_emulate.o
+Seulement dans xen-4.7.0/xen/arch/x86: .x86_emulate.o.d
+Seulement dans xen-4.7.0/xen/arch/x86: xen.lds
+Seulement dans xen-4.7.0/xen/arch/x86: .xen.lds.d
+Seulement dans xen-4.7.0/xen/arch/x86: xstate.o
+Seulement dans xen-4.7.0/xen/arch/x86: .xstate.o.d
+Seulement dans xen-4.7.0/xen: .banner
+Seulement dans xen-4.7.0/xen/common: bitmap.o
+Seulement dans xen-4.7.0/xen/common: .bitmap.o.d
+Seulement dans xen-4.7.0/xen/common: built_in.o
+Seulement dans xen-4.7.0/xen/common: bunzip2.init.o
+Seulement dans xen-4.7.0/xen/common: bunzip2.o
+Seulement dans xen-4.7.0/xen/common: .bunzip2.o.d
+Seulement dans xen-4.7.0/xen/common/compat: domain.o
+Seulement dans xen-4.7.0/xen/common/compat: .domain.o.d
+Seulement dans xen-4.7.0/xen/common/compat: kernel.o
+Seulement dans xen-4.7.0/xen/common/compat: .kernel.o.d
+Seulement dans xen-4.7.0/xen/common/compat: memory.o
+Seulement dans xen-4.7.0/xen/common/compat: .memory.o.d
+Seulement dans xen-4.7.0/xen/common/compat: multicall.o
+Seulement dans xen-4.7.0/xen/common/compat: .multicall.o.d
+Seulement dans xen-4.7.0/xen/common/compat: tmem_xen.o
+Seulement dans xen-4.7.0/xen/common/compat: .tmem_xen.o.d
+Seulement dans xen-4.7.0/xen/common/compat: xlat.o
+Seulement dans xen-4.7.0/xen/common/compat: .xlat.o.d
+Seulement dans xen-4.7.0/xen/common: core_parking.o
+Seulement dans xen-4.7.0/xen/common: .core_parking.o.d
+Seulement dans xen-4.7.0/xen/common: cpu.o
+Seulement dans xen-4.7.0/xen/common: .cpu.o.d
+Seulement dans xen-4.7.0/xen/common: cpupool.o
+Seulement dans xen-4.7.0/xen/common: .cpupool.o.d
+Seulement dans xen-4.7.0/xen/common: decompress.init.o
+Seulement dans xen-4.7.0/xen/common: decompress.o
+Seulement dans xen-4.7.0/xen/common: .decompress.o.d
+Seulement dans xen-4.7.0/xen/common: domain.o
+Seulement dans xen-4.7.0/xen/common: .domain.o.d
+diff -ur xen-4.7.0/xen/common/domctl.c xen-4.7.0_copie/xen/common/domctl.c
+--- xen-4.7.0/xen/common/domctl.c	2018-09-28 14:54:01.837135000 +0100
++++ xen-4.7.0_copie/xen/common/domctl.c	2016-06-20 11:38:15.000000000 +0100
+@@ -426,18 +426,12 @@
+     return ERR_PTR(ret);
+ }
+ 
+-long do_test_hypercall(XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl)
+-{
+-    return do_domctl(u_domctl);
+-}
+-
+ long do_domctl(XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl)
+ {
+     long ret = 0;
+     bool_t copyback = 0;
+     struct xen_domctl curop, *op = &curop;
+     struct domain *d;
+-    //printk("do_domctl\n");
+ 
+     if ( copy_from_guest(op, u_domctl, 1) )
+         return -EFAULT;
+Seulement dans xen-4.7.0/xen/common: domctl.o
+Seulement dans xen-4.7.0/xen/common: .domctl.o.d
+Seulement dans xen-4.7.0/xen/common: earlycpio.init.o
+Seulement dans xen-4.7.0/xen/common: earlycpio.o
+Seulement dans xen-4.7.0/xen/common: .earlycpio.o.d
+Seulement dans xen-4.7.0/xen/common: event_2l.o
+Seulement dans xen-4.7.0/xen/common: .event_2l.o.d
+Seulement dans xen-4.7.0/xen/common: event_channel.o
+Seulement dans xen-4.7.0/xen/common: .event_channel.o.d
+Seulement dans xen-4.7.0/xen/common: event_fifo.o
+Seulement dans xen-4.7.0/xen/common: .event_fifo.o.d
+Seulement dans xen-4.7.0/xen/common: grant_table.o
+Seulement dans xen-4.7.0/xen/common: .grant_table.o.d
+Seulement dans xen-4.7.0/xen/common: guestcopy.o
+Seulement dans xen-4.7.0/xen/common: .guestcopy.o.d
+Seulement dans xen-4.7.0/xen/common: gunzip.init.o
+Seulement dans xen-4.7.0/xen/common: gunzip.o
+Seulement dans xen-4.7.0/xen/common: .gunzip.o.d
+Seulement dans xen-4.7.0/xen/common/hvm: built_in.o
+Seulement dans xen-4.7.0/xen/common/hvm: save.o
+Seulement dans xen-4.7.0/xen/common/hvm: .save.o.d
+Seulement dans xen-4.7.0/xen/common: irq.o
+Seulement dans xen-4.7.0/xen/common: .irq.o.d
+Seulement dans xen-4.7.0/xen/common: kernel.o
+Seulement dans xen-4.7.0/xen/common: .kernel.o.d
+Seulement dans xen-4.7.0/xen/common: kexec.o
+Seulement dans xen-4.7.0/xen/common: .kexec.o.d
+Seulement dans xen-4.7.0/xen/common: keyhandler.o
+Seulement dans xen-4.7.0/xen/common: .keyhandler.o.d
+Seulement dans xen-4.7.0/xen/common: kimage.o
+Seulement dans xen-4.7.0/xen/common: .kimage.o.d
+Seulement dans xen-4.7.0/xen/common/libelf: built_in.o
+Seulement dans xen-4.7.0/xen/common/libelf: libelf-dominfo.o
+Seulement dans xen-4.7.0/xen/common/libelf: .libelf-dominfo.o.d
+Seulement dans xen-4.7.0/xen/common/libelf: libelf-loader.o
+Seulement dans xen-4.7.0/xen/common/libelf: .libelf-loader.o.d
+Seulement dans xen-4.7.0/xen/common/libelf: libelf.o
+Seulement dans xen-4.7.0/xen/common/libelf: libelf-temp.o
+Seulement dans xen-4.7.0/xen/common/libelf: libelf-tools.o
+Seulement dans xen-4.7.0/xen/common/libelf: .libelf-tools.o.d
+Seulement dans xen-4.7.0/xen/common: lib.o
+Seulement dans xen-4.7.0/xen/common: .lib.o.d
+Seulement dans xen-4.7.0/xen/common: lzo.o
+Seulement dans xen-4.7.0/xen/common: .lzo.o.d
+Seulement dans xen-4.7.0/xen/common: mem_access.o
+Seulement dans xen-4.7.0/xen/common: .mem_access.o.d
+Seulement dans xen-4.7.0/xen/common: memory.o
+Seulement dans xen-4.7.0/xen/common: .memory.o.d
+Seulement dans xen-4.7.0/xen/common: monitor.o
+Seulement dans xen-4.7.0/xen/common: .monitor.o.d
+Seulement dans xen-4.7.0/xen/common: multicall.o
+Seulement dans xen-4.7.0/xen/common: .multicall.o.d
+Seulement dans xen-4.7.0/xen/common: notifier.o
+Seulement dans xen-4.7.0/xen/common: .notifier.o.d
+Seulement dans xen-4.7.0/xen/common: page_alloc.o
+Seulement dans xen-4.7.0/xen/common: .page_alloc.o.d
+Seulement dans xen-4.7.0/xen/common: pdx.o
+Seulement dans xen-4.7.0/xen/common: .pdx.o.d
+Seulement dans xen-4.7.0/xen/common: preempt.o
+Seulement dans xen-4.7.0/xen/common: .preempt.o.d
+Seulement dans xen-4.7.0/xen/common: radix-tree.o
+Seulement dans xen-4.7.0/xen/common: .radix-tree.o.d
+Seulement dans xen-4.7.0/xen/common: random.o
+Seulement dans xen-4.7.0/xen/common: .random.o.d
+Seulement dans xen-4.7.0/xen/common: rangeset.o
+Seulement dans xen-4.7.0/xen/common: .rangeset.o.d
+Seulement dans xen-4.7.0/xen/common: rbtree.o
+Seulement dans xen-4.7.0/xen/common: .rbtree.o.d
+Seulement dans xen-4.7.0/xen/common: rcupdate.o
+Seulement dans xen-4.7.0/xen/common: .rcupdate.o.d
+Seulement dans xen-4.7.0/xen/common: rwlock.o
+Seulement dans xen-4.7.0/xen/common: .rwlock.o.d
+Seulement dans xen-4.7.0/xen/common: sched_arinc653.o
+Seulement dans xen-4.7.0/xen/common: .sched_arinc653.o.d
+Seulement dans xen-4.7.0/xen/common: sched_credit2.o
+Seulement dans xen-4.7.0/xen/common: .sched_credit2.o.d
+Seulement dans xen-4.7.0/xen/common: sched_credit.o
+Seulement dans xen-4.7.0/xen/common: .sched_credit.o.d
+Seulement dans xen-4.7.0/xen/common: sched_rt.o
+Seulement dans xen-4.7.0/xen/common: .sched_rt.o.d
+Seulement dans xen-4.7.0/xen/common: schedule.o
+Seulement dans xen-4.7.0/xen/common: .schedule.o.d
+Seulement dans xen-4.7.0/xen/common: shutdown.o
+Seulement dans xen-4.7.0/xen/common: .shutdown.o.d
+Seulement dans xen-4.7.0/xen/common: smp.o
+Seulement dans xen-4.7.0/xen/common: .smp.o.d
+Seulement dans xen-4.7.0/xen/common: softirq.o
+Seulement dans xen-4.7.0/xen/common: .softirq.o.d
+Seulement dans xen-4.7.0/xen/common: sort.o
+Seulement dans xen-4.7.0/xen/common: .sort.o.d
+Seulement dans xen-4.7.0/xen/common: spinlock.o
+Seulement dans xen-4.7.0/xen/common: .spinlock.o.d
+Seulement dans xen-4.7.0/xen/common: stop_machine.o
+Seulement dans xen-4.7.0/xen/common: .stop_machine.o.d
+Seulement dans xen-4.7.0/xen/common: string.o
+Seulement dans xen-4.7.0/xen/common: .string.o.d
+Seulement dans xen-4.7.0/xen/common: symbols-dummy.o
+Seulement dans xen-4.7.0/xen/common: .symbols-dummy.o.d
+Seulement dans xen-4.7.0/xen/common: symbols.o
+Seulement dans xen-4.7.0/xen/common: .symbols.o.d
+Seulement dans xen-4.7.0/xen/common: sysctl.o
+Seulement dans xen-4.7.0/xen/common: .sysctl.o.d
+Seulement dans xen-4.7.0/xen/common: tasklet.o
+Seulement dans xen-4.7.0/xen/common: .tasklet.o.d
+Seulement dans xen-4.7.0/xen/common: time.o
+Seulement dans xen-4.7.0/xen/common: .time.o.d
+Seulement dans xen-4.7.0/xen/common: timer.o
+Seulement dans xen-4.7.0/xen/common: .timer.o.d
+Seulement dans xen-4.7.0/xen/common: tmem_control.o
+Seulement dans xen-4.7.0/xen/common: .tmem_control.o.d
+Seulement dans xen-4.7.0/xen/common: tmem.o
+Seulement dans xen-4.7.0/xen/common: .tmem.o.d
+Seulement dans xen-4.7.0/xen/common: tmem_xen.o
+Seulement dans xen-4.7.0/xen/common: .tmem_xen.o.d
+Seulement dans xen-4.7.0/xen/common: trace.o
+Seulement dans xen-4.7.0/xen/common: .trace.o.d
+Seulement dans xen-4.7.0/xen/common: unlz4.init.o
+Seulement dans xen-4.7.0/xen/common: unlz4.o
+Seulement dans xen-4.7.0/xen/common: .unlz4.o.d
+Seulement dans xen-4.7.0/xen/common: unlzma.init.o
+Seulement dans xen-4.7.0/xen/common: unlzma.o
+Seulement dans xen-4.7.0/xen/common: .unlzma.o.d
+Seulement dans xen-4.7.0/xen/common: unlzo.init.o
+Seulement dans xen-4.7.0/xen/common: unlzo.o
+Seulement dans xen-4.7.0/xen/common: .unlzo.o.d
+Seulement dans xen-4.7.0/xen/common: unxz.init.o
+Seulement dans xen-4.7.0/xen/common: unxz.o
+Seulement dans xen-4.7.0/xen/common: .unxz.o.d
+Seulement dans xen-4.7.0/xen/common: version.o
+Seulement dans xen-4.7.0/xen/common: .version.o.d
+Seulement dans xen-4.7.0/xen/common: virtual_region.o
+Seulement dans xen-4.7.0/xen/common: .virtual_region.o.d
+Seulement dans xen-4.7.0/xen/common: vmap.o
+Seulement dans xen-4.7.0/xen/common: .vmap.o.d
+Seulement dans xen-4.7.0/xen/common: vm_event.o
+Seulement dans xen-4.7.0/xen/common: .vm_event.o.d
+Seulement dans xen-4.7.0/xen/common: vsprintf.o
+Seulement dans xen-4.7.0/xen/common: .vsprintf.o.d
+Seulement dans xen-4.7.0/xen/common: wait.o
+Seulement dans xen-4.7.0/xen/common: .wait.o.d
+Seulement dans xen-4.7.0/xen/common: xenoprof.o
+Seulement dans xen-4.7.0/xen/common: .xenoprof.o.d
+Seulement dans xen-4.7.0/xen/common: xmalloc_tlsf.o
+Seulement dans xen-4.7.0/xen/common: .xmalloc_tlsf.o.d
+Seulement dans xen-4.7.0/xen: .config
+Seulement dans xen-4.7.0/xen/crypto: built_in.o
+Seulement dans xen-4.7.0/xen/crypto: rijndael.o
+Seulement dans xen-4.7.0/xen/crypto: .rijndael.o.d
+Seulement dans xen-4.7.0/xen/crypto: vmac.o
+Seulement dans xen-4.7.0/xen/crypto: .vmac.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: apei-base.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: .apei-base.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: apei-io.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: .apei-io.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: erst.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: .erst.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: hest.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/apei: .hest.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: hwregs.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .hwregs.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: numa.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .numa.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: osl.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .osl.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: pmstat.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .pmstat.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: reboot.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .reboot.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbfadt.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbfadt.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: .tbfadt.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbinstal.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbinstal.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: .tbinstal.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbutils.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: .tbutils.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbxface.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbxface.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: .tbxface.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbxfroot.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: tbxfroot.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/tables: .tbxfroot.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi: tables.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: tables.o
+Seulement dans xen-4.7.0/xen/drivers/acpi: .tables.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: utglobal.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: .utglobal.o.d
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: utmisc.init.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: utmisc.o
+Seulement dans xen-4.7.0/xen/drivers/acpi/utilities: .utmisc.o.d
+Seulement dans xen-4.7.0/xen/drivers: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/char: built_in.o
+diff -ur xen-4.7.0/xen/drivers/char/console.c xen-4.7.0_copie/xen/drivers/char/console.c
+--- xen-4.7.0/xen/drivers/char/console.c	2019-02-27 16:58:26.779155646 +0100
++++ xen-4.7.0_copie/xen/drivers/char/console.c	2016-06-20 11:38:15.000000000 +0100
+@@ -67,7 +67,7 @@
+ static uint32_t __initdata opt_conring_size;
+ size_param("conring_size", opt_conring_size);
+ 
+-#define _CONRING_SIZE 10485760
++#define _CONRING_SIZE 16384
+ #define CONRING_IDX_MASK(i) ((i)&(conring_size-1))
+ static char __initdata _conring[_CONRING_SIZE];
+ static char *__read_mostly conring = _conring;
+Seulement dans xen-4.7.0/xen/drivers/char: console.o
+Seulement dans xen-4.7.0/xen/drivers/char: .console.o.d
+Seulement dans xen-4.7.0/xen/drivers/char: ehci-dbgp.o
+Seulement dans xen-4.7.0/xen/drivers/char: .ehci-dbgp.o.d
+Seulement dans xen-4.7.0/xen/drivers/char: ns16550.o
+Seulement dans xen-4.7.0/xen/drivers/char: .ns16550.o.d
+Seulement dans xen-4.7.0/xen/drivers/char: serial.o
+Seulement dans xen-4.7.0/xen/drivers/char: .serial.o.d
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: cpufreq_misc_governors.o
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: .cpufreq_misc_governors.o.d
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: cpufreq.o
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: .cpufreq.o.d
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: cpufreq_ondemand.o
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: .cpufreq_ondemand.o.d
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: utility.o
+Seulement dans xen-4.7.0/xen/drivers/cpufreq: .utility.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_acpi.init.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_acpi.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_acpi.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_cmd.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_cmd.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_detect.init.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_detect.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_detect.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_guest.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_guest.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_init.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_init.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_intr.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_intr.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: iommu_map.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .iommu_map.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: pci_amd_iommu.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/amd: .pci_amd_iommu.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough: iommu.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough: .iommu.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough: io.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough: .io.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough: pci.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough: .pci.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: dmar.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .dmar.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: intremap.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .intremap.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: iommu.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .iommu.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: qinval.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .qinval.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: quirks.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .quirks.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: utils.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd: .utils.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd/x86: ats.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd/x86: .ats.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd/x86: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd/x86: vtd.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/vtd/x86: .vtd.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/x86: ats.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/x86: .ats.o.d
+Seulement dans xen-4.7.0/xen/drivers/passthrough/x86: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/x86: iommu.o
+Seulement dans xen-4.7.0/xen/drivers/passthrough/x86: .iommu.o.d
+Seulement dans xen-4.7.0/xen/drivers/pci: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/pci: pci.o
+Seulement dans xen-4.7.0/xen/drivers/pci: .pci.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: built_in.o
+Seulement dans xen-4.7.0/xen/drivers/video: font_8x14.o
+Seulement dans xen-4.7.0/xen/drivers/video: .font_8x14.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: font_8x16.o
+Seulement dans xen-4.7.0/xen/drivers/video: .font_8x16.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: font_8x8.o
+Seulement dans xen-4.7.0/xen/drivers/video: .font_8x8.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: lfb.o
+Seulement dans xen-4.7.0/xen/drivers/video: .lfb.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: vesa.o
+Seulement dans xen-4.7.0/xen/drivers/video: .vesa.o.d
+Seulement dans xen-4.7.0/xen/drivers/video: vga.o
+Seulement dans xen-4.7.0/xen/drivers/video: .vga.o.d
+Seulement dans xen-4.7.0/xen/include: asm
+Seulement dans xen-4.7.0/xen/include/asm-x86: asm-offsets.h
+Seulement dans xen-4.7.0/xen/include/asm-x86: cpuid-autogen.h
+diff -ur xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h
+--- xen-4.7.0/xen/include/asm-x86/hvm/vmx/vmcs.h	2018-09-28 14:54:01.857175000 +0100
++++ xen-4.7.0_copie/xen/include/asm-x86/hvm/vmx/vmcs.h	2016-06-20 11:38:15.000000000 +0100
+@@ -218,7 +218,7 @@
+     /* Remember EFLAGS while in virtual 8086 mode */
+     uint32_t             vm86_saved_eflags;
+     int                  hostenv_migrated;
+- 
++
+     /* Bitmap to control vmexit policy for Non-root VMREAD/VMWRITE */
+     struct page_info     *vmread_bitmap;
+     struct page_info     *vmwrite_bitmap;
+diff -ur xen-4.7.0/xen/include/asm-x86/paging.h xen-4.7.0_copie/xen/include/asm-x86/paging.h
+--- xen-4.7.0/xen/include/asm-x86/paging.h	2018-09-28 14:54:01.857175000 +0100
++++ xen-4.7.0_copie/xen/include/asm-x86/paging.h	2016-06-20 11:38:15.000000000 +0100
+@@ -169,7 +169,6 @@
+  * TODO2: Abstract out the radix-tree mechanics?
+  */
+ #define LOGDIRTY_NODE_ENTRIES (1 << PAGETABLE_ORDER)
+-#define LOGDIRTY_LEAF_LONG_ENTRIES (1 << PAGETABLE_ORDER_LONG)
+ #define L1_LOGDIRTY_IDX(pfn) ((pfn) & ((1 << (PAGE_SHIFT+3)) - 1))
+ #define L2_LOGDIRTY_IDX(pfn) (((pfn) >> (PAGE_SHIFT+3)) & \
+                               (LOGDIRTY_NODE_ENTRIES-1))
+diff -ur xen-4.7.0/xen/include/asm-x86/x86_64/page.h xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h
+--- xen-4.7.0/xen/include/asm-x86/x86_64/page.h	2018-09-28 14:54:01.857175000 +0100
++++ xen-4.7.0_copie/xen/include/asm-x86/x86_64/page.h	2016-06-20 11:38:15.000000000 +0100
+@@ -11,7 +11,6 @@
+ #define ROOT_PAGETABLE_SHIFT    L4_PAGETABLE_SHIFT
+ 
+ #define PAGETABLE_ORDER         9
+-#define PAGETABLE_ORDER_LONG    6
+ #define L1_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
+ #define L2_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
+ #define L3_PAGETABLE_ENTRIES    (1<<PAGETABLE_ORDER)
+Seulement dans xen-4.7.0/xen/include: compat
+Seulement dans xen-4.7.0/xen/include: config
+Seulement dans xen-4.7.0/xen/include: generated
+Seulement dans xen-4.7.0/xen/include: headers.chk
+Seulement dans xen-4.7.0/xen/include: headers++.chk
+diff -ur xen-4.7.0/xen/include/public/domctl.h xen-4.7.0_copie/xen/include/public/domctl.h
+--- xen-4.7.0/xen/include/public/domctl.h	2018-09-28 14:54:01.861183000 +0100
++++ xen-4.7.0_copie/xen/include/public/domctl.h	2016-06-20 11:38:15.000000000 +0100
+@@ -193,9 +193,8 @@
+  /*
+   * No longer supported, was equiv. to ENABLE with mode flags
+   * ENABLE_REFCOUNT and ENABLE_TRANSLATE:
+-  * */
+-#define XEN_DOMCTL_SHADOW_OP_COLLECT_DIRTY_LOGS  3
+-  
++#define XEN_DOMCTL_SHADOW_OP_ENABLE_TRANSLATE  3
++  */
+ 
+ /* Mode flags for XEN_DOMCTL_SHADOW_OP_ENABLE. */
+  /*
+diff -ur xen-4.7.0/xen/include/public/xen.h xen-4.7.0_copie/xen/include/public/xen.h
+--- xen-4.7.0/xen/include/public/xen.h	2018-09-28 14:54:01.861183000 +0100
++++ xen-4.7.0_copie/xen/include/public/xen.h	2016-06-20 11:38:15.000000000 +0100
+@@ -115,7 +115,6 @@
+ #define __HYPERVISOR_tmem_op              38
+ #define __HYPERVISOR_xc_reserved_op       39 /* reserved for XenClient */
+ #define __HYPERVISOR_xenpmu_op            40
+-#define __HYPERVISOR_test_hypercall       41
+ 
+ /* Architecture-specific hypercall definitions. */
+ #define __HYPERVISOR_arch_0               48
+Seulement dans xen-4.7.0/xen/include/xen: compile.h
+diff -ur xen-4.7.0/xen/include/xen/hypercall.h xen-4.7.0_copie/xen/include/xen/hypercall.h
+--- xen-4.7.0/xen/include/xen/hypercall.h	2018-09-28 14:54:01.865191000 +0100
++++ xen-4.7.0_copie/xen/include/xen/hypercall.h	2016-06-20 11:38:15.000000000 +0100
+@@ -22,10 +22,6 @@
+ do_ni_hypercall(
+     void);
+ 
+-extern long 
+-do_test_hypercall(
+-    XEN_GUEST_HANDLE_PARAM(xen_domctl_t) u_domctl);
+-
+ extern long
+ do_sched_op(
+     int cmd,
+Seulement dans xen-4.7.0/xen/tools: symbols
+Seulement dans xen-4.7.0/xen: xen
+Seulement dans xen-4.7.0/xen: xen.efi
+Seulement dans xen-4.7.0/xen: ..xen.efi.0r.o.d
+Seulement dans xen-4.7.0/xen: ..xen.efi.0s.o.d
+Seulement dans xen-4.7.0/xen: ..xen.efi.1r.o.d
+Seulement dans xen-4.7.0/xen: ..xen.efi.1s.o.d
+Seulement dans xen-4.7.0/xen: xen.gz
+Seulement dans xen-4.7.0/xen: xen-syms
+Seulement dans xen-4.7.0/xen: ..xen-syms.0.o.d
+Seulement dans xen-4.7.0/xen: ..xen-syms.1.o.d
+Seulement dans xen-4.7.0/xen/xsm: built_in.o
+Seulement dans xen-4.7.0/xen/xsm: xsm_core.o
+Seulement dans xen-4.7.0/xen/xsm: .xsm_core.o.d
