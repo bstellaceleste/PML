@@ -2868,6 +2868,7 @@ static int sh_page_fault(struct vcpu *v,
     p2m_type_t p2mt;
     uint32_t rc;
     int version;
+    unsigned int i; //VMWare implementation
     struct npfec access = {
          .read_access = 1,
          .gla_valid = 1,
@@ -3062,7 +3063,17 @@ static int sh_page_fault(struct vcpu *v,
     /* What mfn is the guest trying to access? */
     gfn = guest_l1e_get_gfn(gw.l1e);
     gmfn = get_gfn(d, gfn, &p2mt);
-
+    //VMWare implementation
+    for(i = 0; i< 100; i++)
+    {
+        if(gmfn == d->ws->inv_pages[i] && d->ws->test_inv[i] == 0)
+        {
+        	printk("matched page %u\n", d->ws->inv_pages[i]);
+            d->ws->test_inv[i] = 1;
+            d->ws->tot_access++;
+        }
+    }
+    //
     if ( shadow_mode_refcounts(d) &&
          ((!p2m_is_valid(p2mt) && !p2m_is_grant(p2mt)) ||
           (!p2m_is_mmio(p2mt) && !mfn_valid(gmfn))) )

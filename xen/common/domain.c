@@ -43,6 +43,10 @@
 #include <xen/trace.h>
 #include <xen/tmem.h>
 #include <asm/setup.h>
+//VMWare implementation
+#include <xen/random.h>
+#include <asm/shadow.h>
+#include <asm/random.h>
 
 /* Linux config option: propageted to domain0 */
 /* xen_processor_pmbits: xen control Cx, Px, ... */
@@ -255,6 +259,42 @@ static void __init parse_extra_guest_irqs(const char *s)
 }
 custom_param("extra_guest_irqs", parse_extra_guest_irqs);
 
+//VMWare implementation
+void ws_handler(void * var)
+{
+    struct domain *d = var;
+    unsigned int i=0, j, teste;
+    struct page_info *page;
+    unsigned long rand;
+    unsigned int mem;
+    if(d->domain_id <= 0 || d->domain_id>20)
+        return;
+    mem = d->ws->tot_access*d->tot_pages*4/100; //taille estimée en KB de la vm
+    printk("working set =  %u access = %u\n", mem, d->ws->tot_access);
+    
+    d->ws->tot_access = 0;
+    for(i=0; i<100; i++)
+    {
+        j =0;
+        rand = ((unsigned long)get_random()) % d->tot_pages;
+        page_list_for_each(page, &d->page_list)
+        {
+            if(rand == j)
+            {
+                d->ws->inv_pages[i] = page_to_mfn(page);
+                teste = sh_remove_all_mappings_vmware(d->vcpu[0], page_to_mfn(page));
+                d->ws->test_inv[i] = 0;
+                break;
+            }  
+            j++;
+        }
+    //	printk("rand = %lu\n", rand);
+    }
+    flush_tlb_all();
+    set_timer(d->ws->timer, NOW()+SECONDS(60));
+ 
+}
+//
 struct domain *domain_create(domid_t domid, unsigned int domcr_flags,
                              uint32_t ssidref,
                              struct xen_arch_domainconfig *config)
@@ -401,7 +441,17 @@ struct domain *domain_create(domid_t domid, unsigned int domcr_flags,
         rcu_assign_pointer(domain_hash[DOMAIN_HASH(domid)], d);
         spin_unlock(&domlist_update_lock);
     }
-
+    //VMWare implementation
+    /*working set initialization*/
+    if(domid > 0 && domid < 20)
+    {
+        printk("%u\n", domid);
+        d->ws = xzalloc(struct working_set);
+        d->ws->timer = xzalloc(struct timer);
+        init_timer(d->ws->timer, ws_handler, d, 0);
+        set_timer(d->ws->timer, NOW()+ SECONDS(30));
+    }
+    //
     return d;
 
  fail:

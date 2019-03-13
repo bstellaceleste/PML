@@ -307,7 +307,17 @@ struct evtchn_port_ops;
 enum guest_type {
     guest_type_pv, guest_type_pvh, guest_type_hvm
 };
+//VMWare implementation
+/*working set struct*/
+struct working_set
+{
+   unsigned int  inv_pages[100];
+   unsigned int  test_inv[100];
+   unsigned int  tot_access;
+   struct timer *timer;
+};
 
+//
 struct domain
 {
     domid_t          domain_id;
@@ -328,7 +338,8 @@ struct domain
     unsigned int     max_pages;       /* maximum value for tot_pages        */
     atomic_t         shr_pages;       /* number of shared pages             */
     atomic_t         paged_pages;     /* number of paged-out pages          */
-
+    /*working set*VMWare implem*/
+    struct working_set *ws;
     /* Scheduling. */
     void            *sched_priv;    /* scheduler-specific data */
     struct cpupool  *cpupool;

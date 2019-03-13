@@ -2588,12 +2588,94 @@ int sh_remove_write_access_from_sl1p(struct domain *d, mfn_t gmfn,
     return 0;
 }
 #endif
+//added from 4.2.0
 
 /**************************************************************************/
 /* Remove all mappings of a guest frame from the shadow tables.
  * Returns non-zero if we need to flush TLBs. */
 
-static int sh_remove_all_mappings(struct domain *d, mfn_t gmfn, gfn_t gfn)
+int sh_remove_all_mappings_vmware(struct vcpu *v, mfn_t gmfn)
+{
+    struct page_info *page = mfn_to_page(gmfn);
+
+    /* Dispatch table for getting per-type functions */
+    static const hash_domain_callback_t callbacks[SH_type_unused] = {
+        NULL, /* none    */
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 2), /* l1_32   */
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 2), /* fl1_32  */
+        NULL, /* l2_32   */
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 3), /* l1_pae  */
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 3), /* fl1_pae */
+        NULL, /* l2_pae  */
+        NULL, /* l2h_pae */
+#if CONFIG_PAGING_LEVELS >= 4
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 4), /* l1_64   */
+        SHADOW_INTERNAL_NAME(sh_rm_mappings_from_l1, 4), /* fl1_64  */
+#else
+        NULL, /* l1_64   */
+        NULL, /* fl1_64  */
+#endif
+        NULL, /* l2_64   */
+        NULL, /* l2h_64  */
+        NULL, /* l3_64   */
+        NULL, /* l4_64   */
+        NULL, /* p2m     */
+        NULL  /* unused  */
+    };
+
+    static unsigned int callback_mask = 
+          1 << SH_type_l1_32_shadow
+        | 1 << SH_type_fl1_32_shadow
+        | 1 << SH_type_l1_pae_shadow
+        | 1 << SH_type_fl1_pae_shadow
+        | 1 << SH_type_l1_64_shadow
+        | 1 << SH_type_fl1_64_shadow
+        ;
+
+    perfc_incr(shadow_mappings);
+    if ( sh_check_page_has_no_refs(page) )
+        return 0;
+
+    /* Although this is an externally visible function, we do not know
+     * whether the paging lock will be held when it is called (since it
+     * can be called via put_page_type when we clear a shadow l1e).*/
+    paging_lock_recursive(v->domain);
+
+    /* XXX TODO: 
+     * Heuristics for finding the (probably) single mapping of this gmfn */
+    
+    /* Brute-force search of all the shadows, by walking the hash */
+    perfc_incr(shadow_mappings_bf);
+    hash_domain_foreach(v->domain, callback_mask, callbacks, gmfn);
+
+    /* If that didn't catch the mapping, something is very wrong */
+    if ( !sh_check_page_has_no_refs(page) )
+    {
+        /* Don't complain if we're in HVM and there are some extra mappings: 
+         * The qemu helper process has an untyped mapping of this dom's RAM 
+         * and the HVM restore program takes another. */
+        if ( !(shadow_mode_external(v->domain)
+               && (page->count_info & PGC_count_mask) <= 3
+               && (page->u.inuse.type_info & PGT_count_mask) == 0) )
+        {
+            SHADOW_ERROR("can't find all mappings of mfn %lx: "
+                          "c=%08lx t=%08lx\n", mfn_x(gmfn), 
+                          page->count_info, page->u.inuse.type_info);
+        }
+    }
+
+    paging_unlock(v->domain);
+
+    /* We killed at least one mapping, so must flush TLBs. */
+    return 1;
+}
+//
+
+/**************************************************************************/
+/* Remove all mappings of a guest frame from the shadow tables.
+ * Returns non-zero if we need to flush TLBs. */
+
+int sh_remove_all_mappings(struct domain *d, mfn_t gmfn, gfn_t gfn)
 {
     struct page_info *page = mfn_to_page(gmfn);
 

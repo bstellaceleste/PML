@@ -78,6 +78,28 @@ void shadow_teardown(struct domain *d, int *preempted);
 /* Call once all of the references to the domain have gone away */
 void shadow_final_teardown(struct domain *d);
 
+//added from 4.2.0
+/* Remove all mappings of the guest page from the shadows. 
+ * This is called from common code.  It does not flush TLBs. */
+int sh_remove_all_mappings(struct domain *d, mfn_t target_mfn, gfn_t gfn);
+static inline void 
+shadow_drop_references(struct domain *d, struct page_info *p)
+{
+    if ( unlikely(shadow_mode_enabled(d)) )
+        /* See the comment about locking in sh_remove_all_mappings */
+        sh_remove_all_mappings(d, _mfn(page_to_mfn(p)),0);
+}
+
+int sh_remove_all_mappings_vmware(struct vcpu *v, mfn_t target_mfn);
+static inline void 
+shadow_drop_references_vmware(struct domain *d, struct page_info *p)
+{
+    if ( unlikely(shadow_mode_enabled(d)) )
+        /* See the comment about locking in sh_remove_all_mappings */
+        sh_remove_all_mappings_vmware(d->vcpu[0], _mfn(page_to_mfn(p)));
+}
+//
+
 void sh_remove_shadows(struct domain *d, mfn_t gmfn, int fast, int all);
 
 /* Discard _all_ mappings from the domain's shadows. */
